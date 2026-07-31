@@ -1,0 +1,74 @@
+{
+  "eval": "buro routing — does the right seat get picked from the always-on surface (post-trim)",
+  "cases": [
+    {
+      "id": 1,
+      "expected": "industrial-design",
+      "seam": "vs concept",
+      "prompt": "ok i'm designing a physical wall-mounted bottle opener that'll be injection molded — need to nail the grip shape and where the thumb sits"
+    },
+    {
+      "id": 7,
+      "expected": "ad-creative",
+      "seam": "vs copy",
+      "prompt": "write me three hook lines for a 6-second youtube pre-roll ad for the oat milk"
+    },
+    {
+      "id": 13,
+      "expected": "gamedesign",
+      "prompt": "the core loop of my roguelike feels boring after 10 minutes, players burn out and quit"
+    },
+    {
+      "id": 16,
+      "expected": "art-director",
+      "seam": "vs cmf",
+      "prompt": "define the whole visual language and style bible for our game — palette, shape language, one-world coherence"
+    },
+    {
+      "id": 18,
+      "expected": "copy",
+      "seam": "vs ad-creative",
+      "prompt": "rewrite this error message so it's human: 'An error occurred while processing your request'"
+    },
+    {
+      "id": 24,
+      "expected": "critic",
+      "prompt": "is this finished short film any good — judge it against the best of its form, don't flatter me"
+    },
+    {
+      "id": 27,
+      "expected": "process",
+      "prompt": "how should i sequence the whole product build from idea to ship without it falling apart as it grows"
+    },
+    {
+      "id": 37,
+      "expected": "docs",
+      "seam": "vs copy",
+      "prompt": "need to write the readme and a getting-started guide for our api — right now new devs ping us on slack for every step"
+    },
+    {
+      "id": 38,
+      "expected": "copy",
+      "seam": "vs docs",
+      "prompt": "what should the empty state say when a user has no projects yet, and what goes on the button"
+    },
+    {
+      "id": 39,
+      "expected": "docs",
+      "seam": "vs editor",
+      "prompt": "our runbook says to restart the worker but that flag was renamed months ago and nobody knows who owns the page"
+    },
+    {
+      "id": 40,
+      "expected": "docs",
+      "seam": "vs gamedesign",
+      "prompt": "we're 3 people making a game, do i write a full gdd or something smaller, and what documents do we actually need"
+    },
+    {
+      "id": 41,
+      "expected": "docs",
+      "seam": "vs usability",
+      "prompt": "the install steps are in the readme, the wiki and the onboarding doc, all three slightly different — where should this stuff actually live and how do i lay out the docs folder"
+    }
+  ]
+}

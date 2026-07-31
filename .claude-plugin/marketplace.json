@@ -1,0 +1,21 @@
+{
+  "name": "buro-free-dev",
+  "description": "Development marketplace for the Buro free-tier skills plugin",
+  "owner": {
+    "name": "buro",
+    "email": "support@getburo.dev"
+  },
+  "plugins": [
+    {
+      "name": "buro-free",
+      "description": "Buro, free tier — one seat per department (16 of 58), full method and full production, no thinning.",
+      "version": "0.1.0",
+      "license": "UNLICENSED",
+      "source": "./",
+      "author": {
+        "name": "buro",
+        "email": "support@getburo.dev"
+      }
+    }
+  ]
+}
