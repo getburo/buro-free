@@ -112,10 +112,16 @@ This is a Claude Code **plugin**. Point Claude Code at this repository as a plug
 add it to a marketplace) and the seats become available as `buro:<seat>`.
 
 ```bash
-# from a local clone
-/plugin marketplace add ~/path/to/claude_plugin_buro_free   # registers the marketplace manifest
-/plugin install buro-free                                   # installs the plugin
+# from GitHub
+/plugin marketplace add getburo/buro-free   # registers the marketplace manifest
+/plugin install buro-free                   # installs the plugin
 # then invoke any seat: buro:buro, buro:docs, buro:critic, …
+```
+
+```bash
+# from a local clone
+/plugin marketplace add ~/path/to/claude_plugin_buro_free
+/plugin install buro-free
 ```
 
 ## Layout
