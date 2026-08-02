@@ -157,4 +157,3 @@ All rights reserved — see [LICENSE](LICENSE).
 This is proprietary software. Free-tier access grants a personal, non-transferable right to use
 it — not to copy, modify, distribute, sublicense, or create derivative works. No open-source or
 future-conversion license applies.
-
