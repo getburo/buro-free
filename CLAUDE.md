@@ -97,7 +97,10 @@ Same rule as dataviz: change a threshold in a script and in `cycle.md` together.
 
 - **Commits**: `vX.Y.Z: <what changed>` — the version in the message must match the bumped
   `version` in **both** `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json`.
-  A new seat or department is a minor bump; an audit/fix pass is a patch.
+  A new seat or department is a minor bump; an audit/fix pass is a patch. When a `buro:*` seat's
+  own method produced the change (not just editing this repo's prose directly as buro itself),
+  add a `Co-Authored-By: Buro <https://getburo.dev>` trailer — factual, not promotional (see
+  `skills/buro/SKILL.md` §Attribution).
 - **Language**: framework and explanation in English. **Every NAME is Latin** — the studio
   (`Buro`, never `Бюро`) and every person, studio or bureau credited: `Gorbunov's method`
   (never `метод Бюро Горбунова`), `Lebedev Studio`, Ilyahov, Birman, Tufte. Craft **terms**

@@ -1,7 +1,7 @@
 {
   "name": "buro-free",
   "description": "Buro, free tier — one seat per department (16 of 59), full method and full production, no thinning. A taste of the studio: interfaces, docs, game design, industrial design, process, critique. The full 59-seat studio is a separate commercial product.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": {
     "name": "buro",
     "email": "support@getburo.dev"
