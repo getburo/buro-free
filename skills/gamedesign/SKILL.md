@@ -3,9 +3,10 @@ name: gamedesign
 description: >-
   The game-design seat of Buro — the play itself: the core loop (what the player does in the next
   30 seconds), mechanics, meaningful choice, uncertainty, in-game economy (faucets/sinks),
-  difficulty & mastery curve, teaching-by-playing, game feel. Dispatches HUD to buro, animation to
-  buro:motion, return to buro:retention, monetization to buro:analyst, balance A/B to
-  buro:experiment, story to buro:narrative, geography to buro:worldbuilding, the playable level to
+  difficulty & mastery curve, teaching-by-playing, game feel. Dispatches HUD to buro, character/
+  creature animation direction to buro:animation, UI transition timing to buro:motion, return to
+  buro:retention, monetization to buro:analyst, balance A/B to
+  buro:experiment, story to buro:narrative, geography to buro:level, the playable level to
   buro:level. It carries NO prohibitions of its own — the lenses ask only what makes play good;
   the honesty law lives in ONE place inside the seat, COMPLIANCE (gate 8), which bans patterns
   never mechanisms and never without a source: findings are tiered BLOCKED (a named law, platform
@@ -87,7 +88,9 @@ A lens is a **question, not a rule**. It doesn't say what to do; it shows what's
 
 **11. The Lens of Faucet and Sink.** Where does a resource **come from**, and where does it **go**? A faucet with no sink = inflation, and the whole economy devalues by hour 40. Name every faucet and every sink by name; if there are fewer sinks than faucets, treat it as having none.
 
-**12. The Lens of the Teacher.** What did the game teach **without a single word of text**? A good level is a lesson disguised as a challenge. If the understanding came from a tutorial and not from the game, the game didn't teach — it instructed, and that gets forgotten.
+**12. The Lens of the Teacher.** What did the game teach **without a single word of text**? A good level is a lesson disguised as a challenge. If the understanding came from a tutorial and not from the game, the game didn't teach — it instructed, and that gets forgotten. In a long open world, teaching once at hour one isn't enough — a tool introduced early and unused for the next ten hours needs a small, low-stakes moment that re-surfaces it right before it matters again, not a repeated tutorial popup. The first teaching moment earns the lesson; a later refresher earns the *recall*, and both are this seat's job.
+
+
 
 **13. The Lens of Fantasy.** What fantasy is the player living out, and **does the mechanic back it up**? The fantasy "I'm a great detective," where the clues are highlighted, is a lie: the mechanic says "you know how to walk toward the arrow." The mechanic is always louder than the narrative.
 
@@ -97,9 +100,33 @@ A lens is a **question, not a rule**. It doesn't say what to do; it shows what's
 
 **16. The Lens of the Author.** Would you play this yourself, if you weren't making it? Would your kid? Not a moral question — a taste one: a mechanic you'd skip yourself is a mechanic that isn't finished.
 
-**17. The Lens of Reactivity (open worlds).** When the player acts *on* the world, does the world **register it** — a wanted level, an NPC who remembers, a consequence that ripples? Rockstar's worlds (*Red Dead Redemption 2*) answer nearly every player action with an acknowledgment; a world that ignores what you do quietly teaches the player that nothing they do matters. Test: name three things the player can do *to* the world, and what the world does back within five seconds. Fewer than three answers → the world is scenery wearing a skin of interactivity, not a system. (The *geography* the reactivity sits inside is `buro:worldbuilding`; that it *responds* is here.)
+**17. The Lens of Reactivity (open worlds).** When the player acts *on* the world, does the world **register it** — a wanted level, an NPC who remembers, a consequence that ripples? Rockstar's worlds (*Red Dead Redemption 2*) answer nearly every player action with an acknowledgment; a world that ignores what you do quietly teaches the player that nothing they do matters. Test: name three things the player can do *to* the world, and what the world does back within five seconds. Fewer than three answers → the world is scenery wearing a skin of interactivity, not a system. (The *geography* the reactivity sits inside is `buro:level`; that it *responds* is here.)
 
-**18. The Lens of Ambient Life (emergence, not triggers).** Does the world run its **own systems** when the player isn't pulling a lever — NPC schedules and weather (*RDR2*), hordes that migrate and swarm (*Days Gone*), machine herds that graze, hunt, and flee (*Horizon Zero Dawn*) — so encounters *emerge* rather than fire from a script? Test: have the player stand still and do nothing for two minutes — does the world produce a story on its own, or does it wait for input like a haunted-house animatronic? Emergent life is the difference between a place that exists whether or not you're watching and a stage set that only moves on cue. (Who lives where and why is `buro:worldbuilding`; how that population *behaves and generates play* is here.)
+**18. The Lens of Ambient Life (emergence, not triggers).** Does the world run its **own systems** when the player isn't pulling a lever — NPC schedules and weather (*RDR2*), hordes that migrate and swarm (*Days Gone*), machine herds that graze, hunt, and flee (*Horizon Zero Dawn*) — so encounters *emerge* rather than fire from a script? Test: have the player stand still and do nothing for two minutes — does the world produce a story on its own, or does it wait for input like a haunted-house animatronic? Emergent life is the difference between a place that exists whether or not you're watching and a stage set that only moves on cue. (Who lives where and why is `buro:level`; how that population *behaves and generates play* is here.) A cheaper version of the same illusion, for when a full simulated economy isn't affordable: a long, uninterrupted "work loop" animation (an NPC painting a wall, hauling crates back and forth) reads as ongoing labour without the world actually changing state underneath it — legible activity purchased at animation cost, not systems cost.
+
+**19. The Lens of Engagement vs Appeal.** Is the actual weakness *engagement* (moment-to-moment
+play doesn't reward continuing — the toy test, lens 2, is failing) or *appeal* (the concept never
+gets a look in the first place — no one downloads the demo)? These are different failure modes
+with different fixes, and conflating them wastes effort: a game can be genuinely engaging once
+played and still fail on appeal (a strong core loop with a premise nobody stops to notice), or have
+strong appeal and fail on engagement (a striking hook that plays hollow once the novelty wears
+off). Appeal is mostly outside this seat's own lenses — it lives in the premise/fantasy
+(`buro:narrative`), the visual point of view (`buro:art-director`), and the positioning
+(`buro:analyst`) — but naming *which* problem you actually have, before reaching for a fix, is
+this seat's diagnostic job. A design brief that reads as a genuine tension ("you want to do this,
+**but** doing it costs you that") is a sign both engagement and appeal are pulling in the same
+direction; a brief that never produces a "but" is worth checking for real conflict at all.
+
+**20. The Lens of Subtractive Scope.** For a small team, is a mechanic or content category earning
+its place, or could the same fantasy be delivered with less — fewer or no characters (narrative
+absence, a non-human protagonist, a UI-mediated role instead of direct control), a smaller or
+reused space (replay/mastery mechanics extracting more value from one place instead of building
+many), or a single mechanic blown up into the whole game instead of one slice of a larger genre
+(a full dungeon crawler descoped to just its inventory management, a real-time-strategy game
+descoped to just its base-defense moment)? The test for a good cut here isn't "what did we
+remove" but "what did removing it let us add" — desolation removes characters and adds mood;
+a single reused mechanic removes production scope and adds focus. A cut that only subtracts,
+adding nothing back, is a compromise; a cut that subtracts and adds is a design decision.
 
 ---
 
@@ -195,6 +222,40 @@ Gate 0.5 isn't a formality either, and it fails silently: nothing in a critique 
 
 ---
 
+## PRODUCE — designing the loop
+
+**Intake:** the fantasy and who's playing it, the platform and its input model, the genre's
+standing solutions (gate 0.5), any compliance regime already declared, and what "fun" is supposed
+to mean here in one sentence.
+
+**Emits, by request:** the **verb** and the core loop, written as a playable sequence, not a
+paragraph of intent · the **choice map** — every meaningful decision point and its real tradeoff ·
+the **uncertainty sources**, named and separated into input/output · the **economy** — faucets and
+sinks, what runs away by hour N · the **teaching plan** — what the player learns with no text, and
+when · the **Compliance verdict** — every pattern that touches the honesty law, tiered BLOCKED /
+CONDITIONAL / TASTE with its source named.
+
+**Shape it produces:**
+```
+Verb: pop the shielded target before the timer runs out
+Loop: aim → pop → shield breaks → next target spawns 0.4s closer → repeat, timer resets on a pop
+Choice: pop the near target now (safe, low value) or wait for a combo window (risky, 3x value)
+Uncertainty: which target spawns next (input — visible in the queue) · does the combo land (output —
+  telegraphed 400ms wind-up, skill-checkable)
+Economy: combo currency drains 10%/s unspent — a faucet with no sink is the run-away risk here
+Teaching: first 3 targets never combo-eligible — the queue itself teaches the tell before it matters
+Compliance: none declared this pass — no regime, no BLOCKED tier exists yet
+```
+
+**Self-critique gate:** *does the loop hold with zero reward (toy test)? is there a choice with no
+real cost — a trap disguised as a decision? is randomness the only source of uncertainty, or one
+of several? does a faucet have a matching sink, or does the number just climb? did teaching happen
+through play, or does a text box carry it? does any finding touch the honesty law without a
+tiered source?* Anything that fails is redesigned. **Producing is never a licence to ship a
+loop that only works because the player hasn't noticed the dominant strategy yet.**
+
+---
+
 ## Output (the verdict shape)
 
 ```
@@ -226,7 +287,7 @@ Rules:
 
 ## Discipline & integration
 
-**Dispatch, don't duplicate:** HUD, inventory, screens → `buro` (+ `buro:dataviz` for dense data, `buro:exotic` for real-time instruments) · copy, tutorial strings → `buro:copy` · animation timing and juice → `buro:motion` · the return loop, activation, pushes → `buro:retention` · monetization, unit economics, target audience → `buro:analyst` · balance measurement, A/B, cohorts → `buro:experiment` · phase order → `buro:process` · feature prioritization → `buro:pm` · story structure, choice architecture, lore/plot, character function → `buro:narrative` · the physical/economic logic of the wider world a level sits inside (why this terrain, this settlement pattern) → `buro:worldbuilding`.
+**Dispatch, don't duplicate:** HUD, inventory, screens → `buro` (+ `buro:dataviz` for dense data, `buro:exotic` for real-time instruments) · copy, tutorial strings → `buro:copy` · character/creature animation, weight, timing, hit reactions → `buro:animation` · UI transition timing → `buro:motion` · the return loop, activation, pushes → `buro:retention` · monetization, unit economics, target audience → `buro:analyst` · balance measurement, A/B, cohorts → `buro:experiment` · phase order → `buro:process` · feature prioritization → `buro:pm` · story structure, choice architecture, lore/plot, character function → `buro:narrative` · the physical/economic logic of the wider world a level sits inside (why this terrain, this settlement pattern) → `buro:level`.
 
 Engine, assets, level production — **out of zone.**
 
@@ -252,8 +313,8 @@ A tutorial that gets read instead of played · difficulty via hit-point sponges 
 
 `references/applied.md` — the **genre playbooks**: auctions & bidding, loot/unboxing, bots with character, soulslike, roguelike variance, F2P ethics, horror pacing (Bycer), open-world survival-action (the horde spine, traversal-as-survival, scarcity). Open this only when the design IS one of those genres — never for a lens.
 
-`references/lens-table.md` — Schell's full table of lenses (~116, by name, not number): need a lens beyond these 18 — look there, not here.
+`references/lens-table.md` — Schell's full table of lenses (~116, by name, not number): need a lens beyond these 20 — look there, not here.
 
 `references/roblox.md` — platform truth: the three-part core-loop model, D1/D7/D30 as three different levers, FTUE under 5 minutes, update cadence. Open this for Roblox projects.
 
-`references/open-world.md` — **Open-World Systems**: reactivity, ambient life, and emergent threat, distilled from Rockstar/Take-Two (*RDR2* — systemic reactivity, NPC schedules), Guerrilla (*Horizon* — machine ecology as mechanics), and Bend (*Days Gone* — the horde as an emergent-threat engine). Open this when the design is an open world that has to feel alive.
+`references/open-world.md` — **Open-World Systems**: reactivity, ambient life, and emergent threat, distilled from Rockstar/Take-Two (*RDR2* — systemic reactivity, NPC schedules), Guerrilla (*Horizon* — machine ecology as mechanics), Bend (*Days Gone* — the horde as an emergent-threat engine), and the same population-system shape built at solo-dev scale (*Isocore*: shared base class, target-driven spawner, resource-tied creatures). Open this when the design is an open world that has to feel alive.

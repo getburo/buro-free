@@ -1,7 +1,7 @@
 # Buro — free tier
 
 **Technical design, as a family of Claude Code skills — one full-strength seat per department
-(16 of the full studio's 58), each with its own method and a critique that pushes back, shipped
+(16 of the full studio's 59), each with its own method and a critique that pushes back, shipped
 at full depth. No thinning: every included seat directs and produces exactly as it does in the
 full studio. The rest of each department's bench lives in the full commercial
 Buro studio, a separate commercial product.**
@@ -73,7 +73,7 @@ same panel, same PRODUCE gate as the full studio. The `(full studio)` seats do n
 | **Words** | `docs` · `editor` | prose, screenwriter, copy, brand, verse, translator, transcreation |
 | **Screen** (film / animation) | `director` | storyboard, edit, sound, animation, performance |
 | **Visual / art** | `art-director` | concept |
-| **Games & worlds** | `gamedesign` | combat-design, level, area, narrative, worldbuilding, game-ui, roblox-engineering, asset-sourcing, live-ops |
+| **Games & worlds** | `gamedesign` | combat-design, level, narrative, game-ui, roblox-engineering, asset-sourcing, live-ops |
 | **Physical / industrial design** | `industrial-design` | cmf, packaging, spatial, manufacturing |
 | **Marketing / comms** | `ad-creative` | campaign, content, launch-pr, sales |
 | **Interfaces & UX** (the Russian school) | `lebedev` · `gorbunov` · `copy` · `usability` | dataviz, exotic, motion, a11y |
@@ -83,7 +83,7 @@ same panel, same PRODUCE gate as the full studio. The `(full studio)` seats do n
 
 Where two seats look alike, the dispatcher carries a **Seam rules** table scoped to what this
 tier can actually route between (the full table, e.g. playable space → `level`, invented
-geography → `worldbuilding`, lives in the full studio).
+geography → `level`, lives in the full studio).
 
 Each seat is a folder under `skills/` with a `SKILL.md` (frontmatter → epigraphs → core chain →
 lenses → an adversarial panel → method gates → a **PRODUCE** section with a self-critique gate →

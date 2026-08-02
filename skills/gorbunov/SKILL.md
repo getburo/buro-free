@@ -2,12 +2,12 @@
 name: gorbunov
 description: >-
   The craft of Gorbunov's method — the executable HOW of
-  the Russian school. Invoke when buro attacks a screen: understanding the task (понимание
-  задачи), ФФФ (fixed deadline / flexible scope), inner ≤ outer spacing (внутреннее ≤ внешнее),
-  contrast, the modular grid, info-style (информационный стиль), interface-as-language (Birman),
-  the 7-seat studio panel, and the standard critique output format. The backbone of every buro
-  critique. Pairs with buro:lebedev (the philosophy / the what); called by buro automatically for
-  any screen work.
+  the Russian school, for a screen's STRUCTURE (NOT its motion/timing/easing — that's
+  buro:motion): understanding the task (понимание задачи), ФФФ (fixed deadline / flexible scope),
+  inner ≤ outer spacing (внутреннее ≤ внешнее), contrast, the modular grid, info-style
+  (информационный стиль), interface-as-language (Birman), the 7-seat studio panel, and the
+  standard critique output format. The backbone of every buro critique. Pairs with buro:lebedev
+  (the philosophy / the what); called by buro automatically for any screen work.
 ---
 
 # Buro · Gorbunov's method — craft and critique
@@ -117,7 +117,7 @@ Work these gates sequentially. Each is a blocker — don't advance until answere
 7. Contrast — differences are obvious; matches are exact.
 8. Text by инфостиль — rewrite every string.
 9. All states — empty, loading, error, success, edges. All inline.
-10. Beauty — invoke frontend-design for the beauty pass.
+10. Beauty — invoke buro:web-designer for the beauty pass.
 11. Critique — run the studio panel below.
 ```
 
@@ -152,7 +152,7 @@ for a small screen, walk them in your head.
 
 - **The Artist (light & material)** — atmosphere, depth, warmth, the emotional
   temperature. *"Is this merely correct — or does it have soul? Would someone
-  feel something here?"* For the beauty pass, invoke `frontend-design`.
+  feel something here?"* For the beauty pass, invoke `buro:web-designer`.
 
 - **The Skeptic (Усомнитель)** — law 2 + 7 incarnate. *"Delete it — what
   breaks? If nothing, it's gone. Why are there two of these? Why is this here?"*

@@ -1,199 +1,256 @@
 ---
 name: copy
 description: >-
-  Invoke when buro needs to write or critique interface copy: error messages,
-  empty states, button labels, onboarding text, tooltips, confirmations, success
-  messages, loading text, or any UI string. Applies информационный стиль
-  (info-style, Ilyahov) in depth — every word earns its place, buttons name their
-  action, errors say what happened and what to do, voice matches the emotional
-  register of the task. Called by buro for any microcopy work; invoke directly when
-  the task is "rewrite this text", "what should this error say", or "is this copy
-  good". The single rule: would a real person say this, face-to-face?
+  Invoke when buro needs to write or critique interface copy: error messages, empty states,
+  button labels, onboarding text, tooltips, confirmations, success messages, loading text, or any
+  UI string. Applies информационный стиль (info-style, Ilyahov) in depth — every word earns its
+  place, buttons name their action, errors say what happened and what to do, voice matches the
+  emotional register of the task. Called by buro for any microcopy work; invoke directly when the
+  task is "rewrite this text", "what should this error say", or "is this copy good". The single
+  rule: would a real person say this, face-to-face?
 ---
 
 # Buro · Microcopy — text as part of the interface
 
-This is **buro's copy sub-skill**. Every label, button, error, empty state,
-tooltip, confirmation, and loading message is interface — not an afterthought
-slapped on after design. Bad copy makes a clear interface confusing. Good copy
-makes a confusing interface survivable.
+> **"An error occurred while processing your request" — would anyone say that, face-to-face?**
+> "Couldn't save — no connection" is the same fact, said the way a person would actually say it.
+> That gap is the whole seat.
+>
+> **A button that says "Confirm" forces the user to read the question to find out what they're
+> confirming.** The label's whole job is to make that re-read unnecessary — name the action, not
+> a generic yes.
 
-The governing idea is Ilyahov's информационный стиль (info-style), applied to the
-smallest units of UI text:
+This is buro's **microcopy** seat. Every label, button, error, empty state, tooltip, confirmation,
+and loading message is interface — not an afterthought slapped on after design. Bad copy makes a
+clear interface confusing. Good copy makes a confusing interface survivable. It answers a question
+no other seat asks: **would a real person actually say this, out loud, to another person's face?**
 
-> **Usefulness and honesty (польза и честность).** Every word is either useful or it goes. The interface
-> is not a place for warmth-signalling, self-promotion, or hedging. Say what
-> happened. Say what to do. Stop.
+The governing idea is Ilyahov's информационный стиль (info-style), applied to the smallest units
+of UI text — **usefulness and honesty (польза и честность)**: every word is either useful or it
+goes. The interface is not a place for warmth-signalling, self-promotion, or hedging. Say what
+happened. Say what to do. Stop.
 
-The single real-person test: **"Would a real person say this, face-to-face?"**
-"An error occurred while processing your request" — would anyone say that?
-"Couldn't save — no connection" — yes.
+It does not carry the visual design of a screen (`buro`'s interface seats), whole-product flows
+and navigation (`buro:usability`), marketing copy meant to persuade (`buro:ad-creative`), or the
+brand's enduring voice and name (`buro:brand` — this seat applies that voice to interface strings,
+it doesn't invent it).
 
-Full before/after pairs in `references/copy-examples.md`.
-
----
-
-## Info-style (информационный стиль) — the rules
-
-**Every word earns its place.** Read every string aloud. If a word can go
-without losing meaning — it goes. No exceptions.
-
-**The button names the action — nothing grander.** The button text is the verb +
-object of the action it performs. "Submit Form" → "Save changes". "Confirm" →
-"Delete account". "Proceed" → "Pay $1,200". When the verb and object are clear
-from context, the object can be dropped: "Save", "Delete", "Send".
-
-**Headings are a task, not an announcement.** "Settings" is a heading, not a feature
-advertisement. "Welcome to our platform!" says nothing — replace with what the
-user can *do*. "Where do you want to start?" or just the content.
-
-**Avoid:**
-- Stop-words: please, kindly, feel free to, don't hesitate to
-- Hedging: may, might, could, perhaps, it seems
-- Self-praise: powerful, seamless, best-in-class, robust
-- Filler openers: "In order to…", "Please note that…", "You can…"
-- Passive voice when active is possible
+**DNA:** *the interface, said out loud, by a person*. Every string exists to tell the user
+something true and useful, in words they'd actually use — never to perform warmth, hedge a
+liability, or promote the product to the person already using it.
 
 ---
 
-## Error messages
+## Core: one chain, not a list of topics
 
-The formula: **what happened + what to do.** Both. Always.
+```
+THE REAL-PERSON TEST: would a person say this, face-to-face — not "would this pass review"
+    ↓ every word surviving only if it's...
+USEFUL: says what happened, what to do, or what's here — nothing performing warmth or caution
+    ↓ shaped to its...
+CONTEXT: an error, an empty state, a button, a confirmation, a loading state — each its own formula
+    ↓ carried in a...
+CONSISTENT VOICE, VARIABLE TONE: the same personality, calm in a success and direct in an error
+    ↓ and never...
+PERFORMING: no exclamation points on errors, no sycophancy, no marketing language in the product
+```
 
-| Anti-pattern | Right |
-|-------------|-----------|
-| "An error occurred" | "Couldn't save — no connection. Try again." |
-| "Error 403" | "You don't have access to this file. Ask the owner for access." |
-| "Invalid format" | "Card number must be 16 digits" |
-| "Something went wrong" | "Couldn't load — the server isn't responding. Refresh the page." |
-| "This field is required" | "Enter your email — we'll send a sign-in link" |
+**One question that checks everything at once:**
+
+> Read the string out loud, to a real person, in the moment they'd actually see it — does it sound
+> like something a person would say, or like copy?
+
+---
+
+## Lenses
+
+A lens is a **question, not a rule**. Apply it to the actual string.
+
+**1. The Lens of the Real Person.** Would a real person say this, face-to-face? "An error occurred
+while processing your request" fails; "Couldn't save — no connection" survives, because someone
+would actually say it that way.
+
+**2. The Lens of Earned Words.** Read the string aloud — if a word can go without losing meaning,
+it goes. No exceptions. Stop-words (please, kindly, feel free to), hedging (may, might, could),
+self-praise (powerful, seamless, best-in-class), and filler openers ("In order to…", "Please note
+that…") are the first to fail this lens.
+
+**3. The Lens of the Named Action (buttons & links).** Does the button name the verb + object of
+what it does — "Save changes," "Delete account," "Pay $1,200" — or does it say "Yes," "OK," or
+"Confirm," forcing the user to re-read the question to know what they're agreeing to? A
+destructive button names the consequence: "Delete account permanently," not "Delete."
+
+**4. The Lens of What-Happened-What-To-Do (errors).** Does the error name the object that failed,
+the cause if known, and the action to take — or is it "An error occurred" / "Something went
+wrong," a fact with no content? Never blame the user: "invalid phone number" becomes "phone number
+not found."
+
+**5. The Lens of the Empty State's One Action.** Does the empty state say what will be here plus
+one action to begin — "No tasks yet. Create the first one →" — or is it a blank screen / "No data
+available" with nothing to do next? A filter-caused empty state offers to clear the filter as its
+one action.
+
+**6. The Lens of the Honest Confirmation.** Does the confirmation name the object and the real
+consequence — "Delete the project 'Rebrand'? This can't be undone." — reserved only for
+irreversible or high-stakes actions, with the destructive button visually secondary and "cancel"
+never the trap-primary button? Everything reversible gets an undo-toast instead.
+
+**7. The Lens of Specific Loading & Quiet Success.** Does a loading state say *what* is loading —
+"Loading your documents…" not "Loading…" — with a real time estimate if known, never an invented
+one? Does a routine success get a quiet checkmark ("✓ Saved") while a non-routine one gets named
+("Request sent. We'll reply by email within a day.")?
+
+**8. The Lens of Consistent Voice, Variable Tone.** Is the personality the same across a calm
+moment and a stressed one, while the tone itself shifts to match the emotional register — precise
+and neutral for finance, direct and no-blame for a user error, warm and brief for an achievement?
+A voice that changes personality between screens reads as several products wearing one skin.
+
+---
+
+## Seats (the adversarial panel)
+
+**The Real Person** — the face-to-face test.
+*"Say this out loud to me, right now, like you're telling me in person. If you'd never actually say it that way, it's copy, not communication."*
+
+**The Word-Counter** — earned words.
+*"Read it aloud. Point to the word that could disappear with nobody noticing. There's always one."*
+
+**The Confused Clicker** — button clarity.
+*"I see 'Confirm.' Confirm WHAT? If I have to scroll up to remember, the button already failed."*
+
+**The Panicked User** — errors and confirmations under stress.
+*"Something just broke, or I'm about to delete something forever. Does this string tell me what happened and what to do, calmly — or does it blame me, or bury the one fact I need?"*
+
+**The Tone Auditor** — consistent voice, variable tone.
+*"Read the error message and the success message back to back. Same personality, different register — or two different products?"*
+
+**The Skeptic** — bounded.
+*"Cut this word, this reassurance, this extra sentence — does the string lose real information, or did I just remove padding dressed as helpfulness?"*
+Cuts a stop-word, a hedge, a filler opener, a sycophantic flourish — **never the fact the user
+needs, the named action, or the one word that carries the actual meaning.**
+
+**Synthesis rule:** a string ships only if it **passes the real-person test**, uses **only earned
+words**, and matches its **context's formula** (what-happened/what-to-do for errors, one action
+for empty states, named consequence for confirmations). Prefer the shorter string that says the
+same true thing over the longer one that hedges it.
+
+---
+
+## Method (gates, in order)
+
+```
+0. Context      — what kind of string is this (error/empty state/button/confirmation/loading/
+                  success/onboarding)? Its formula depends on the answer.
+1. The fact     — what's actually true here — what happened, what's here, what will happen next?
+2. Real-person  — draft it the way a person would actually say it, not the way a form says it.
+3. Word cut     — read aloud, cut every word that doesn't survive being spoken.
+4. Tone check   — does the tone match the emotional register (precise for finance, direct for
+                  error, warm for success) without breaking the consistent underlying voice?
+5. Action named — for buttons/CTAs: is the verb + object explicit, never "Yes/No/OK/Confirm"?
+```
+
+Gate 0 isn't a formality: an error message drafted with an empty-state's formula (what's here +
+one action) reads as strange even when every individual word is fine — the formula has to match
+the context before the words are chosen.
+
+---
+
+## PRODUCE — writing the strings
+
+**Intake:** the exact moment the string appears (success, failure, empty, loading), the fact the
+user actually needs (what happened, what's here, what's next), the emotional register of that
+moment, and the product's established voice (`buro:brand`, if declared).
+
+**Emits, by request:** the exact **string(s)**, each labelled by context (error/empty/button/
+confirmation/etc.), each already passed through the real-person test and the word cut. For a
+family of related strings (an error set, a full empty-state pass), a **table**: anti-pattern →
+right, matching the seat's own reference tables.
+
+**Shape it produces:**
+```
+Context: error, payment declined.
+Fact: the card was declined; the reason known is "insufficient funds" (from the processor).
+Draft: "Payment declined — insufficient funds. Try another card."
+Real-person check: yes, someone would say this exactly.
+Word cut: "Payment of $1,200 declined due to insufficient funds. Please try another card." →
+  cut "of $1,200" (not the cause of failure, adds nothing to the fix), cut "due to" (filler), cut
+  "Please" (stop-word).
+Tone: precise, neutral (finance context) — no exclamation point, no blame.
+Final: "Payment declined — insufficient funds. Try another card."
+```
+
+**Self-critique gate:** every produced string re-checked — *would a real person say this,
+face-to-face? does every remaining word earn its place? does it match its context's formula (what-
+happened/what-to-do, one action, named consequence)? does the tone fit the moment without breaking
+the underlying voice? does a button name the action instead of a generic Yes/OK?* Anything that
+fails is rewritten. **Producing is never a licence to ship a string that reads fine in isolation
+but wouldn't survive being read aloud to the person seeing it.**
+
+---
+
+## Output (the verdict shape — DIRECT mode)
+
+```
+Task: <one line — the string(s), their context, what the user needs to know or do>
+
+Real-person test: <passes, or the phrase nobody would actually say>
+Word economy: <every word earns its place, or which word doesn't>
+Formula fit: <matches its context (error/empty/confirmation/etc.) or uses the wrong one>
+Tone: <matches the emotional register · consistent voice, or a personality break>
+
+Findings (worst first):
+  ✗ [seat] <what's broken> → <the exact rewrite>
+  ⚠ [seat] <weaker, but worth noting>
+
+Verdict: <Would say it | Draft — still reads as copy, not a person | Wordy — cut this | Wrong
+formula — an error dressed as an empty state, or similar | Off-tone — breaks the voice>
+— <the one change that matters more than all the others>
+```
 
 Rules:
-- Name the object that failed ("photo didn't upload", not "upload failed")
-- Name the cause if known ("no connection", "file too large", "link expired")
-- Name the action ("try again", "refresh the page", "choose another file")
-- Never blame the user ("you entered an invalid…" → "phone number not found")
-- Never use technical codes as the main message — codes go in small print for
-  support, the human message goes big
-- Errors are inline, calm, and terse — not a modal apology
+- Name the **seat**, so the fix is a specific rewrite, not a vibe.
+- A finding is the **exact replacement string**, not "make it friendlier."
+- **Prefer the shorter string that says the same true thing** over the longer one that hedges it.
 
 ---
 
-## Empty states
+## Discipline & integration
 
-Two elements: **what will be here + one action to begin.**
+**Dispatch, don't duplicate:** the visual design of the screen the string lives on → `buro`'s
+interface seats · whole-product flows, navigation, and where a string sits in a journey →
+`buro:usability` · persuasive marketing copy (ads, offer pages) → `buro:ad-creative` · the brand's
+enduring voice, name, and tone rules → `buro:brand` (this seat *applies* that voice to interface
+strings; it doesn't invent the voice itself) · long-form content → `buro:prose` / `buro:content`.
 
-| Anti-pattern | Right |
-|-------------|-----------|
-| (blank screen) | "No tasks yet. Create the first one →" |
-| "No data available" | "Your purchases will show up here. Go to the catalog →" |
-| "No results" | "Nothing for 'concrete'. Try 'building materials'." |
-| "List is empty" | "You haven't added any contacts yet. Invite colleagues →" |
+**The boundary with `buro:ad-creative` that gets confused most often:** this seat writes
+**functional** text inside the product — what happened, what to do, what's here. `buro:ad-creative`
+writes **persuasive** text outside or at the edge of the product — a hook, a claim, a CTA meant to
+convert. The same three words ("Get started") can be either, depending on whether the user is
+already inside the product being told what to do next, or outside it being persuaded to enter.
 
-Rules:
-- The empty state is not an error — don't use error styling
-- One action max — the most natural first step for this screen
-- If the empty state is caused by a filter/search, offer to clear it as the action
-- If the empty state is a good thing ("inbox zero"), say so: "All caught up.
-  Take a break." — still no filler, just honest warmth
+**The boundary with `buro:brand` that gets confused second most often:** `buro:brand` decides the
+voice — the constant personality, the traits, the do's and don'ts. This seat applies that voice
+correctly to hundreds of small, functional moments — an error, a button, a loading state — where
+the brand voice has to survive contact with "the payment failed" without either losing its
+personality or performing it inappropriately.
 
----
-
-## Buttons and links (labels)
-
-- **Verb + object:** "Save changes", "Delete account", "Pay $1,200", "Add member"
-- **Verb only** (when object is clear from context): "Save", "Delete", "Sign in", "Cancel"
-- **Never:** "Yes", "No", "OK", "Confirm" — these force the user to read
-  the question to know what they're confirming. The button names the action.
-- **Destructive actions** name the consequence: "Delete account permanently",
-  not "Delete"
-- **Links** name the destination or the action, not "click here" or "learn more"
-  without context
+**Full source material:** `references/copy-examples.md` — the full before/after library, one
+table per context. `references/canon.md` — the full three-criteria definition of информационный
+стиль (info-style), the "useful action / goal / tasks" triad, all five stop-word categories with
+verbatim quotes, the six-step anti-канцелярит (anti-bureaucratese) sequence, instruction/
+multi-step structure, paragraph autonomy, and the "фальшь" (fake tone) test — sourced from
+Ilyahov & Sarycheva, *Пиши, сокращай* ("Write, Cut").
 
 ---
 
-## Confirmations
+## Slop the seat kills on sight
 
-The question names the object and the consequence. The buttons name the actions.
-
-| Anti-pattern | Right |
-|-------------|-----------|
-| "Are you sure?" [Yes] [No] | "Delete the project 'Rebrand'? This can't be undone." [Delete project] [Keep] |
-| "Confirm action?" [OK] [Cancel] | "Cancel your subscription? Access ends June 15." [Cancel subscription] [Keep] |
-
-Rules:
-- Show confirmation *only* for irreversible or high-stakes actions
-- Everything reversible gets an undo-toast instead of a dialog (see `buro:usability`)
-- The destructive button is the secondary button visually (less prominent)
-- Never make "cancel" the primary button — that's a trap
-
----
-
-## Loading states
-
-- Be specific about *what* is loading: "Loading your documents…" not "Loading…"
-- If you know the time, say it: "This usually takes ~10 seconds"
-- If you don't know, don't invent progress: use indeterminate, label it "Loading…"
-- Don't add a period to "Loading…" — the ellipsis already implies continuation
-- Skeleton screens: no text, just the shape of the content — nothing to read
-
----
-
-## Success messages
-
-Routine actions get quiet acknowledgment. Non-routine actions get named.
-
-| Situation | Text |
-|----------|-------|
-| Form save | ✓ Saved (quiet, no modal) |
-| Request submission | "Request sent. We'll reply by email within a day." |
-| Item deletion | "Deleted. Undo →" (toast, 5–6 s) |
-| Payment | "Paid. Receipt sent to your email." |
-
-Rules:
-- "Successfully saved" → "Saved" (successfully is a stop-word)
-- Routine successes don't need a sentence — a checkmark and a word are enough
-- Tell the user what happens *next* when that's useful
-
----
-
-## Onboarding (first-run copy)
-
-- Lead with what the user can *do*, not what the product *is*
-- No "Welcome to X!" as a headline — that's the product promoting itself
-- The first screen's job: orient + give one action
-- Don't front-load everything — introduce features as they become relevant
-- Permissions: ask at the moment of need, explain the benefit in plain terms:
-  "Allow the mic so you can record a voice note" not "We need microphone access"
-
----
-
-## Voice and tone
-
-The content of the message is fixed by facts. The *tone* is set by the emotional
-register of the task. Match them:
-
-| Context | Tone | Example |
-|----------|-----|--------|
-| Finance, medicine, law | Precise, neutral | "Payment of $1,200 declined. Check your card details." |
-| Learning, progress | Supportive, direct | "Clean. That step's done." |
-| User error | Direct, no blame | "Phone number not found. Check the number." |
-| Success, achievement | Warm, brief | "First one done. That's the path." |
-| Empty state | Neutral, orienting | "Your tasks will show up here." |
-
-The voice is consistent; the tone shifts. "Consistent voice, variable tone" is
-the rule — the same personality in a calm moment and a stressed one.
-
-**Never:**
-- Exclamation points on errors ("Error!")
-- Sycophancy ("Great choice!")
-- Irony or jokes on errors
-- Marketing language inside the product ("Unlock the power of our platform")
-
----
-
-## Reference
-
-Full before/after library in `references/copy-examples.md`.
-
-`references/canon.md` — depth beyond these rules: the full three-criteria definition of информационный стиль (info-style), the "useful action / goal / tasks" triad, all five stop-word categories with verbatim quotes, the six-step anti-канцелярит (anti-bureaucratese) sequence, instruction/multi-step structure, paragraph autonomy, and the "фальшь" (fake tone) test — all sourced from Ilyahov & Sarycheva, *Пиши, сокращай* ("Write, Cut"). Open it for an exact quote or a deeper before/after example.
+"An error occurred" or "Something went wrong" with no object, cause, or action named · a button
+labelled "Yes," "No," "OK," or "Confirm" that forces a re-read of the question to know what it
+does · a stop-word (please, kindly, feel free to), a hedge (may, might, could), or self-praise
+(powerful, seamless, best-in-class) surviving the word cut · a confirmation dialog for a fully
+reversible action, when an undo-toast would do · "cancel" set as the visually primary button on a
+destructive confirmation · an invented time estimate on a loading state when the real duration is
+unknown · an exclamation point on an error, or sycophancy ("Great choice!") anywhere in the
+product · marketing language inside the product ("Unlock the power of our platform") · a produced
+string that skipped its own self-critique gate and shipped copy nobody read aloud first.

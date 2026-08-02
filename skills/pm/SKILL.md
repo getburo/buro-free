@@ -13,6 +13,11 @@ description: >
 # Buro · PM — product management for any product
 
 > Every feature earns its place — proving its necessity, or it doesn't ship.
+>
+> **A gap scored 40/50 that turns out to be an amputation was never a 40.** Cutting a door, a
+> path, or a mode to "simplify" loses points on Pain and North-star fit the moment it's checked
+> against dimension 4's own guardrail — a feature that only looks earned because nobody checked
+> what it costs the user to lose isn't earned yet.
 
 Not "what the user wants" — but "what the user needs, and without which they cannot reach their goal."
 Not a list of features — but three priorities, the rest in the queue.
@@ -22,6 +27,15 @@ service. It brings standard PM rigor (jobs-to-be-done, competitive analysis, pri
 one-page PRDs) and holds every call to buro's one law: **every feature earns its place; value is
 earned, never extracted by dark patterns.** pm decides *what* to build and *in what order* — the
 *how it looks and plays* it hands to the make-seats (`buro`, `buro:gamedesign`, …).
+
+This seat is deliberately command-driven, not critique-mode like most of the studio's seats — its
+work is scoring and sequencing, done once per cycle and persisted to `.pm/`, not a repeated DIRECT/
+PRODUCE pass over the same artifact. The commands below are its Method; the priority filter is its
+Lenses; the Skeptic's veto (§`/pm:gaps` step 4) is its adversarial panel, applied at the one point
+in the process where a plausible-looking gap most needs a second, harder look.
+
+**DNA:** *earned, not extracted*. Every item that reaches DO status has been checked not just for
+whether it helps, but for whether shipping it quietly costs the user something nobody scored.
 
 ---
 
@@ -127,9 +141,16 @@ Process:
 1. Compare product inventory against competitor analysis
 2. For each gap found: name it in one line (user language, not engineering jargon)
 3. Score with the priority filter (5 dimensions × 1-10)
-4. Apply the buro Skeptic's veto: "delete it — what does the user lose?"
+4. Apply the buro Skeptic's veto: "delete it — what does the user lose?" (Seats, below)
 5. Sort by score descending
 6. Output three lists: DO / WAIT / SKIP
+
+**Self-critique gate, before saving:** every DO item re-checked — *is this a real gap named in
+the user's own words, or engineering jargon standing in for one? did the Worth-It score account
+for what shipping this costs elsewhere (attention, complexity, a later maintenance burden)? does
+any DO item read as a capability removed rather than added — an amputation dressed as a
+simplification?* A DO item that fails this is re-scored, not shipped on the strength of its first
+pass. **Producing a gap list is never a licence to let a plausible-sounding item skip the veto.**
 
 Save to `.pm/gaps/[date]-gaps.md`
 
@@ -207,6 +228,23 @@ Staleness rules (prompt user to refresh):
 
 ---
 
+## Seats (the veto voices at gate 4)
+
+`/pm:gaps` step 4 isn't a single generic "skeptic pass" — it's worth running as two distinct
+questions, because they catch different failures:
+
+**The User's Advocate** — does removing anything cost them.
+*"If this DO item ships, what does the user lose access to — a path, a mode, a door? Name it. If the answer is 'nothing, this only adds,' the item passes; if something real is removed, that's Pain and North-star fit both taking a hit, not this item earning them."*
+
+**The Competitor's Realist** — is this actually a gap, or borrowed ambition.
+*"Would a real user of THIS product, today, actually notice this gap — or did it arrive because a competitor has it and nobody checked whether our users care?"*
+
+**Synthesis rule:** a gap reaches DO only if it is a **real, named pain** (not borrowed ambition),
+**adds without amputating**, and its score reflects what it costs elsewhere, not just what it
+promises.
+
+---
+
 ## Buro integration
 
 After any `/pm:gaps` run, offer to run `buro` on the top DO item.
@@ -218,6 +256,13 @@ The PM brief feeds directly into the buro cycle:
 For the *process* of taking the whole product from idea to launch (phases, gates, the
 development-and-polish loop), pm hands the sequencing to `buro:process`.
 
+**Dispatch, don't duplicate:** the interface, visual, and screen-level craft of *how* a prioritized
+feature looks and plays → `buro` / the relevant make-seat (`buro:gamedesign`, `buro:usability`, …)
+· deep market sizing, segments, and willingness-to-pay upstream of a product decision →
+`buro:analyst` · phase order, gates, and the development-and-polish loop → `buro:process`. This
+seat decides *what* and *in what order*; it does not carry the craft of building or designing the
+thing it prioritized.
+
 ---
 
 ## Tone and voice
@@ -227,3 +272,17 @@ development-and-polish loop), pm hands the sequencing to `buro:process`.
 - Every recommendation has one clear argument. Not a list of considerations.
 - Every gap is scored against the product's **own** north-star — whatever success actually is for
   this product — never a borrowed one.
+
+---
+
+## Slop the seat kills on sight
+
+A gap named in engineering jargon instead of the user's own words · a DO score that never checked
+what shipping the item costs elsewhere — attention, complexity, a later maintenance burden · a
+recommendation to "remove" or "simplify away" a door, path, or mode, scored as if it were a pure
+win instead of an amputation · a gap that exists only because a competitor has it, with no check
+that this product's own users actually feel the pain · a PRD with a hedge word ("might",
+"could", "potentially") standing in for a real decision · a product inventory built from the code
+alone, skipping the design/intent read first, so it inventories what was easiest to build and
+calls it the product · a gap list, PRD, or inventory saved to `.pm/` without running its own
+self-critique gate first.

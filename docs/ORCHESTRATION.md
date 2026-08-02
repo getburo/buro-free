@@ -122,7 +122,7 @@ Concrete "who, in what order, who integrates." These are defaults, not cages —
 process(gate the whole) + creative-director(vision) + producer(ship)  ← integration owners
  0 analyst        — is it worth building, for whom, how it pays
  1 gamedesign     — the core loop, the verb of the next 30s, economy (+ references/roblox.md)
- 2 worldbuilding  — the world's geography · narrative — story/quests · level — the spaces
+ 2 level          — the world's geography + the playable spaces · narrative — story/quests
  3 art-director   — one visual language → concept — the specific assets (design)
    animation — motion · sound — audio/music · game-ui — HUD/menus under pressure
  3b asset-sourcing — turn the concept/sound briefs into ACTUAL assets, by PRIORITY: build-own
@@ -168,7 +168,7 @@ in a row raise nothing (cap 3–4; still hot after that → it's a spiral round,
 | Table | Generator → Distorter → Judge | Seated when |
 |---|---|---|
 | **Idea** | `gamedesign` → `chaos` → `critic` | a mechanic or feature from nothing |
-| **World** | `worldbuilding` → `narrative` → `level` | geography that must also *play* |
+| **World** | `level` → `narrative` → `gamedesign` | geography that must also *play* |
 | **Screen** | `gorbunov` → `a11y` / `chaos` → `lebedev` | a new interface pattern, not a fix |
 | **Word** | `copy` / `prose` → `audience` → `editor` | text that has to work read aloud, cold |
 | **Frame** | `director` → `storyboard` → `critic` | a scene that isn't landing |

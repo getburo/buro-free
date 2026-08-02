@@ -51,8 +51,8 @@ it in.* Cohesion is a consequence of the shared arbiter, not a separate task —
 that doesn't carry the law doesn't belong.
 
 **No craft above another.** The ten departments are peers. Where two seats look alike, the
-dispatcher's **Seam rules** table (`skills/buro/SKILL.md`) is the tie-breaker (playable space →
-`level`, invented geography → `worldbuilding`, real built environment → `spatial`, and so on);
+dispatcher's **Seam rules** table (`skills/buro/SKILL.md`) is the tie-breaker (playable space or
+invented geography → `level`, real built environment → `spatial`, and so on);
 the eval's `seam` field mirrors those pairs.
 
 **Cost discipline.** Only the frontmatter descriptions are always-on (~9.8k tokens); each seat's

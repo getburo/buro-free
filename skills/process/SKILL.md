@@ -3,7 +3,8 @@ name: process
 description: >-
   The conductor of Buro — the whole-product development process: take any product from idea to
   shipped at real quality AND cohesion (цельность), through phases & gates, iterating to
-  convergence. It tells you WHICH PHASE you're in and WHICH seat to call now (buro:analyst
+  convergence. NOT the production plan, critical path, or cut-list under a real deadline — that's
+  buro:producer. It tells you WHICH PHASE you're in and WHICH seat to call now (buro:analyst
   upstream, buro:pm for backlog, buro / buro:usability for design, buro:retention / buro:growth /
   buro:experiment to grow & measure), enforces the gate between phases, runs the iteration-to-
   convergence loop, keeps an idea-archive of rejected ideas that can be revived, runs a
@@ -108,6 +109,16 @@ scope** — the reframe is wrong, and the sentence is the evidence.
 > *"Introduce a level of item**s** … × weight = price."* Subject: the item. Answer given: *"level
 > belongs to the building"* → every item in a building shares one level. Substitute it back and
 > the plural becomes meaningless. **One reading and it dies** — but nobody read it back.
+
+**Scope creep hides in a convenient mechanism, not just a wrong noun.** *"A player should be able
+to start solo or in a chosen party"* asked about **grouping**. The answer that shipped — "N
+parallel lanes, each a complete independent copy of the whole shared hub" — solved grouping and
+also, unasked, decided the hub's cardinality: one shared social space became eight duplicated
+ones. Read back against the original sentence, "duplicate the hub" isn't in it anywhere; it rode
+along because it was the cheapest way to satisfy the part that *was* asked. Caught six ticks and a
+real build later, only once someone saw eight copies of a space meant to be one. **Every answer
+that touches something the question never named is a second, unaudited decision** — read it back
+before it ships, not after it's built.
 
 **2. Convenient agreement — when a reading dissolves a problem YOU raised, suspicion goes UP.**
 This is the dangerous class, because it arrives disguised as luck. You have a motive to accept it,
@@ -318,111 +329,18 @@ finding, not a done-call.
 > **An empty backlog is not a finished product.** The backlog and the GDD are a *guess made at the
 > start*; clearing them means the guess is exhausted, not that the product is complete.
 
-Re-derive the work from the *product's actual state*, never from an emptied list.
+Re-derive the work from the *product's actual state*, never from an emptied list. Each pass
+**re-reads the WHOLE product from the top**, one level deeper than the last (does every piece
+exist? is it filled? good? fun? polished?), against a **completeness rubric** — not the GDD's own
+number, which is a floor, not a cap. Exit only on real convergence: the rubric green, two full
+passes in a row surfacing nothing, a fresh player experiencing a whole product, not a shell. **The
+agent doing the work is forbidden to declare the project done** — that call belongs to the
+conductor, made only on convergence, never because the executor ran out of tasks.
 
-**Concentric passes (general → detail, repeated):** each pass **re-reads the WHOLE product from the
-top**. Pass 1 is coarsest (does every major piece exist at all?); each later pass goes one level
-deeper — is each piece *filled*? *good*? *fun*? *polished*?
-
-**The GDD is a seed, not a ceiling.** A number in the doc ("5 districts", "10 weapons") is a floor,
-not a cap. A district that is **empty or thin is NOT "done, as specified" — it is a gap to FILL**.
-The design is expected to grow past the doc where growth serves the concept, and the doc gets
-updated as the product teaches you what it needs.
-
-**Each pass runs this loop — against the concept, not the list:**
-```
-1. Re-scan the WHOLE product vs the concept + the completeness rubric — top to bottom.
-2. Re-review every "done" — actually done to the bar, or a STUB / EMPTY / off-concept?
-                            Empty-but-listed is NOT done → re-open it.
-3. Gap-hunt — what's MISSING that a complete product needs but nobody put on the list?
-                            (empty zones, thin mid/late game, no failure states, no reason to return.)
-4. Fill & fun — for every thin/empty piece: what gives the player more to DO? Add it
-                            (via buro:gamedesign / level / narrative / live-ops).
-5. Prune — what's off-concept or didn't work? Cut it (subtract, don't amputate) → filed in the
-                            IDEA-ARCHIVE, never deleted.
-6. Regenerate the backlog from 1–5, and loop. The list is an OUTPUT of the sweep.
-```
-
-**Exit ONLY on real convergence:** the completeness rubric is green, **and** two full top-down
-passes in a row surface nothing worth adding/filling/fixing/cutting, **and** a fresh player with no
-context experiences a whole product, not a shell. If the list is empty but the rubric isn't green,
-**the list was wrong — regenerate it**.
-
-**The completeness rubric (definition-of-done for the PRODUCT):**
-- the core loop is fun with rewards stripped (the toy test — `buro:gamedesign`);
-- real content **volume** — early / mid / late game each exist and are filled, not stubbed;
-- progression doesn't run out; there's a reason to keep playing and a reason to **return**;
-- every system, zone, and level is **filled**, not an empty shell that "exists per the doc";
-- onboarding teaches by playing; failure states exist; the endgame / loop closes;
-- no gap a real player hits in the first hour; the polish pass is done.
-
-### The spiral of rounds
-
-Development is a spiral of named rounds — each a full top-down pass, each **deeper** than the last,
-then spiralling back to re-deepen everything at the new bar. A canonical spiral for a game (a
-*template* — rename per project, keep the shape):
-
-| Round | Goal (each pass goes DEEPER) | Owner seats |
-|---|---|---|
-| **R1 Blockout** | greybox skeleton — every district/system roughed in (the first ~2%) | worldbuilding, gamedesign, roblox-engineering |
-| **R2 Deepen** | real content — quests, behaviours, each zone's gameplay identity, the whole map FILLED | gamedesign, level, worldbuilding, roblox-engineering |
-| **R3 Live world** | the multiplayer/social layer actually lived-in (presence, shared events) | gamedesign, live-ops, retention |
-| **R4 Feel** | <100ms juice, camera, sound, the moment-to-moment | motion, sound, gamedesign |
-| **R5 Assets** | greybox → real art, one-world coherence | asset-sourcing, art-director, concept |
-| **R6 Critique / converge** | the adversarial panel + a real playtest → converge | pm/process, experiment, usability |
-| **→ back to R2** | re-open zones/quests/systems at the higher bar | (repeat, forever) |
-
-### Re-review discipline — nothing stays done forever
-
-- Every completed item is **stamped with the round it was done in** — `(done R2)`.
-- When the spiral returns to that layer the item is **mandatorily re-opened** as
-  `[~] re-review @ higher bar` and **re-run through its seat** — a full re-discussion, not
-  assumed-good. Core loop, zones, and quests especially.
-- The backlog keeps a **`## RE-REVIEW QUEUE`**; `buro:pm` / `buro:process` sets the cadence.
-
-### The idea-archive — pruned is logged, never deleted
-
-Every rejected or pruned element goes to a kept **idea-archive** with two lines: **why it was cut**
-(which lens killed it) and its **revival condition** — the one thing that would have to change for
-it to work. The archive is a **source the generate/deepen step reads**: a later round, at a higher
-bar or beside a new neighbouring element, can revive an idea whose condition is now met. This is
-how the process compounds instead of forgetting.
-
-- **Revival is re-entry, not reinstatement** — a revived idea returns as a *candidate* and re-earns
-  its place through critique.
-- **Distinct from the RE-REVIEW QUEUE:** that queue re-opens *done* items at a higher bar; the
-  archive re-opens *rejected* ones when their condition is met.
-- It is a real kept artifact, not a mental note, so an idea from R2 is still legible at R9.
-
-### The done-call belongs to the conductor
-
-The agent doing the work is **forbidden to declare the project done.** The tick rule:
-
-```
-each tick:
-  → READ .buro/active.md — the concept, the round, the backlog, the queue, the goal-distance
-  → RE-READ THE REQUEST IN THE ASKER'S OWN WORDS, quoted. Read the last answer back into that
-    sentence: does it survive its number, its subject, its scope? If a reframe happened and was
-    never said out loud, that is finding #1 — before any new work.
-  → ask buro:pm / buro:process for the CURRENT round's top slice (or read the backlog it ordered)
-  → BEFORE inventing: name the standing solution in the field → adopt | adapt | deviate, out loud
-  → route that design to its seat — or SEAT A TABLE (riff) where one lens won't birth it →
-    produce the verdict → flag anything unverified → commit → next tick
-  → a lesson about HOW WE WORK goes to the studio (the seat / this skill), never to active.md
-  → every so often, buro:process re-opens a completed item for mandatory re-review
-  → WRITE .buro/active.md — advance the round, regenerate the backlog: DEFECTS from the product,
-    MISSING THINGS from the spec (references/cycle.md §2b — a sweep over the world cannot see what
-    was never started), update
-    goal-distance, log any prune to the IDEA-ARCHIVE and any interaction to Composition
-when a round's pillars are all at-bar → buro:process declares the NEXT round / the next spiral.
-the loop NEVER terminates from inside; "done" is buro:process's call, made ONLY on the completeness
-rubric + two clean rounds + a fresh player — NEVER because the executor ran out of tasks.
-```
-
-**PRODUCE (for a real project):** a project-specific **spiral dev-cycle plan** (the concept + its
-border, the named rounds, the owner-seats per round), a **backlog with a `## RE-REVIEW QUEUE`**, a
-kept **`## IDEA-ARCHIVE`**, and the **loop/tick prompt** — all living in one `.buro/active.md`.
-Naming the biggest missing thing as a **new pillar** is part of the deepen pass.
+Full mechanics — the pass loop, the completeness rubric, the spiral-of-rounds table, re-review
+discipline, the idea-archive, and the tick rule that enforces the done-call — live in
+**`references/completeness.md`**. Open it before running a multi-round build; this seat's own
+gate list above is general-purpose and doesn't repeat the spiral.
 
 ---
 
@@ -495,98 +413,15 @@ elements for what they *create*.
 The composition pass collides **elements**. The table collides **seats**. Some material never gets
 past *competent* under a single lens: the seat that owns it also owns its blind spot, and its
 self-critique is the same eye grading its own homework. Then seat a table — three or four seats
-playing the same material inside one move.
+(generator, distorter, judge, optionally a grounder) playing the same material inside one move,
+either a **RIFF** (each seat's output is the next seat's input — use it to bring something into
+being) or a **FAN** (every seat plays the same material independently, verdicts collided — use it
+to judge what already exists). **Generating with FAN produces three sketches and no work; judging
+with RIFF contaminates every seat after the first.**
 
-```
-RIFF   generator → distorter → judge → generator′        (creation; order matters)
-FAN    generator ┐
-       distorter ┼→ collide the verdicts → resolve       (judgement; order is irrelevant)
-       judge     ┘
-```
-
-- **RIFF** — each seat's output is the next seat's *input*, returning to where it started, raised.
-  **Use it to bring something into being.**
-- **FAN** — every seat plays the same unchanged material independently; verdicts are then
-  **collided** and only the contradictions worked. **Use it to judge what already exists.** One
-  verdict must come from outside the project: how do the works that solved this already do it?
-
-**Generating with FAN** produces three sketches and no work — nobody built on anybody. **Judging
-with RIFF** contaminates every seat after the first: one opinion in three voices.
-
-### The three chairs (a table is roles, not a headcount)
-
-| Chair | Its move | Typically |
-|---|---|---|
-| **Generator** | owns the artifact; emits something **concrete** — never a topic | the make-seat that owns the medium |
-| **Distorter** | takes it to the edge on purpose — absurd, hostile, degenerate | `buro:chaos` · `buro:tester` · `buro:audience` · `buro:exotic` |
-| **Judge** | verdict against the best of the form, defended from the material | `buro:critic` · `buro:curator` · `buro:lebedev` · `buro:editor` |
-
-A fourth chair, the **Grounder** (`buro:producer`, `buro:roblox-engineering`, `buro:experiment`),
-joins only when the table keeps producing things that cannot be built, shipped, or measured.
-
-**Never two seats from one department** at one table — that's one lens in two voices. **Never more
-than four chairs** — past that it's a meeting; call the extra seats sequentially, after.
-
-### The riff protocol (one round)
-
-```
-0. Seating   — name the table: the ONE sentence of what's on it, and what counts as a win this round.
-1. SCOUT     — before the generator plays: how is this ALREADY solved, by whom, and what does that
-               solution buy? (the prior-art gate above). Then adopt / adapt / deviate, out loud.
-               NOBODY generates until this is said. Skipping it is the table's one fatal move.
-2. Generate  — a concrete artifact (a rule, a layout, a map, a line), not a direction.
-3. Distort   — push it to absurd AT its boundary, not next to it. Every extreme must TEACH:
-               name the assumption it exposed. An extreme with no lesson is vandalism, not a move.
-4. Judge     — verdict with evidence FROM the material: what survived, what was posturing,
-               where it is merely derivative of the best of its form.
-5. Return    — the generator rewrites, TAKING what the edge revealed — never retreating from it
-               to the safe version it started with. (Retreat is how a table produces blandness.)
-6. Close     — one line: what grew · what was cut (→ IDEA-ARCHIVE with its revival condition) ·
-               what is still on the table.
-```
-
-**Why the scout comes first, and why it is not optional.** Every other chair looks *inward*: the
-generator works inside the frame it was handed, the distorter breaks that frame's edges, the judge
-grades against the form. Three inward lenses **amplify** a wrong frame instead of catching it — the
-table returns the best possible version of something that should never have been built, and the
-critique quality is what makes it convincing. A table with no outward look is three masters
-improving the wrong thing.
-
-**The round is the unit, not the move.** The table converges when **two rounds in a row raise
-nothing**. Cap at **three or four rounds**: a table still hot after that is a spiral round in
-disguise → hand it to the round schedule (R1–R6) and give it a pillar.
-
-### Discipline
-
-- **The table does not replace the seats' own gates.** Each move still passes its seat's PRODUCE
-  self-critique. A table is a faster loop, never a cheaper one.
-- **The table's output is a candidate, not a decision** — it still faces the phase gate, the
-  concept filter, and the grammar budget.
-- **The judge judges the material, never the neighbour.**
-- **No generation before the scout has spoken.** All three chairs look inward; the outward look is
-  a step, not a mood, and it is the step that gets skipped.
-- **Unrecorded is undone** — every round leaves a line in `.buro/active.md` (`## TABLE`).
-- **Conflict between two seats is not resolved at the table.** It goes to
-  `buro:creative-director`. The table *sharpens* the conflict; a compromise reached to end an
-  argument is the one output a table must never produce.
-
-### Canonical tables
-
-Defaults, not a closed list.
-
-| Table | Generator → Distorter → Judge | Seated when |
-|---|---|---|
-| **Idea** | `gamedesign` → `chaos` → `critic` | a mechanic or feature from nothing |
-| **World** | `worldbuilding` → `narrative` → `level` | geography that must also *play* |
-| **Screen** | `gorbunov` → `a11y` / `chaos` → `lebedev` | a new interface pattern, not a fix |
-| **Word** | `copy` / `prose` → `audience` → `editor` | text that has to work read aloud, cold |
-| **Frame** | `director` → `storyboard` → `critic` | a scene that isn't landing |
-| **Thing** | `industrial-design` → `tester` → `cmf` | an object in atoms |
-| **Market** | `analyst` → `chaos` → `curator` | *should this exist at all* |
-
-**Composing one that isn't listed:** the seat that **owns the artifact** (generator); a seat with a
-**genuinely different lens** licensed to break things (distorter); a seat that **holds the bar of
-the form** (judge). If you cannot name three different lenses, call the one seat.
+Full mechanics — the three chairs and their typical seats, the riff protocol round by round (the
+scout step is the one move that must never be skipped), when a table converges, and the canonical
+tables per medium — live in **`references/table.md`**. Open it before actually seating one.
 
 ---
 
@@ -713,7 +548,7 @@ pass with no re-test.
 | What to measure / A/B / cohorts | `buro:experiment` |
 | The game itself — loop, mechanics, balance | `buro:gamedesign` |
 | Story structure / branching / lore vs plot | `buro:narrative` |
-| World geography — real or fictional | `buro:worldbuilding` |
+| World geography — real or fictional | `buro:level` |
 | The beauty pass | `frontend-design` |
 
 The conductor sequences and gates; the seats play (`buro:lebedev` law 7: dispatch, don't duplicate).

@@ -85,7 +85,7 @@ buro  — top studio dispatcher (plugin entry: buro:buro)
 │    analyst · pm · process · experiment · growth · retention
 │
 ├─ DEPARTMENT: GAMES & WORLDS
-│    gamedesign · combat-design · narrative · worldbuilding · level · area · roblox-engineering ·
+│    gamedesign · combat-design · narrative · level · roblox-engineering ·
 │    asset-sourcing · live-ops
 │
 ├─ DEPARTMENT: WORDS
@@ -122,8 +122,7 @@ buro  — top studio dispatcher (plugin entry: buro:buro)
 | `buro:creative-director` | one creative vision: makes N seats cohere into a single work; final taste call | vision brief, cross-seat coherence notes, the "north-star" of the piece |
 | `buro:producer` | logistics: schedule, resources, dependencies, risk; herds seats to ship | production plan, dependency map, cut-list under deadline |
 | `buro:curator` | selection & body-of-work coherence: what's worth doing, what represents the studio | go/no-go call, curation rationale, portfolio coherence review |
-| `buro:level` | one playable space: layout, encounters, pacing, sightlines, gating | level layout, encounter beat sheet, flow map |
-| `buro:area` | many places finished together: coverage, region identity, seams, set dressing | region manifest, seam plan, dressing plan, coverage audit |
+| `buro:level` | a world's geography (real or invented) down to one playable space, and many such places finished together: layout, encounters, pacing, sightlines, gating, coverage, region identity, seams, set dressing | world map, level layout, encounter beat sheet, flow map, region manifest, seam plan, dressing plan, coverage audit |
 | `buro:screenwriter` | script structure: 3 acts, sequences, beat sheet, format | scenes, dialogue, screen scripts for film / animation / cutscenes |
 | `buro:prose` | long-form prose: POV, scene-sequel, voice, chapter rhythm | novel / short-story / non-fiction chapters |
 | `buro:editor` | structural & line editing; text honesty | edited text, "what to cut" breakdown |
@@ -182,7 +181,7 @@ Every seat is a folder with a `SKILL.md`:
    fiction/non-fiction, `screenwriter`=screen script).
 2. **mandate** — what the seat OWNS.
 3. **dispatches** — what it hands to neighbours (`storyboard`→`director`; world
-   physics/economics→`worldbuilding`; actual build→`process`→superpowers).
+   physics/economics→`level`; actual build→`process`→superpowers).
 4. **DIRECT section** — method + canon + critique output format.
 5. **PRODUCE section** — how it emits the artifact + a self-critique gate before delivery.
 6. **honesty law** — what this seat forbids.
@@ -226,7 +225,7 @@ critique. Neither re-implements the other.
 | Medium | Seats engaged |
 |---|---|
 | Websites | buro (design) + superpowers (build) + analyst/pm/process |
-| Games | gamedesign/narrative/worldbuilding + buro (HUD) + superpowers (code) + sound/art |
+| Games | gamedesign/narrative/level + buro (HUD) + superpowers (code) + sound/art |
 | Short / interface / marketing text | copy |
 | Books | prose + editor + art-director (cover / illustration brief) |
 | Cartoons (animation) | screenwriter + director + storyboard + sound + art-director + narrative |

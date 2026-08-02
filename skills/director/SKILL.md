@@ -2,11 +2,13 @@
 name: director
 description: >-
   The (film / scene) directing seat of Buro — staging as a treatment (scene staging & camera, NOT
-  the visual style = buro:art-director, NOT one uniting vision = buro:creative-director): turn a
-  script into a staged scene — blocking, mise-en-scène, camera placement & movement as meaning,
-  POV, tempo-rhythm. The exact drawn frame is buro:storyboard. Triggers: directing, staging,
-  blocking, mise-en-scène, camera placement, coverage, shot plan, tempo, POV, eyeline, 180-degree
-  rule, how to shoot this scene.
+  the visual style = buro:art-director, NOT one uniting vision = buro:creative-director, NOT the
+  physical logic/layout of a playable space = buro:level): turn a script or a cutscene into
+  a staged scene — blocking, mise-en-scène, camera placement & movement as meaning, POV,
+  tempo-rhythm, where a character stands relative to another object in ONE scene. The exact drawn
+  frame is buro:storyboard. Triggers: directing, staging, blocking, mise-en-scène, camera
+  placement, coverage, shot plan, tempo, POV, eyeline, 180-degree rule, how to shoot this scene,
+  cutscene camera, cutscene staging, where does the camera go, where does the character stand.
 ---
 
 # Buro · Directing — the camera has a reason or it has no business moving

@@ -4,7 +4,7 @@ Depth behind SKILL.md's Lens 15 (Reactivity) and Lens 16 (Ambient Life). Open th
 
 ⚠️ **Synthesis, not citation.** These are best practices distilled from four studios' shipped open worlds, not a single theorist's framework. The named games are the evidence; the principles are this seat's reading of what they do well. Three seats split this material and must not duplicate it:
 - **`buro:gamedesign` (here)** — how the world *behaves*: reactivity, emergent systems, ecology-as-mechanics.
-- **`buro:worldbuilding`** — the *distribution*: who and what populates the map, and why (its "Populating a World" canon section).
+- **`buro:level`** — the *distribution*: who and what populates the map, and why (its "Populating a World" canon section).
 - **`buro:narrative`** — the *content*: each point of interest as an authored story (its "Hand-Authored Point of Interest" canon section).
 
 **Table of contents:**
@@ -12,6 +12,7 @@ Depth behind SKILL.md's Lens 15 (Reactivity) and Lens 16 (Ambient Life). Open th
 - [Ambient Life — the world runs on its own](#ambient-life--the-world-runs-on-its-own-rockstar)
 - [Ecology as Mechanics](#ecology-as-mechanics-guerrilla--horizon)
 - [The Emergent-Threat System](#the-emergent-threat-system-bend--days-gone)
+- [The Same Systems at Solo-Dev Scale](#the-same-systems-at-solo-dev-scale-isocore)
 - [The honesty line](#the-honesty-line) · [Sources](#sources)
 
 ---
@@ -46,7 +47,7 @@ The test that separates a living world from a stage set: **have the player stand
 - **The distribution is the telegraph.** You know a region is dangerous before a fight starts, because of *what lives there*. The world's population doubles as its difficulty signposting — no UI needed.
 - **Weak points and resource loops.** Each machine is a puzzle of exposed components; hitting the right part both wins the fight faster and *harvests the resource* that part represents. Combat, economy, and ecology are one system, not three bolted together.
 
-The transferable principle: when the things that populate your world are **systems with legible roles and legible weak points**, the world's population and its mechanics reinforce each other instead of competing for the player's attention. (The *placement* of that ecology across the map — who lives where and why — is `buro:worldbuilding`'s Lens of the Living System; how each creature *fights* is here.)
+The transferable principle: when the things that populate your world are **systems with legible roles and legible weak points**, the world's population and its mechanics reinforce each other instead of competing for the player's attention. (The *placement* of that ecology across the map — who lives where and why — is `buro:level`'s Lens of the Living System; how each creature *fights* is here.)
 
 ---
 
@@ -55,13 +56,45 @@ The transferable principle: when the things that populate your world are **syste
 *Days Gone*'s horde is the cleanest example of an **emergent-threat system**: a large, dynamic population of enemies whose behavior — pathing, swarming, splitting, funneling through chokepoints — is a real-time system, not a scripted set-piece. Drawing a horde is a self-set challenge with dynamic difficulty: the player chooses when and where to engage, uses the terrain (chokepoints, explosives, traps), and the encounter plays out differently every time because the swarm *reacts*.
 
 Why it works as game design:
-- **The threat has a place in the world** (it migrates between feeding and nesting sites — see `buro:worldbuilding`), so encountering it feels like meeting the world's own logic, not a trigger.
+- **The threat has a place in the world** (it migrates between feeding and nesting sites — see `buro:level`), so encountering it feels like meeting the world's own logic, not a trigger.
 - **The player authors the encounter.** When and how to fight the horde is a meaningful choice with a real tradeoff (Lens 3) — engage unprepared and it's lethal; prepare the ground and it's a triumph of mastery (Lens 7), not a scripted win.
 - **Uncertainty from an opponent, not a die roll** (Lens 4). The swarm's exact behavior is unknown but *systemic*, so the player can read and outplay it — the best source of uncertainty, not the worst.
 
 The transferable principle: a single well-tuned emergent-threat system can carry more felt content than a dozen scripted encounters, because it generates a new story each time the player chooses to engage. This is the systemic spine a *Days Gone*–style survival world is built on.
 
 ---
+
+## The Same Systems at Solo-Dev Scale (Isocore)
+
+Everything above is drawn from AAA teams of dozens to hundreds. The same *shape* of system —
+population that runs itself instead of being hand-placed — is achievable by a single developer,
+just built smaller and cheaper. *Isocore*, a solo-developed 2D open-world survival game, is a
+useful reference precisely because its population system is legible at a scale one person can
+actually reason about end to end:
+
+- **One shared base class, many derived creatures.** A single "mob" base class carries the
+  behaviour every creature needs (movement, basic AI, animation, event handling); each specific
+  creature is a small derived class on top of it. This is what makes a varied population
+  affordable for one developer — the shared 80% is written once.
+- **Per-region population caps as homeostasis, not hand-placement.** Rather than placing
+  creatures by hand, a spawner tracks a friendly-population and hostile-population count per
+  region and tops each up toward a target when it's under, with no manual authoring per spawn.
+  This is the solo-scale version of Rockstar-style ambient life above: cheap to build, and it
+  keeps a hand-built world from feeling over- or under-populated as the player moves through it.
+- **Every creature earns a resource role, not just a cosmetic one.** A creature added purely for
+  atmosphere (ambient insects, frogs) is legitimate, but the ones tied to player-facing systems
+  (a resource only obtainable from a specific animal) do double duty — population *and* economy
+  from one asset, which matters when every asset is expensive to make alone.
+- **Soft difficulty layers over the population, not just harder enemies.** An energy meter that
+  degrades a player's effectiveness rather than killing them outright, and a biome-linked
+  temperature hazard mitigated by the environment itself (water cools, shelter warms), are both
+  ways of adding pressure to an open world without requiring more hand-built content — the
+  systems create the tension, not new areas.
+
+**Criterion:** for a solo or small-team open world, is population handled by a system with a
+shared base and a target-driven spawner, or is every instance hand-placed? Hand-placement caps
+how large and varied a world can afford to be for one person; a homeostatic spawner scales past
+that ceiling at a fixed, one-time cost.
 
 ## The honesty line
 
@@ -77,5 +110,6 @@ Synthesis — the shipped games are the evidence, not a single cited framework:
 - **Guerrilla Games** — *Horizon Zero Dawn* (2017): machine ecology as mechanics, weak-point/resource loops, ecology-as-difficulty-signposting.
 - **Bend Studio** — *Days Gone* (2019): the horde as an emergent-threat system, player-authored encounters, systemic swarm AI.
 - **CD Projekt Red** — *The Witcher 3* (2015), *Cyberpunk 2077* (2020): the no-filler content philosophy that the *narrative* seat owns; cited here for the reactivity of its choice-consequence webs.
+- **Isocore** (solo-developed, in progress) — the same population-system shape (shared base class, target-driven per-region spawner, resource-tied creatures, soft difficulty layers) built and documented at a one-person scale; cited via the developer's own devlog.
 
-For the placement/distribution half of this material, see `buro:worldbuilding` → `references/canon.md`, "Populating a World." For the authored-content half, see `buro:narrative` → `references/canon.md`, "The Hand-Authored Point of Interest."
+For the placement/distribution half of this material, see `buro:level` → `references/canon.md`, "Populating a World." For the authored-content half, see `buro:narrative` → `references/canon.md`, "The Hand-Authored Point of Interest."

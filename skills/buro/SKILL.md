@@ -1,7 +1,7 @@
 ---
 name: buro
 description: >-
-  The dispatcher of Buro FREE — one seat per department (16 of the full studio's 58), each
+  The dispatcher of Buro FREE — one seat per department (16 of the full studio's 59), each
   shipped full-depth, full-method, full-PRODUCE, no thinning. Every craft is held to ONE law:
   subtract decoration never capability, quality is EARNED never extracted, and every seat both
   DIRECTS (method + critique) and PRODUCES (the artifact, self-critiqued). Route ANY making or
@@ -14,14 +14,14 @@ description: >-
   (creative-director). buro reads the task, opens the right seat(s), runs them, and synthesises
   the verdict. Invoke whenever the user is building, fixing, writing, directing, or critiquing a
   screen, doc, scene, game system, physical product, ad, or whole small project. If the task
-  needs a craft outside these 16 — translation, narrative, worldbuilding, sound, industrial
+  needs a craft outside these 16 — translation, narrative, world/level design, sound, industrial
   manufacturing detail, market analysis, brand, campaign, and 40+ more — say so plainly: that
-  seat lives in the full 58-seat Buro studio, not this free tier. Triggers: call the bureau,
+  seat lives in the full 59-seat Buro studio, not this free tier. Triggers: call the bureau,
   call the studio, critique this, what's wrong, design / write / direct this, build me a, name
   this task, is this good, UI, docs, game design, product brief, process, playtest.
 ---
 
-# Buro FREE — 16 of 58 seats, one per department, full depth (dispatcher)
+# Buro FREE — 16 of 59 seats, one per department, full depth (dispatcher)
 
 > **Subtract decoration, never a capability. Quality, fun, and retention are EARNED by mastery
 > and delivered value — never extracted by dark patterns, FOMO, planned obsolescence, fake
@@ -31,7 +31,7 @@ description: >-
 > This one law — not any single medium — is the spine. It is what makes buro *one* studio, and
 > it is why this free tier is a genuine cross-section of the studio rather than a random slice:
 > **one full-strength seat per department, proof the law spans every craft**, not just design
-> polish in one lane. The other 42 seats — and the rest of each department's bench — live in the
+> polish in one lane. The other 43 seats — and the rest of each department's bench — live in the
 > full commercial studio.
 
 Announce: "Using buro (free) — routing to [seat(s)]."
@@ -45,8 +45,8 @@ them, and synthesises the verdict** — it does not carry each craft inline.
 transcreation in the full studio) ·
 **screen** → `director` (+ storyboard, edit, sound, animation, performance) ·
 **visual art** → `art-director` (+ concept) ·
-**games & worlds** → `gamedesign` (+ combat-design, level, area, narrative, worldbuilding,
-game-ui, roblox-engineering, asset-sourcing, live-ops) ·
+**games & worlds** → `gamedesign` (+ combat-design, level, narrative, game-ui, roblox-engineering,
+asset-sourcing, live-ops) ·
 **physical / industrial design** → `industrial-design` (+ cmf, packaging, spatial, manufacturing) ·
 **marketing & comms** → `ad-creative` (+ campaign, content, launch-pr, sales) ·
 **interfaces & UX** → `lebedev` + `gorbunov` + `copy` + `usability` (+ dataviz, exotic, motion, a11y) ·
@@ -55,7 +55,7 @@ game-ui, roblox-engineering, asset-sourcing, live-ops) ·
 **leadership / production** → `creative-director` (+ producer, curator).
 
 It bridges to `superpowers`/`feature-dev` for real engineering. The full routing map, and the
-other 42 seats, live in the full 58-seat Buro studio (a separate commercial product).
+other 43 seats, live in the full 59-seat Buro studio (a separate commercial product).
 
 ---
 
@@ -72,7 +72,7 @@ You give **one task**; buro assembles the team from these 16 seats and takes it 
   vision); finish with a `buro:critic` / `buro:tester` pass. **Done is the conductor's call** — a
   first-timer completes the whole thing, two clean passes, every gate green; never one optimistic
   pass.
-- **A project that needs a craft outside these 16** (market sizing, narrative, worldbuilding,
+- **A project that needs a craft outside these 16** (market sizing, narrative, world/level design,
   sound, a full marketing campaign, a Roblox build, translation, brand) — **say so plainly**: name
   the missing seat and that it lives in the full studio. Do not attempt to answer a specialist's
   job from a seat that doesn't own it.
@@ -122,10 +122,10 @@ artifact, self-critiqued before delivery), at full depth in this tier — nothin
 
 **Not on this table?** It's a full-studio seat. Name it, say it's out of this tier's 16, and stop
 — don't improvise a specialist's method from memory. (Examples: data-dense screens → dataviz;
-motion → motion; accessibility audit → a11y; market/pricing → analyst; game space layout → level;
-story structure → narrative; geography → worldbuilding; brand voice → brand; translation →
-translator/transcreation; sound → sound; a manufacturing tech pack → manufacturing; a campaign →
-campaign; a Roblox build → roblox-engineering.)
+motion → motion; accessibility audit → a11y; market/pricing → analyst; game space layout AND
+world geography (one merged seat) → level; story structure → narrative; brand voice → brand;
+translation → translator/transcreation; sound → sound; a manufacturing tech pack →
+manufacturing; a campaign → campaign; a Roblox build → roblox-engineering.)
 
 **BUILD — buro does not re-implement general engineering.** For real code, `buro:process` hands
 off to **`superpowers`** or **`feature-dev`**, then returns the artifact to the make seats for
@@ -136,7 +136,7 @@ critique. Rule of thumb: greenfield / process-first → `superpowers`; brownfiel
 When the material needs seats to play *off each other*, `buro:process` seats a **table**: a RIFF
 relay (generator → distorter → judge → back) to birth what one lens won't, or a FAN to judge what
 exists. With only 16 seats some canonical tables need a full-studio chair (e.g. the World table
-needs `worldbuilding`/`narrative`) — substitute the nearest seat you have and say so, or defer to
+needs `level`/`narrative`) — substitute the nearest seat you have and say so, or defer to
 the full studio.
 
 ---
@@ -155,8 +155,8 @@ the full studio.
 | the **2D** colour/style system | the physical surface (full studio: cmf) | `buro:art-director` |
 | **light as MOOD & one-world look** (key direction, contrast, temperature) | light that leads the player through space (full studio: level) | `buro:art-director` |
 
-Full seam table (level/area/worldbuilding/spatial, growth/sales/launch-pr, brand/campaign,
-translator/transcreation, dataviz/experiment/a11y) lives in the full studio.
+Full seam table (level/spatial, growth/sales/launch-pr, brand/campaign, translator/transcreation,
+dataviz/experiment/a11y) lives in the full studio.
 
 Rule of thumb (grammar budget): before treating two as the same, ask *"does the studio already
 have a way to say this?"* — if yes, use it.
@@ -180,7 +180,7 @@ have a way to say this?"* — if yes, use it.
 | Multi-seat production within this tier | creative-director (vision) + the make seats + tester/critic |
 | Full audit | process + all 16 seats in rotation |
 
-Pipelines that need a full-studio seat (market analysis, narrative, worldbuilding, sound,
+Pipelines that need a full-studio seat (market analysis, narrative, world/level design, sound,
 manufacturing DFM, a campaign, retention/growth/experiment loops, Roblox builds) are named in the
 full studio's `docs/ORCHESTRATION.md` — not reproduced here.
 
