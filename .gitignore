@@ -1,0 +1,9 @@
+.DS_Store
+*.log
+node_modules/
+.in_use/
+__pycache__/
+*.pyc
+
+# local, machine-specific — carries absolute paths and personal settings
+.claude/settings.local.json
