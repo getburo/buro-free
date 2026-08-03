@@ -1,5 +1,7 @@
 # Buro — free tier
 
+**[getburo.dev](https://getburo.dev) · [what Buro is and how it works](https://getburo.dev/how-it-works) · [the full studio](https://getburo.dev/#pricing)**
+
 **Technical design, as a family of Claude Code skills — 16 full-strength seats, at least one in
 every department (16 of the full studio's 59), each with its own method and a critique that
 pushes back, shipped at full depth. No thinning: every included seat directs and produces exactly as it does in the
@@ -64,9 +66,10 @@ Two spines, one brain:
 
 ## The seats
 
-Ten departments — **peers, not a hierarchy** — this tier ships one full-depth seat from each,
-16 seats total (+ the `buro` dispatcher and `selftest`). The seat named is complete: same method,
-same panel, same PRODUCE gate as the full studio. The `(full studio)` seats do not ship here.
+Ten departments — **peers, not a hierarchy** — and this tier ships **16 full-depth seats, at
+least one from every department** (+ the `buro` dispatcher and `selftest`). Every seat named
+below is complete: same method, same panel, same PRODUCE gate as the full studio. The bench
+listed in the right-hand column does not ship here.
 
 | Department | Seats | Full-studio bench (not shipped here) |
 |---|---|---|
@@ -104,7 +107,8 @@ canon.
 | A small project idea → ship | `process` (conductor) + `creative-director` (vision) + the relevant make seat + `tester`/`critic` |
 
 Full-medium pipelines (a whole game, book, film, marketing campaign, physical-product line, or
-Roblox build) need seats outside this tier — the full commercial studio.
+Roblox build) need seats outside this tier — the full commercial studio, at
+[getburo.dev](https://getburo.dev/#pricing).
 
 ## Install
 
