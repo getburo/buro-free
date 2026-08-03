@@ -1,8 +1,8 @@
 # Buro — free tier
 
-**Technical design, as a family of Claude Code skills — one full-strength seat per department
-(16 of the full studio's 59), each with its own method and a critique that pushes back, shipped
-at full depth. No thinning: every included seat directs and produces exactly as it does in the
+**Technical design, as a family of Claude Code skills — 16 full-strength seats, at least one in
+every department (16 of the full studio's 59), each with its own method and a critique that
+pushes back, shipped at full depth. No thinning: every included seat directs and produces exactly as it does in the
 full studio. The rest of each department's bench lives in the full commercial
 Buro studio, a separate commercial product.**
 
@@ -21,7 +21,7 @@ name, a scene, and a product decision.
 > never extracted by dark patterns, FOMO, planned obsolescence, or hype past the product. Every
 > seat both directs and produces — and producing is never an excuse to phone it in.**
 
-That law is what makes buro *one* studio. **No craft sits above another** — a translator, a
+That law is what makes Buro *one* studio. **No craft sits above another** — a translator, a
 game designer, an industrial designer, and the interface seats are equal members; their outputs
 rhyme because they share the arbiter, not a subject. The seats span words, screen (film &
 animation), visual art, games & worlds, physical / industrial design, marketing & comms,
@@ -34,7 +34,7 @@ leadership wing that holds a multi-seat production together — and it **bridges
 **You give one task; the studio assembles the team and takes the whole project to done.** For a
 single-craft job (rewrite this error, name this, critique this screen) one seat runs and returns
 the verdict. For a **whole project** — a website, a greeting card, a game, a cartoon, a film, a
-product, a campaign — buro runs the full lifecycle: **market analysis & the first idea →
+product, a campaign — Buro runs the full lifecycle: **market analysis & the first idea →
 production → post-production → post-launch**. The seats form teams and call one another,
 conducted by `process` (which sequences the phases), with `creative-director` holding one vision
 and `producer` shipping it. Done is the conductor's call — never one optimistic pass.
