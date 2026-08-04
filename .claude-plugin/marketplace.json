@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "buro-free",
-      "description": "Buro, free tier — one seat per department (16 of 59), full method and full production, no thinning.",
+      "description": "Buro, free tier — one seat per department (16 of 60), full method and full production, no thinning.",
       "version": "0.2.2",
       "license": "UNLICENSED",
       "source": "./",
