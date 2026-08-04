@@ -105,17 +105,6 @@ are not open, so [getburo.dev](https://getburo.dev/#pricing) carries a wait list
 checkout. The prices are stated there, and the first 100 people on that list keep the founding
 price for as long as they stay.
 
-## Two spines
-
-- **Buro** owns *what* and *why* — intent, taste, honesty, and the artifact itself.
-- **[Superpowers](https://github.com/obra/superpowers) / feature-dev** own *how to build
-  safely* — brainstorming → plans → TDD → review.
-- **`buro:process`** is the switchman between them; the make-seats critique what comes back.
-
-Superpowers is a **separate, external open-source project** by someone else. It is not bundled
-here, not redistributed, and not required — Buro works without it. If you want that half, you
-install and license it yourself from its own repository.
-
 ## Layout
 
 ```
