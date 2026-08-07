@@ -25,6 +25,12 @@ UNFALSIFIABLE = re.compile(
 
 REQUIRED_HEADINGS = ["Concept", "Goals", "COMPLIANCE", "Phase / Round"]
 
+# Tier 0 of the priority ladder (cycle.md §2a): a product that does not run has
+# exactly one item on its board. These words in a `Runs:` line mean it is open.
+BROKEN = re.compile(r"\b(no|not|never|broken|crash(es|ed|ing)?|fails?|failed|"
+                    r"won'?t start|does ?n[o']?t (start|load|run|launch)|unplayable|"
+                    r"cannot be played|black screen|hangs?|freezes?)\b", re.I)
+
 # A cut is executed, never annotated (cycle.md §2h). A row that says the thing is
 # gone while still carrying a ladder state keeps being counted, ranked and rebuilt.
 CUT_ANNOTATION = re.compile(
@@ -160,6 +166,30 @@ def main() -> int:
         if re.search(r"Gate:[^|\n]*CLOSED\s*\(converged\)", text, re.I) and \
            not re.search(r"Goal-distance:\s*0(\D|$)", text, re.I):
             fail("active", "Gate CLOSED but Goal-distance is not 0 — the done-gate contradicts itself")
+
+        # ---- tier 0: does the thing RUN, and was that measured recently? (§2a) ----
+        runs = re.search(r"\bRuns:\s*([^\n]*)", text, re.I)
+        if not runs:
+            fail("liveness", "no 'Runs:' line — tier 0 of the priority ladder is whether the "
+                             "product starts and survives one loop end to end. Unmeasured, the "
+                             "ordering rules below it rank an unbuilt cosmetic at 100% short of "
+                             "its bar and fog a game nobody can start")
+        else:
+            claim = runs.group(1).strip()
+            mv = re.search(r"\bt(\d+)\b", claim)
+            if not mv:
+                fail("liveness", f"Runs: '{claim[:48]}' names no tick — liveness is a measurement "
+                                 f"with a date on it, not a belief. Write what happened when you "
+                                 f"started it and on which tick (t<N>)")
+            elif tick is not None and tick - int(mv.group(1)) >= 2:
+                fail("liveness", f"Runs: last measured at t{mv.group(1)}, now t{tick} — "
+                                 f"{tick - int(mv.group(1))} ticks stale. Start the product and "
+                                 f"play one loop before picking any other work (§2a step 0a)")
+            if BROKEN.search(claim) and \
+               re.search(r"Gate:[^|\n]*CLOSED\s*\(converged\)", text, re.I):
+                fail("liveness", f"Runs: '{claim[:48]}' reports the product does not run, and the "
+                                 f"gate says CLOSED (converged) — a done-call over a product "
+                                 f"nobody can start")
 
     # ---- registers --------------------------------------------------------
     fronts: dict[str, int] = {}

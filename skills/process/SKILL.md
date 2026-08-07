@@ -333,15 +333,16 @@ gate list above is general-purpose and doesn't repeat the spiral.
 A loop with no state-file dies at the next context compaction and starts over blind. One file per
 project, **re-read at the top of every tick and rewritten at the bottom**. It is **not** the backlog
 and **not** the design document: it is the **live state**, regenerated from the product each pass.
-⛔ **That is a statement about STATE, and about nothing else.** The design document is not a guess —
-it is the **intent**, and it outranks the product on every question of *what must exist and what it
-is for*. The product outranks it only on *what is true right now*. (`references/cycle.md` §0) Canonical shape (rename headings per project, keep the parts):
+⛔ **That is a statement about STATE, and nothing else.** The design document is the **intent**: it
+outranks the product on *what must exist and what it is for*; the product outranks it only on
+*what is true right now*. (`references/cycle.md` §0) Canonical shape (rename per project):
 
 ```
 # <project> — active state · updated <spiral pass / date>
 
 ## Concept         one checkable sentence + its border ("…, NOT …")
-## Goals           north-star (buro:analyst) · Goal-distance: <how far the world is, now>
+## Goals           north-star · Goal-distance: <count, now> · Runs: <what happened when you
+                   started it, and on which tick — tier 0, cycle.md §2a>
 ## COMPLIANCE      platforms: <…> · markets: <…> · age rating: <…> · author's own: <…>
                    — the ONLY grounds for a BLOCKED verdict. Undeclared = no BLOCKED tier exists.
 ## Phase / Round   Phase 0–6 · Spiral R1–R6 (which pass) · Gate: open | blocked by … | CLOSED (converged)

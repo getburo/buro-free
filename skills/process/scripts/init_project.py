@@ -66,6 +66,10 @@ North-star: <the one number, from buro:analyst>
 **Goal-distance: 0 of 0 artifacts exist · 0 verified · 0 at intent**
 ⛔ Derived from the registers, and it is 0 of 0 because the inventory has not been derived yet.
 That is tick 1's job (`cycle.md` §2b) — until then this project cannot say how far it is.
+**Runs: t0 — nothing to start yet; there is no product.**
+⛔ Tier 0 of the priority ladder (`cycle.md` §2a). Every tick starts the product and plays one
+loop end to end, then rewrites this line with what happened and the tick. A product that does not
+run has exactly ONE item on its board — no absence, no polish, no fog outranks it.
 
 ## COMPLIANCE
 platforms: <…> · markets: <…> · age rating: <…> · the author's own: <…>

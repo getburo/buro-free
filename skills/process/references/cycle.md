@@ -94,7 +94,41 @@ one department has run three states ahead of another.**
 `max(front) − min(front) ≤ 1`. Nothing may be polished to `received` while a department it ships
 with has items at `intent`. This is the single rule that prevents a beautiful, unplayable corner.
 
-## 2b. The inventory comes from the SPEC, not from the product
+## 2a. LIVENESS FIRST — the tier ladder that beats every score
+
+> **A product that does not run has exactly one item on its board.**
+
+Every ordering rule below this one — absence over defect (§2c), the largest gap as a fraction of
+its bar (§2e) — assumes the thing *works*. When it does not, those rules actively pick wrong, and
+the arithmetic hides it: an unbuilt cosmetic scores **100% short of its bar**, the largest possible
+gap on the board, so *"add the atmospheric fog"* outranks *"the game cannot be played"* — which is
+not even a row, because §2b builds the inventory from the spec and no document says "it must not
+crash". **Measured, this is what a loop does with those rules alone: it fogs and polishes a game
+that nobody can start.**
+
+So ordering is **tiered, and a tier dominates every score inside it.** Check them in order; no
+work at a lower tier while a higher one is open:
+
+| # | Tier | The question | Open means |
+|---|---|---|---|
+| 0 | **RUNS** | does it start, load, and survive one full loop end to end, today, measured? | nothing else is workable |
+| 1 | **REACHABLE** | can the player actually get to and use what exists — the entrance, the exit, the input, the save? | the rest is decoration on an unreachable thing |
+| 2 | **COMPLETE** | do the things the documents rule exist at all? (§2b, §2c) | absence, ranked by §2e |
+| 3 | **CORRECT** | do the built things meet their acceptance lines? | defects, ranked by §2e |
+| 4 | **PRESENTATION** | fog, luminance, dressing, easing, seams, prop kits | only when 0–3 are clear for this slice |
+
+**Tier 0 and 1 are not register rows and do not wait for a spec.** They are the loop's own
+precondition: found by running the product, fixed the same tick, and recorded in the log. A
+crash-on-start is not "a defect competing with an absence" — the ladder does not compare them.
+
+⛔ **"Absence outranks defect" (§2c) is a rule INSIDE tier 2 vs 3.** It never promotes a missing
+decoration above a broken product. When those two look comparable on the score, the score is
+wrong, not the reading.
+
+**Tier 0 is a measurement, not a belief.** *"It worked last week"* is tier 0 unverified, and so is
+*"the code looks fine"*. Start it, play one loop, record what happened and on which tick — that
+line is what `active.md`'s `Runs:` field carries, and `state_check.py` fails a project whose
+liveness has gone stale.
 
 > **Regenerating the backlog from the product can only ever find what is badly made. It cannot find
 > what was never started.**
@@ -132,8 +166,9 @@ And once per round, mechanically, over the whole spec: **for every noun and mech
 rule, does a builder, a service or a file implement it?** Anything living only in prose is a
 register row at `intent` — not a finding to mention, a row to carry.
 
-**Absence outranks defect.** A missing mechanic beats a badly-made one in the order, always: the
-polish of a thing that exists cannot be worth more than the existence of a thing the design requires.
+**Absence outranks defect — inside tier 2 vs 3 (§2a), never above tiers 0–1.** A missing mechanic
+beats a badly-made one: the polish of a thing that exists cannot be worth more than the existence
+of a thing the design requires. Neither beats a product that will not run.
 
 ## 2d. Goal-distance is a COUNT
 
@@ -155,8 +190,10 @@ A per-item score — pain × fit × timing × worth × execution — is computed
 that arithmetic systematically promotes the small and certain over the large and murky. The result
 is a queue that polishes while the product's biggest number stays where it was.
 
-> **The row with the largest measured distance to its bar goes first** — until it is closed, or
-> deferred out loud with a reason and a date.
+> **Within a tier (§2a), the row with the largest measured distance to its bar goes first** —
+> until it is closed, or deferred out loud with a reason and a date. **The tier comes first; the
+> fraction only sorts inside it.** Comparing a tier-4 fraction with a tier-2 one is the arithmetic
+> that fogs a game nobody can start.
 
 **Measured, the case this rule comes from:** a game whose session ran **33 seconds against a
 documented eight minutes** — 93% short, the largest gap on the board — while twenty ticks went to
@@ -400,9 +437,12 @@ Next: region 7 encounters — it is the floor of the register.
 
 ```
 0 READ    active.md + registers. Question audit (SKILL.md gate 0).
+0a RUNS    start the product and play one loop end to end. Broken → that IS the tick (§2a tier 0),
+          and nothing below is picked. Write the result and the tick into active.md's `Runs:`.
 0b ABSENCE three things the spec rules — does each have an artifact? Missing → a row, at intent.
 0c CLUSTER could several open rows be one cause? Then the cause is the work (§2f, buro:detective).
-0d PICK    absence > defect; then the LARGEST GAP as a fraction of its bar (§2e); then the lowest
+0d PICK    the HIGHEST OPEN TIER first (§2a: runs → reachable → complete → correct → presentation);
+          inside it the LARGEST GAP as a fraction of its bar (§2e); then the lowest
           register front, on buro:producer's critical path — never what was last complained about.
 1 STALL   check the item in hand: spent vs budget, tick − moved. Stalled → take an exit, log it, done.
 2 DIRECT  3–5 seats, sequential if the slice touches ≤3 departments, fan if ≥4.
@@ -473,6 +513,7 @@ job every round, not a script's.
 
 It fails on a register row with no state, an acceptance line missing at `specced`+, a broken
 one-state rule, a stalled item nobody exited, a tick that left no log entry, a row annotated as cut
-instead of deleted (§2h), and a `source:` that points at a document or a section which no longer
-exists — the dangling citation a design change leaves behind (§4d). **An unvalidated
+instead of deleted (§2h), a `source:` that points at a document or a section which no longer
+exists — the dangling citation a design change leaves behind (§4d) — and a `Runs:` line that is
+missing, dateless, two ticks stale, or reports a dead product under a closed gate (§2a). **An unvalidated
 "the loop is going well" is the project-scale version of the screenshot of the good corner.**
