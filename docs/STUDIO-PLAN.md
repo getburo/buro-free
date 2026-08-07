@@ -6,7 +6,7 @@
 > physical / industrial design, marketing, interfaces, product, engineering, reception, leadership
 > are peers; their outputs cohere because they share the arbiter, not a subject.
 
-**This is the FREE tier: 18 seats across 12 departments** (+ the `buro` dispatcher and
+**This is the FREE tier: 17 seats across 12 departments** (+ the `buro` dispatcher and
 `selftest`), packaged as the plugin `buro-free@buro-free-dev` — one full-depth seat from every
 department, no thinning. The architecture below is the **full studio's** and is kept whole for
 reference; the roadmap, the remaining bench, and every seat not in this tier's roster live in

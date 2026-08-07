@@ -4,7 +4,7 @@
 > parts — each already excellent. This document is the seams: how they combine into *one*
 > production, so a 61-seat studio stays one studio and not 61 tools.
 >
-> **This free tier ships 18 of those seats.** The document below describes the full studio
+> **This free tier ships 17 of those seats.** The document below describes the full studio
 > and is kept whole for reference: where a pipeline names a seat this tier does not have,
 > say so and stop rather than improvising its method.
 

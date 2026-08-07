@@ -2,10 +2,10 @@
 
 **[getburo.dev](https://getburo.dev) · [how it works](https://getburo.dev/how-it-works) · [the full studio](https://getburo.dev/#pricing)**
 
-<sub>Free tier · 18 seats · updated 2026-08-07</sub>
+<sub>Free tier · 17 seats · updated 2026-08-07</sub>
 
-A studio's craft method, written down and packaged as Claude Code skills. **18 full-depth seats,
-at least one in every department** — 18 of the full studio's 61 — plus the `buro` dispatcher and
+A studio's craft method, written down and packaged as Claude Code skills. **17 full-depth seats,
+at least one in every department** — 17 of the full studio's 61 — plus the `buro` dispatcher and
 a completion hook. No thinning: every seat here directs and produces exactly as it does in the
 full studio. What is missing is the rest of each department's bench, not the depth of what ships.
 
@@ -70,7 +70,7 @@ right-hand column is the bench that does not ship here.
 | **Games & worlds** | `gamedesign` | combat-designer, level, narrative, game-ui-designer, roblox-engineering, asset-sourcing, live-ops |
 | **Physical / industrial design** | `industrial-designer` | cmf, packaging, spatial, manufacturing |
 | **Marketing & comms** | `ad-creative` | campaign, content, launch-pr, sales |
-| **Interfaces & UX** | `lebedev` · `gorbunov` · `copy` · `usability` | dataviz, exotic, motion, a11y, web-designer |
+| **Interfaces & UX** | `web-designer` · `copy` · `usability` | lebedev, gorbunov, dataviz, exotic, motion, a11y |
 | **Product & business** | `pm` · `process` | analyst, brainstorm, experiment, growth, retention |
 | **Engineering** | `dev` | roblox-engineering |
 | **Research & intelligence** | `osint` | analyst, detective |
@@ -89,7 +89,8 @@ actually route between.
 
 | Task | Seats engaged here |
 |---|---|
-| A screen or a small flow, critiqued | `lebedev` + `gorbunov` + `copy` + `usability` |
+| A screen or a small flow, critiqued | `usability` + `copy` (+ `web-designer` if it's web/software) |
+| A web design executed — type pairing, colour tokens, responsive, focus | `web-designer` (after `art-director` chooses the direction) |
 | Documentation — README, reference, runbook | `docs` (+ `editor` to tighten an existing draft) |
 | A game system — loop, mechanics, balance | `gamedesign` |
 | A scene, staged | `director` |

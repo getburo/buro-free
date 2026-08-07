@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this repo is
 
 Buro — a **Claude Code plugin**, not an application. There is no build step, no
-package manager, no runtime. The deliverable is prose: 18 seats (+ the `buro` dispatcher and
+package manager, no runtime. The deliverable is prose: 17 seats (+ the `buro` dispatcher and
 the `selftest` tool) under `skills/`, each a folder with a `SKILL.md` and a `references/`
 canon. Editing this repo means editing skill prose, and the only "tests" are the consistency
 check and the routing eval.
@@ -46,7 +46,7 @@ department (`tester` · `audience` · `critic` · `chaos` · `detective`). The s
 DIRECT → PRODUCE → RECEIVE → revise.
 
 **The one law**, carried by every seat, is what makes the twelve departments one studio rather
-than 18 tools: *subtract decoration never a capability; quality earned by mastery and delivered
+than 17 tools: *subtract decoration never a capability; quality earned by mastery and delivered
 value, never extracted by dark patterns, FOMO, or hype; producing is never an excuse to phone
 it in.* Cohesion is a consequence of the shared arbiter, not a separate task — so a new seat
 that doesn't carry the law doesn't belong.

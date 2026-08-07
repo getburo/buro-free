@@ -184,7 +184,7 @@ plan = read(os.path.join(ROOT, "docs", "STUDIO-PLAN.md"))
 
 rosters = {
     "dispatcher/departments": region(dispatcher, "**The twelve departments", "Engineering ships in-house"),
-    "dispatcher/trigger table": region(dispatcher, "**Always, for any screen work:**", "\n**BUILD —"),
+    "dispatcher/trigger table": region(dispatcher, "**For any screen work in this tier:**", "\n**BUILD —"),
     "README/department table": region(readme, "| Department | Seats |", "\n\n"),
     "STUDIO-PLAN/org chart": region(plan, "## 3. The studio org chart", "\n`*` ="),
 }

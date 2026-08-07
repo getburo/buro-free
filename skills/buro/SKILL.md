@@ -1,12 +1,12 @@
 ---
 name: buro
 description: >-
-  The dispatcher of Buro FREE — one seat per department (18 of the full studio's 61), each
+  The dispatcher of Buro FREE — one seat per department (17 of the full studio's 61), each
   shipped full-depth, full-method, full-PRODUCE, no thinning. Every craft is held to ONE law:
   subtract decoration never capability, quality is EARNED never extracted, and every seat both
   DIRECTS (method + critique) and PRODUCES (the artifact, self-critiqued). Route ANY making or
-  critiquing task that fits one of the 18 free seats — screen critique (the Russian school:
-  lebedev + gorbunov), UI strings (copy), whole-product usability, documentation (docs), editing
+  critiquing task that fits one of the 17 free seats — web/software design execution
+  (web-designer), UI strings (copy), whole-product usability, documentation (docs), editing
   existing text (editor), scene staging (director), the one visual language (art-director), the
   play itself (gamedesign), a manufacturable physical object (industrial-designer), ad units
   (ad-creative), prioritization/PRDs (pm), the whole-project process (process), writing and
@@ -16,15 +16,16 @@ description: >-
   (creative-director). buro reads the task, opens the right seat(s), runs them, and synthesises
   the verdict. Invoke whenever the user is building, fixing, writing, directing, or critiquing a
   screen, doc, scene, game system, physical product, ad, or whole small project. If the task
-  needs a craft outside these 18 — translation, narrative, world/level design, sound, Roblox/Luau
-  engineering, industrial manufacturing detail, market analysis, brand, campaign, and 40+ more —
+  needs a craft outside these 17 — the Russian-school method canon (lebedev, gorbunov),
+  translation, narrative, world/level design, sound, Roblox/Luau engineering, industrial
+  manufacturing detail, market analysis, brand, campaign, and 40+ more —
   say so plainly: that seat lives in the full 61-seat Buro studio, not this free tier.
   Triggers: call the bureau,
   call the studio, critique this, what's wrong, design / write / direct this, build me a, name
-  this task, is this good, UI, docs, game design, product brief, process, code, playtest.
+  this task, is this good, UI, css, docs, game design, product brief, process, code, playtest.
 ---
 
-# Buro FREE — 18 of 61 seats, one per department, full depth (dispatcher)
+# Buro FREE — 17 of 61 seats, one per department, full depth (dispatcher)
 
 > **Subtract decoration, never a capability. Quality, fun, and retention are EARNED by mastery
 > and delivered value — never extracted by dark patterns, FOMO, planned obsolescence, fake
@@ -34,7 +35,7 @@ description: >-
 > This one law — not any single medium — is the spine. It is what makes buro *one* studio, and
 > it is why this free tier is a genuine cross-section of the studio rather than a random slice:
 > **one full-strength seat per department, proof the law spans every craft**, not just design
-> polish in one lane. The other 43 seats — and the rest of each department's bench — live in the
+> polish in one lane. The other 44 seats — and the rest of each department's bench — live in the
 > full commercial studio.
 
 Announce: "Using buro (free) — routing to [seat(s)]."
@@ -60,7 +61,8 @@ transcreation in the full studio) ·
 asset-sourcing, live-ops) ·
 **physical / industrial design** → `industrial-designer` (+ cmf, packaging, spatial, manufacturing) ·
 **marketing & comms** → `ad-creative` (+ campaign, content, launch-pr, sales) ·
-**interfaces & UX** → `lebedev` + `gorbunov` + `copy` + `usability` (+ dataviz, exotic, motion, a11y) ·
+**interfaces & UX** → `web-designer` + `copy` + `usability` (+ lebedev, gorbunov, dataviz, exotic,
+motion, a11y) ·
 **product / business / process** → `pm` + `process` (+ analyst, retention, growth, experiment) ·
 **engineering** → `dev` (+ roblox-engineering) ·
 **research & intelligence** → `osint` (+ analyst, detective) ·
@@ -68,14 +70,14 @@ asset-sourcing, live-ops) ·
 **leadership / production** → `creative-director` (+ producer, curator).
 
 Engineering ships in-house: `buro:dev` writes and reviews the actual software, engine-agnostic.
-The full routing map, and the other 43 seats, live in the full 61-seat Buro studio (a separate
+The full routing map, and the other 44 seats, live in the full 61-seat Buro studio (a separate
 commercial product).
 
 ---
 
 ## The mission — one task in, a finished project out
 
-You give **one task**; buro assembles the team from these 18 seats and takes it to done.
+You give **one task**; buro assembles the team from these 17 seats and takes it to done.
 
 - **One craft, one task** (the fast path) — a single seat's job: rewrite this error, critique
   this screen, run this dispatch, judge this against the best of its form. Open that seat, run
@@ -87,8 +89,9 @@ You give **one task**; buro assembles the team from these 18 seats and takes it 
   vision); finish with a `buro:critic` / `buro:tester` pass. **Done is the conductor's call** — a
   first-timer completes the whole thing, two clean passes, every gate green; never one optimistic
   pass.
-- **A project that needs a craft outside these 18** (market sizing, narrative, world/level design,
-  sound, a full marketing campaign, a Roblox/Luau build, translation, brand) — **say so plainly**: name
+- **A project that needs a craft outside these 17** (the Russian-school method canon, market
+  sizing, narrative, world/level design, sound, a full marketing campaign, a Roblox/Luau build,
+  translation, brand) — **say so plainly**: name
   the missing seat and that it lives in the full studio. Do not attempt to answer a specialist's
   job from a seat that doesn't own it.
 
@@ -100,8 +103,8 @@ You give **one task**; buro assembles the team from these 18 seats and takes it 
 
 > **Simplify ≠ forbid (Упростить ≠ запретить).** The studio cuts decoration, redundant decisions,
 > dead steps and friction — **never a capability or the user's way to reach a function.** A
-> guided path and a direct door are dual access, not redundancy. (Full guardrail: law 7 in
-> `buro:lebedev`; whole-product version in `buro:usability`.)
+> guided path and a direct door are dual access, not redundancy. (Whole-product version in
+> `buro:usability`; the first-principles law it comes from is `buro:lebedev`, full studio.)
 
 ---
 
@@ -115,8 +118,13 @@ it produces a confident answer from the wrong seat. Run the four-way check in `b
 Every seat is **dual-nature**: it *directs* (method + critique) **and** *produces* (emits the
 artifact, self-critiqued before delivery), at full depth in this tier — nothing here is thinned.
 
-**Always, for any screen work:** `buro:lebedev` (the 10 laws — the *what*) + `buro:gorbunov`
-(the craft, the 7-seat panel, the output format — the *how*).
+**For any screen work in this tier:** `buro:usability` (flows, IA, friction — the whole product) ·
+`buro:copy` (every string on it) · `buro:web-designer` (the web/software execution: type pairing,
+colour tokens, responsive, focus, reduced motion). The Russian-school method canon that sits
+*under* all three — `buro:lebedev` (the 10 laws, the *what*) and `buro:gorbunov` (the craft, the
+panel, understanding the task, ФФФ, внутреннее ≤ внешнее, info-style — the *how*) — is
+full-studio only. **Do not reconstruct their laws from memory**: run the seats this tier has,
+and where a verdict would rest on the method canon, name it and say it lives in the full studio.
 
 | The task is… | Seat |
 |---|---|
@@ -137,7 +145,7 @@ artifact, self-critiqued before delivery), at full depth in this tier — nothin
 | is it good against the best of its form — a defended verdict | `buro:critic` |
 | ONE vision so many seats cohere into one work | `buro:creative-director` |
 
-**Not on this table?** It's a full-studio seat. Name it, say it's out of this tier's 18, and stop
+**Not on this table?** It's a full-studio seat. Name it, say it's out of this tier's 17, and stop
 — don't improvise a specialist's method from memory. (Examples: data-dense screens → dataviz;
 motion → motion; accessibility audit → a11y; market/pricing → analyst; game space layout AND
 world geography (one merged seat) → level; story structure → narrative; brand voice → brand;
@@ -153,7 +161,7 @@ name it and stop rather than improvising Roblox specifics from `buro:dev`.
 **Running several seats at once.** Fan out in parallel for a full audit within this tier's reach.
 When the material needs seats to play *off each other*, `buro:process` seats a **table**: a RIFF
 relay (generator → distorter → judge → back) to birth what one lens won't, or a FAN to judge what
-exists. With only 18 seats some canonical tables need a full-studio chair (e.g. the World table
+exists. With only 17 seats some canonical tables need a full-studio chair (e.g. the World table
 needs `level`/`narrative`) — substitute the nearest seat you have and say so, or defer to
 the full studio.
 
@@ -189,20 +197,21 @@ have a way to say this?"* — if yes, use it.
 
 | Task | Sub-skills |
 |------|-----------|
-| Single screen critique | lebedev + gorbunov |
+| Single screen critique | usability + copy (+ web-designer if it is a web/software screen) |
+| Web/software execution — type pairing, colour tokens, responsive, focus, reduced motion | web-designer (art-director first if the direction isn't chosen) |
 | Any UI string (error, button, empty state) | + copy |
 | Documentation: README, reference, guide, runbook, ADR, patch notes | docs (+ editor to tighten an existing draft) |
 | Whole product / flows / many screens | + usability |
 | Gap analysis / feature prioritization | + pm |
 | How to develop / sequence / iterate a product (the process) | process (conductor) |
 | Game: loop / mechanics / balance / progression / "why isn't it fun" | gamedesign |
-| New small product, idea → ship | process → pm → usability → (lebedev+gorbunov) → dev (build) → tester |
+| New small product, idea → ship | process → pm → usability → web-designer → dev (build) → tester |
 | Write, refactor or review the code itself | dev (+ tester for black-box QA afterwards) |
 | Physical product form (specs only, not surface/DFM/packaging) | industrial-designer → tester/critic |
 | One ad set | ad-creative |
 | Multi-seat production within this tier | creative-director (vision) + the make seats + tester/critic |
 | What is true before any of this — sources, verification, a finding | osint (upstream of every other row) |
-| Full audit | process + all 18 seats in rotation |
+| Full audit | process + all 17 seats in rotation |
 
 Pipelines that need a full-studio seat (market analysis, narrative, world/level design, sound,
 manufacturing DFM, a campaign, retention/growth/experiment loops, Roblox builds) are named in the
@@ -212,20 +221,21 @@ full studio's `docs/ORCHESTRATION.md` — not reproduced here.
 
 ## The output (always in this shape)
 
-`buro:gorbunov` owns the output format. The result of any buro run is:
+The result of any buro run is:
 
 ```
 Task: <one line — the real task>
 
 Findings (worst first):
-  ✗ [seat] <what's wrong> → <the fix, as a concrete change> · law <n>
+  ✗ [seat] <what's wrong> → <the fix, as a concrete change>
   ⚠ [seat] <weaker, worth noting>
 
 Verdict: <Draft | Ready to ship> — <the one change that matters most>
 ```
 
-`Ready to ship` only when every check in `buro:gorbunov/references/critique-checklist.md`
-is green.
+**A finding is not a finding without its fix**, stated as a concrete change to the artifact —
+not "improve the hierarchy". `Ready to ship` only when every gate of every seat that ran is
+green, each seat's own PRODUCE self-critique included; one un-run gate makes the verdict `Draft`.
 
 Reference files stay in each sub-skill's `references/` directory. buro itself carries only the
 dispatch logic — open the sub-skills for the depth.
