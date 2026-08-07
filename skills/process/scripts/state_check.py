@@ -25,6 +25,15 @@ UNFALSIFIABLE = re.compile(
 
 REQUIRED_HEADINGS = ["Concept", "Goals", "COMPLIANCE", "Phase / Round"]
 
+# A cut is executed, never annotated (cycle.md §2h). A row that says the thing is
+# gone while still carrying a ladder state keeps being counted, ranked and rebuilt.
+CUT_ANNOTATION = re.compile(
+    r"(no longer (exists|exist|in the game|in the design|used|planned|needed)|"
+    r"\b(cut|removed|dropped|scrapped) from (the )?(game|scope|design|product|spec)\b|"
+    r"\bwas (cut|removed|scrapped|deleted)\b|"
+    r"\b(obsolete|deprecated|superseded|descoped|de-scoped)\b|"
+    r"\bdoes ?n[o']?t exist any ?more\b)", re.I)
+
 fails: list[str] = []
 warns: list[str] = []
 inventory: list[str] = []      # every live row's state, for the goal-distance count
@@ -72,6 +81,29 @@ def mentions(root: Path, term: str, dirs: list[str]) -> int:
     return len([l for l in r.stdout.splitlines() if l.strip()])
 
 
+def dangling(root: Path, source: str) -> list[str]:
+    """Does a row's `source:` still resolve? (cycle.md §4d)
+
+    A source reads `docs/04-world.md §the manhole is the exit`. Only path-shaped
+    citations are checked — a source naming a decision ('ADR-7') or a meeting is
+    not resolvable here and is left alone. Missing file or missing §section = the
+    design changed in the spec and this row was never re-stated.
+    """
+    cite = source.strip().strip("*`")
+    doc, _, anchor = cite.partition("§")
+    doc = doc.strip().strip("*`").rstrip(",;")
+    if not doc or not re.search(r"[/\\]|\.(md|txt|rst|adoc)$", doc, re.I):
+        return []
+    path = root / doc
+    if not path.is_file():
+        return [f"source: `{doc}` does not exist"]
+    anchor = re.sub(r"\s+", " ", anchor.strip().strip("*`").rstrip(".,;")).lower()
+    if not anchor:
+        return []
+    text = re.sub(r"\s+", " ", path.read_text(encoding="utf-8", errors="replace")).lower()
+    return [] if anchor in text else [f"source: `{doc}` no longer contains '§{anchor}'"]
+
+
 def main() -> int:
     argv = [a for a in sys.argv[1:] if not a.startswith("--")]
     code_dirs: list[str] = []
@@ -107,8 +139,11 @@ def main() -> int:
     tick = None
     if active.is_file():
         text = active.read_text(encoding="utf-8", errors="replace")
+        # `#{2,3}` and not `#{1,3}`: the H1 is the project title, so under re.I a project named
+        # `Concepta` or `Goalpost` satisfied its own heading check on the title line. The trailing
+        # \b stops `## Goalsetting` from passing as `## Goals`.
         for h in REQUIRED_HEADINGS:
-            if not re.search(rf"^#{{1,3}}\s*{re.escape(h)}", text, re.I | re.M):
+            if not re.search(rf"^#{{2,3}}\s*{re.escape(h)}\b", text, re.I | re.M):
                 fail("active", f"no '## {h}' section")
         m = re.search(r"\bTick:\s*t?(\d+)", text, re.I)
         if not m:
@@ -137,6 +172,16 @@ def main() -> int:
         live = []
         for r in rows:
             rid, state = r.get("id", "?"), r.get("state", "").lower()
+
+            # ---- a cut is executed, never annotated (§2h) ----
+            cut = CUT_ANNOTATION.search(" ".join(r.values()))
+            if cut:
+                fail("cut", f"{name}/{rid}: says '{cut.group(0)}' but still carries state "
+                            f"'{state or '—'}' — an annotated row is still counted in the "
+                            f"goal-distance, still ranked, and still re-derived from the spec. "
+                            f"Delete the row, delete or amend its source:, re-open what stood "
+                            f"on it, and put the history in log/ + decisions.md")
+
             if state == PARKED:
                 if "revive-if" not in " ".join(r.values()).lower():
                     fail("registers", f"{name}/{rid}: parked with no revive-if condition")
@@ -151,10 +196,17 @@ def main() -> int:
             blob = " ".join(r.values())
 
             # ---- provenance: did this row come from the SPEC or from the product? ----
-            if not re.search(r"\bsource:\s*\S", blob, re.I):
+            src = re.search(r"\bsource:\s*(.+?)(?:\s*[|·]|$)", blob, re.I)
+            if not src:
                 fail("inventory", f"{name}/{rid}: no 'source:' — a row with no document behind it "
                                   f"came from looking at what got built, and a sweep over the "
                                   f"product cannot see what was never started")
+            else:
+                # ---- the dangling citation a design change leaves behind (§4d) ----
+                for msg in dangling(root, src.group(1)):
+                    fail("citation", f"{name}/{rid}: {msg} — a citation that no longer resolves is "
+                                     f"worse than none: the change landed in the spec and nowhere "
+                                     f"else, so this row was never re-stated (§4d move 2)")
 
             # ---- the absence check: 'built' with nothing on disk ----
             if RANK[state] >= RANK["built"]:
@@ -162,16 +214,18 @@ def main() -> int:
                 if not m:
                     fail("absence", f"{name}/{rid}: at '{state}' with no 'artifact:' path — "
                                     f"a state that claims built and names nothing is unfalsifiable")
-                elif not (root / m.group(1)).exists():
-                    fail("absence", f"{name}/{rid}: claims '{state}' but {m.group(1)} does not "
-                                    f"exist — the row is a description of an intention")
-                elif code_dirs:
-                    term = re.sub(r"[*`]", "", r.get("item", "")).split(".")[0].split("—")[0]
-                    term = term.strip()[:40]
-                    if term and mentions(root, term, code_dirs) == 0:
-                        warn("absence", f"{name}/{rid}: {m.group(1)} exists, but nothing in "
-                                        f"{'/'.join(code_dirs)} mentions '{term}' — the row may "
-                                        f"name the wrong artifact")
+                else:
+                    path = m.group(1).strip("`*")
+                    if not (root / path).exists():
+                        fail("absence", f"{name}/{rid}: claims '{state}' but {path} does not "
+                                        f"exist — the row is a description of an intention")
+                    elif code_dirs:
+                        term = re.sub(r"[*`]", "", r.get("item", "")).split(".")[0].split("—")[0]
+                        term = term.strip()[:40]
+                        if term and mentions(root, term, code_dirs) == 0:
+                            warn("absence", f"{name}/{rid}: {path} exists, but nothing in "
+                                            f"{'/'.join(code_dirs)} mentions '{term}' — the row may "
+                                            f"name the wrong artifact")
 
             if RANK[state] >= RANK["specced"]:
                 acc = r.get("acceptance", "")

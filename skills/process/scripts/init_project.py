@@ -45,8 +45,11 @@ REGISTER_HEADER = """# Register — {dept}
 |----|------|------|-------|------------|--------|-------|-------|
 """
 
-EXAMPLE_ROW = ("| {id} | *example — delete me.* source: `docs/01 §2` · artifact: `src/x.ts` "
-               "| {seat} | intent |  |  |  |\n")
+# The example cites a file this kit actually writes: `state_check.py` fails a
+# `source:` whose document or §section does not resolve (cycle.md §4d), and the
+# kit's own output has to pass unedited. Replace it with the real spec passage.
+EXAMPLE_ROW = ("| {id} | *example — delete me.* source: `.buro/loop.md §Specific to this project` "
+               "· artifact: `src/x.ts` | {seat} | intent |  |  |  |\n")
 
 ACTIVE = """# {name} — active state · updated tick t0
 
@@ -190,10 +193,10 @@ def main() -> int:
     (buro / "log" / "0001-the-loop-is-installed.md").write_text(LOG_FIRST, encoding="utf-8")
 
     for dept in KINDS[a.kind]:
-        seat = {"regions": "level", "story": "narrative", "world": "worldbuilding",
-                "features": "gamedesign", "systems": "roblox-engineering", "ui": "game-ui",
+        seat = {"regions": "level", "story": "narrative", "world": "level",
+                "features": "gamedesign", "systems": "roblox-engineering", "ui": "game-ui-designer",
                 "assets": "asset-sourcing", "flows": "usability", "growth": "growth",
-                "design": "buro", "build": "superpowers", "content": "copy",
+                "design": "buro", "build": "coder", "content": "copy",
                 "product": "pm"}.get(dept, "buro")
         body = REGISTER_HEADER.format(dept=dept) + EXAMPLE_ROW.format(
             id=dept[:2].upper() + "01", seat=seat)

@@ -7,7 +7,7 @@
 > their outputs cohere because they share the arbiter, not a subject. Bridged to **Superpowers**
 > for engineering.
 
-**16 seats across 10 departments** (+ the `buro` dispatcher and `selftest`) — the free tier of
+**17 seats across 11 departments** (+ the `buro` dispatcher and `selftest`) — the free tier of
 the full commercial Buro studio, packaged as the plugin `buro-free@buro-free-dev`. One full-depth
 seat per department, no thinning; the roadmap and the remaining bench live in the full studio,
 a separate commercial product.
@@ -69,8 +69,8 @@ full studio motion is therefore **DIRECT → PRODUCE → RECEIVE → back to the
 This chart is the full studio's, kept for reference. **This free tier ships only:**
 `lebedev`, `gorbunov`, `copy`, `usability` (Taste/Method), `pm`, `process` (Product/Business),
 `gamedesign` (Games & Worlds), `docs`, `editor` (Words), `director` (Screen), `art-director`
-(Visual), `industrial-design` (Physical), `ad-creative` (Marketing), `tester`, `critic`
-(Reception), `creative-director` (Leadership). Every other name below is full-studio only.
+(Visual), `industrial-design` (Physical), `ad-creative` (Marketing), `osint` (Intel), `tester`,
+`critic` (Reception), `creative-director` (Leadership). Every other name below is full-studio only.
 
 ```
 buro  — top studio dispatcher (plugin entry: buro:buro)
@@ -105,8 +105,12 @@ buro  — top studio dispatcher (plugin entry: buro:buro)
 │    campaign · ad-creative · content · launch-pr · sales
 │    (de-collided from brand/copy/growth; sales = one-to-one, growth = the system)
 │
-├─ DEPARTMENT: RECEPTION / STRESS — simulated audience, adversary, investigator
-│    tester · audience · critic · chaos · detective
+├─ DEPARTMENT: INTEL — research & intelligence, upstream of everything
+│    analyst · osint · detective
+│    (what is true before you build · whether a claim survives · what went wrong after)
+│
+├─ DEPARTMENT: RECEPTION / STRESS — simulated audience, adversary
+│    tester · audience · critic · chaos · emo
 │
 └─ BRIDGE TO EXECUTION (sites, game code)
      buro:process ⟶ superpowers (brainstorming → writing-plans → TDD → code-review) ⟶ back for critique

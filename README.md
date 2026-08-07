@@ -2,10 +2,10 @@
 
 **[getburo.dev](https://getburo.dev) · [how it works](https://getburo.dev/how-it-works) · [the full studio](https://getburo.dev/#pricing)**
 
-<sub>Free tier · 16 seats · updated 2026-08-04</sub>
+<sub>Free tier · 17 seats · updated 2026-08-07</sub>
 
-A studio's craft method, written down and packaged as Claude Code skills. **16 full-depth seats,
-at least one in every department** — 16 of the full studio's 60 — plus the `buro` dispatcher and
+A studio's craft method, written down and packaged as Claude Code skills. **17 full-depth seats,
+at least one in every department** — 17 of the full studio's 61 — plus the `buro` dispatcher and
 a completion hook. No thinning: every seat here directs and produces exactly as it does in the
 full studio. What is missing is the rest of each department's bench, not the depth of what ships.
 
@@ -58,7 +58,7 @@ seats are equal members; their outputs rhyme because they share the arbiter, not
 
 ## The seats
 
-Ten departments, peers rather than a hierarchy. Every seat in the middle column is
+Eleven departments, peers rather than a hierarchy. Every seat in the middle column is
 complete: same method, same adversarial panel, same PRODUCE gate as the full studio. The
 right-hand column is the bench that does not ship here.
 
@@ -72,7 +72,8 @@ right-hand column is the bench that does not ship here.
 | **Marketing & comms** | `ad-creative` | campaign, content, launch-pr, sales |
 | **Interfaces & UX** | `lebedev` · `gorbunov` · `copy` · `usability` | dataviz, exotic, motion, a11y, web-designer |
 | **Product & business** | `pm` · `process` | analyst, brainstorm, dev, experiment, growth, retention |
-| **Reception & stress** | `critic` · `tester` | audience, chaos, detective, emo |
+| **Research & intelligence** | `osint` | analyst, detective |
+| **Reception & stress** | `critic` · `tester` | audience, chaos, emo |
 | **Leadership & production** | `creative-director` | producer, curator |
 
 Each seat is a folder under `skills/` with a `SKILL.md` — frontmatter, epigraphs, the core

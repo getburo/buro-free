@@ -206,6 +206,45 @@ doc) · **the finding is real and the doc is wrong** (re-open the decision, `§4
 right and the finding is the loop re-litigating a settled call** (close it, and say which document
 settled it). ⚠ **The third is the expensive one**, because it looks exactly like diligence.
 
+## 2h. A cut is EXECUTED, never annotated
+
+> **A row for a system that no longer exists is not work. It is noise, and noise that reads exactly
+> like inventory.**
+
+The failure is specific and it recurs: the loop records that a thing was cut — a note in the item
+cell, a strikethrough, *"removed in R4"* — and then keeps working as though it exists. The row is
+still counted in the goal-distance, still ranked by gap, still re-derived from the spec by §2b,
+still resurrected by the absence pass in §2c *because the document that ruled it was never touched*.
+Ticks later something reads it as a real requirement and the loop says **oh!**
+
+**Cutting a thing is four moves in ONE tick, or it was not cut:**
+
+1. **Delete the row.** Not annotated, not struck through, not moved to `parked` — `parked` means
+   *not now, with a `revive-if`*, and using it for *gone* is how a cut thing comes back.
+2. **Delete or amend its `source:`** — the passage in the spec that rules it must exist. A row
+   deleted while its source stands is a row §2b will write again next round, correctly.
+3. **List what stood on it** (`§4c` — *cut a mechanism, name what stood on it*). Rows whose `source:`
+   cites the deleted passage are re-opened by name in the same move.
+4. **Write the log entry and the ADR.** The history of the cut lives in `log/` and `decisions.md`
+   — append-only, single-homed. **That is the only place a dead thing is allowed to be described**,
+   and it is why deleting the row loses nothing.
+
+**A CHANGED mechanic is not a cut and not an edit-in-place.** The old acceptance number was measured
+against a bar that no longer applies, so it is void, not history:
+
+> **Rewrite the acceptance line, drop the state to `specced`, reset `spent` and `moved`.** A row that
+> keeps `verified` across a change to what the thing does is the same lie as a `built` row with no
+> artifact — it just takes longer to catch.
+
+Which of the two it is comes from `§4c`'s three tests: changed *what it must let people do*, or
+*what a part is for* → re-derive the row; changed only *how it looks or is named* → patch it in place
+and keep the state.
+
+⚠ **`state_check.py` fails a register row that describes itself as cut, removed, obsolete or
+superseded while still carrying a state.** It cannot see a row that should have been deleted and
+wasn't touched at all — that is §2b and §2c's job — but the annotated corpse it does catch, because
+that is the form this failure actually takes.
+
 ## 3. The acceptance line — no number, no build
 
 **An item may not leave `specced` without a line that can fail.** "Make the bike feel good" cannot
@@ -295,6 +334,41 @@ rebuild cost in units and ticks and let `buro:producer` cut — that is a scope 
 children. A citation that points at a moved or deleted address is worse than none: it does not read
 as broken, it resolves to something else.
 
+## 4d. The CHANGE PASS — redesign is the normal case, chaos is the half-applied change
+
+> **Nothing is right the first time. A loop that treats a design change as an exception will be in
+> chaos by round three — not because the design changed, but because each change landed in one place
+> and not the other four.**
+
+A change touches five things, and the chaos is always the same shape: the spec says A, the register
+row says B, the artifact does C, the doc explains A, and the ADR was never written. **A change is
+applied whole in ONE tick or it is not applied.** If the blast radius does not fit the tick's budget,
+that is a scope call for `buro:producer` — never a reason to land half of it and finish next round.
+
+**The five moves, in this order. The order is the point: spec first, product last.**
+
+| # | Move | The failure it prevents |
+|---|---|---|
+| 1 | **Change the SPEC** — the passage that ruled the old thing. Amend or delete it. | The registers derive from the spec (§2b). Change the product first and next round's re-derivation quietly restores the old design. |
+| 2 | **List the blast radius by CITATION** — every row whose `source:` cites the changed passage, by name, now. | "Consider re-opening" (§4c). Rows that are never listed are found later, by a player. |
+| 3 | **Re-state each listed row** with §4c's three tests: *what it must let people do* changed → re-derive · *what a part is FOR* changed → rebuild · *how it looks or is named* → patch, keep the state. Removed entirely → **delete the row** (§2h). | The row that keeps `verified` against a bar that no longer applies. |
+| 4 | **Write the ADR and the log entry** — superseded, never edited (§5). | The next round re-litigating the change because nobody can find why it was made. |
+| 5 | **Then change the product**, and the docs pass at step 7 catches what the change made untrue. | — |
+
+**Recompute goal-distance after a change, and expect it to go UP.** A redesign destroys verified
+work; the count must show that. ⛔ **A goal-distance that only ever falls is not measuring the
+project** — it is measuring the loop's morale, and it will hide every re-do until the end.
+
+**A citation is what makes all of this cheap.** With `source:` on every row, move 2 is a search. With
+no citation, move 2 is a re-reading of the whole spec, so it gets skipped, and *that* is the chaos.
+`state_check.py` fails a `source:` whose document or `§`-section no longer exists — the dangling
+citation is the mechanical footprint of a change that landed in the spec and nowhere else.
+
+**The third re-open is a STALL of the design, not a change.** Same rule as §4. When one decision has
+been re-opened three times, stop changing it: the item is unspecifiable at the current level of
+understanding. Take an exit — **adopt** the standing solution, **cut** to the honest minimum, or
+**park** it with a `revive-if`. Churning a design is the most expensive way a loop can look busy.
+
 ## 5. Three artifacts, three homes — never a fourth copy
 
 | Artifact | Home | Discipline |
@@ -333,11 +407,13 @@ Next: region 7 encounters — it is the floor of the register.
 1 STALL   check the item in hand: spent vs budget, tick − moved. Stalled → take an exit, log it, done.
 2 DIRECT  3–5 seats, sequential if the slice touches ≤3 departments, fan if ≥4.
 3 PRODUCE artifacts through each seat's own self-critique gate.
-4 BUILD   superpowers / feature-dev + the engine seat. TDD where it is code.
+4 BUILD   buro:dev + buro:roblox-engineering where it's Roblox. TDD where it is code.
 5 VERIFY  the acceptance number, measured. A tick that produced no number produced no progress.
 6 RECEIVE tester → audience → critic → chaos, on the slice. Findings become register rows.
 7 WRITE   registers (states, spent, moved) · one log entry · decisions if one was made · active.md
           (round, goal-distance, archive) · the docs pass: what did this change make untrue?
+7b CUT    did this tick cut or change anything? Cut → delete the row AND its source, re-open what
+          stood on it. Changed → new acceptance line, state back to specced (§2h). Never a note.
 ```
 
 **Step 7's docs pass is not optional.** Every tick asks which document now lies — the GDD, the TDD,
@@ -396,5 +472,7 @@ prove the thing works, and it is blind to a row nobody wrote — which is why §
 job every round, not a script's.
 
 It fails on a register row with no state, an acceptance line missing at `specced`+, a broken
-one-state rule, a stalled item nobody exited, and a tick that left no log entry. **An unvalidated
+one-state rule, a stalled item nobody exited, a tick that left no log entry, a row annotated as cut
+instead of deleted (§2h), and a `source:` that points at a document or a section which no longer
+exists — the dangling citation a design change leaves behind (§4d). **An unvalidated
 "the loop is going well" is the project-scale version of the screenshot of the good corner.**

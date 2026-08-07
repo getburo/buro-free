@@ -3,7 +3,7 @@
 > Quality is made on the parts. **Cohesion is made on the seams.** The full studio's many
 > seats are the parts — each already excellent. This document is the seams: how they combine
 > into *one* production, so a large studio stays one studio and not many tools. **This free
-> tier ships 16 of them**; this document describes the full studio and is kept for reference.
+> tier ships 17 of them**; this document describes the full studio and is kept for reference.
 
 This is the playbook `buro:process` (the conductor) points to. It answers: what is the
 studio *about*, how do the seats hand off, what's the core motion, and — for the common

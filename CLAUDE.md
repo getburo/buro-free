@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this repo is
 
 Buro — a **Claude Code plugin**, not an application. There is no build step, no
-package manager, no runtime. The deliverable is prose: 57 seats (+ the `buro` dispatcher and
+package manager, no runtime. The deliverable is prose: 17 seats (+ the `buro` dispatcher and
 the `selftest` tool) under `skills/`, each a folder with a `SKILL.md` and a `references/`
 canon. Editing this repo means editing skill prose, and the only "tests" are the consistency
 check and the routing eval.
@@ -16,7 +16,6 @@ check and the routing eval.
 python3 evals/check-consistency.py          # the test suite — seven checks, exit 1 on failure
 python3 evals/check-consistency.py --fix    # regenerate evals/surface.txt from frontmatter, then report
 BURO_DONE_GATE=block hooks/buro-done-gate.sh   # exercise the Stop hook in blocking mode
-python3 skills/dataviz/scripts/validate_palette.py "#EA630C,#07A4A4,#0280F7"   # a runnable seat method
 python3 skills/process/scripts/init_project.py /path/to/project --name X --kind game  # the starter kit
 python3 skills/process/scripts/state_check.py /path/to/consuming/project   # the loop's state check
 ```
@@ -44,13 +43,13 @@ artifact, through its own self-critique gate). A third mode, RECEIVE, lives in t
 department (`tester` · `audience` · `critic` · `chaos` · `detective`). The studio's motion is
 DIRECT → PRODUCE → RECEIVE → revise.
 
-**The one law**, carried by every seat, is what makes the ten departments one studio rather
-than 57 tools: *subtract decoration never a capability; quality earned by mastery and delivered
+**The one law**, carried by every seat, is what makes the eleven departments one studio rather
+than 17 tools: *subtract decoration never a capability; quality earned by mastery and delivered
 value, never extracted by dark patterns, FOMO, or hype; producing is never an excuse to phone
 it in.* Cohesion is a consequence of the shared arbiter, not a separate task — so a new seat
 that doesn't carry the law doesn't belong.
 
-**No craft above another.** The ten departments are peers. Where two seats look alike, the
+**No craft above another.** The eleven departments are peers. Where two seats look alike, the
 dispatcher's **Seam rules** table (`skills/buro/SKILL.md`) is the tie-breaker (playable space or
 invented geography → `level`, real built environment → `spatial`, and so on);
 the eval's `seam` field mirrors those pairs.
@@ -69,7 +68,7 @@ Adding a seat touches more places than it looks. All of these must be updated to
    universal template (frontmatter → epigraphs → core chain → lenses → adversarial panel →
    method gates → **PRODUCE** with a self-critique gate → verdict format → discipline &
    boundaries → "slop it kills on sight"), plus `references/canon.md`.
-2. Four rosters, each of which must name every seat: the dispatcher's **ten departments** block
+2. Four rosters, each of which must name every seat: the dispatcher's **eleven departments** block
    and its **trigger table** (`| The task is… | Seat |` — one row saying *when to open it*, never
    what it carries; that lives in the seat's own always-on description), the README department
    table, and the `docs/STUDIO-PLAN.md` org chart.
@@ -84,14 +83,12 @@ folder (`docs/research/` is exempt: those are dated captures naming seats that w
 planned). A reference file has exactly one owning seat — never copy one into a second seat, link
 to it. `canon.md` is the one exempt filename, being the per-seat template name.
 
-Two seats have an executable method. `buro:dataviz`: `scripts/validate_palette.py`
-implements the colour checks its `references/colour.md` documents, and the seat's PRODUCE gate
-refuses an unvalidated palette. If you change a threshold, change it in both places.
-`buro:process`: `scripts/state_check.py` validates a **consuming** project's `.buro/` against
-`references/cycle.md` — the state ladder, the one-state rule, the acceptance line, the stall
-budget, provenance, the absence check, the log. `scripts/init_project.py` scaffolds that same
-`.buro/` into any project (the starter kit) and its output must pass `state_check.py` unedited.
-Same rule as dataviz: change a threshold in a script and in `cycle.md` together.
+One seat has an executable method. `buro:process`: `scripts/state_check.py` validates a
+**consuming** project's `.buro/` against `references/cycle.md` — the state ladder, the one-state
+rule, the acceptance line, the stall budget, provenance, the absence check, the annotated cut
+(§2h), the dangling `source:` citation (§4d), the log. `scripts/init_project.py` scaffolds that
+same `.buro/` into any project (the starter kit) and its output must pass `state_check.py`
+unedited. Change a threshold in the script and in `cycle.md` together, never one alone.
 
 ## Conventions
 

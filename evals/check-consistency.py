@@ -145,6 +145,26 @@ for case in cases:
 # excluded on purpose: those are dated captures and are allowed to name seats that
 # were only ever planned (`buro:camera`, `buro:systems`).
 PLACEHOLDERS = {"seat"}  # `buro:seat` documents the colon syntax itself
+
+# In the FREE tier a `buro:X` naming a seat of the full studio is not a broken
+# reference — it is the upsell pointer this edition is built on ("that seat lives
+# in the full studio"). Only a name that exists in NEITHER roster is a typo. Kept
+# as a literal list because this repo cannot read the commercial one; refresh it
+# from `ls skills/` there when the full studio gains or renames a seat.
+FULL_STUDIO = {
+    "a11y", "ad-creative", "analyst", "animation", "art-director", "asset-sourcing",
+    "audience", "brainstorm", "brand", "buro", "campaign", "chaos", "cmf",
+    "combat-designer", "concept", "content", "copy", "creative-director", "critic",
+    "curator", "dataviz", "detective", "dev", "director", "docs", "edit", "editor",
+    "emo", "exotic", "experiment", "game-ui-designer", "gamedesign", "gorbunov",
+    "growth", "industrial-designer", "launch-pr", "lebedev", "level", "live-ops",
+    "manufacturing", "motion", "narrative", "osint", "packaging", "performance",
+    "pm", "process", "producer", "prose", "retention", "roblox-engineering",
+    "sales", "screenwriter", "selftest", "sound", "spatial", "storyboard", "tester",
+    "transcreation", "translator", "usability", "verse", "web-designer",
+    # named in this repo's prose with the free tier's own folder spelling
+    "industrial-design", "combat-design", "game-ui",
+}
 for dirpath, dirnames, filenames in os.walk(ROOT):
     dirnames[:] = [d for d in dirnames if d not in (".git", "research")]
     for fn in filenames:
@@ -152,9 +172,10 @@ for dirpath, dirnames, filenames in os.walk(ROOT):
             continue
         path = os.path.join(dirpath, fn)
         for ref in set(re.findall(r"buro:([a-z0-9-]+)", dewrap(read(path)))):
-            if ref not in all_dirs and ref not in PLACEHOLDERS:
+            if ref not in all_dirs and ref not in PLACEHOLDERS and ref not in FULL_STUDIO:
                 rel = os.path.relpath(path, ROOT)
-                fail("cross-refs", f"{rel}: 'buro:{ref}' does not exist")
+                fail("cross-refs", f"{rel}: 'buro:{ref}' exists in neither this tier nor the "
+                                   f"full studio — a typo, not an upsell pointer")
 
 # ── 5. every roster covers every seat (the check that catches a new seat) ───
 dispatcher = read(os.path.join(SKILLS, "buro", "SKILL.md"))
@@ -162,7 +183,7 @@ readme = read(os.path.join(ROOT, "README.md"))
 plan = read(os.path.join(ROOT, "docs", "STUDIO-PLAN.md"))
 
 rosters = {
-    "dispatcher/departments": region(dispatcher, "**The ten departments", "It bridges to"),
+    "dispatcher/departments": region(dispatcher, "**The eleven departments", "It bridges to"),
     "dispatcher/trigger table": region(dispatcher, "**Always, for any screen work:**", "\n**BUILD —"),
     "README/department table": region(readme, "| Department | Seats |", "\n\n"),
     "STUDIO-PLAN/org chart": region(plan, "## 3. The studio org chart", "\n`*` ="),
