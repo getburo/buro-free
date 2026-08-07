@@ -53,11 +53,11 @@ then spiralling back to re-deepen everything at the new bar. A canonical spiral 
 
 | Round | Goal (each pass goes DEEPER) | Owner seats |
 |---|---|---|
-| **R1 Blockout** | greybox skeleton — every district/system roughed in (the first ~2%) | level, gamedesign, roblox-engineering |
-| **R2 Deepen** | real content — quests, behaviours, each zone's gameplay identity, the whole map FILLED | gamedesign, level, roblox-engineering |
+| **R1 Blockout** | greybox skeleton — every district/system roughed in (the first ~2%) | level, gamedesign, game-engineering |
+| **R2 Deepen** | real content — quests, behaviours, each zone's gameplay identity, the whole map FILLED | gamedesign, level, game-engineering |
 | **R3 Live world** | the multiplayer/social layer actually lived-in (presence, shared events) | gamedesign, live-ops, retention |
 | **R4 Feel** | <100ms juice, camera, sound, the moment-to-moment | motion, sound, gamedesign |
-| **R5 Assets** | greybox → real art, one-world coherence | asset-sourcing, art-director, concept |
+| **R5 Assets** | greybox → real art, one-world coherence | assets, art-director, concept |
 | **R6 Critique / converge** | the adversarial panel + a real playtest → converge | pm/process, experiment, usability |
 | **→ back to R2** | re-open zones/quests/systems at the higher bar | (repeat, forever) |
 

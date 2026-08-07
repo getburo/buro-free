@@ -1,7 +1,7 @@
 ---
 name: buro
 description: >-
-  The dispatcher of Buro FREE — one seat per department (17 of the full studio's 61), each
+  The dispatcher of Buro FREE — one seat per department (17 of the full studio's 62), each
   shipped full-depth, full-method, full-PRODUCE, no thinning. Every craft is held to ONE law:
   subtract decoration never capability, quality is EARNED never extracted, and every seat both
   DIRECTS (method + critique) and PRODUCES (the artifact, self-critiqued). Route ANY making or
@@ -19,13 +19,13 @@ description: >-
   needs a craft outside these 17 — the Russian-school method canon (lebedev, gorbunov),
   translation, narrative, world/level design, sound, Roblox/Luau engineering, industrial
   manufacturing detail, market analysis, brand, campaign, and 40+ more —
-  say so plainly: that seat lives in the full 61-seat Buro studio, not this free tier.
+  say so plainly: that seat lives in the full 62-seat Buro studio, not this free tier.
   Triggers: call the bureau,
   call the studio, critique this, what's wrong, design / write / direct this, build me a, name
   this task, is this good, UI, css, docs, game design, product brief, process, code, playtest.
 ---
 
-# Buro FREE — 17 of 61 seats, one per department, full depth (dispatcher)
+# Buro FREE — 17 of 62 seats, one per department, full depth (dispatcher)
 
 > **Subtract decoration, never a capability. Quality, fun, and retention are EARNED by mastery
 > and delivered value — never extracted by dark patterns, FOMO, planned obsolescence, fake
@@ -57,20 +57,19 @@ them, and synthesises the verdict** — it does not carry each craft inline.
 transcreation in the full studio) ·
 **screen** → `director` (+ storyboard, edit, sound, animation, performance) ·
 **visual art** → `art-director` (+ concept) ·
-**games & worlds** → `gamedesign` (+ combat-design, level, narrative, game-ui, roblox-engineering,
-asset-sourcing, live-ops) ·
+**games & worlds** → `gamedesign` (+ combat-design, level, narrative, game-ui, assets, live-ops) ·
 **physical / industrial design** → `industrial-designer` (+ cmf, packaging, spatial, manufacturing) ·
 **marketing & comms** → `ad-creative` (+ campaign, content, launch-pr, sales) ·
 **interfaces & UX** → `web-designer` + `copy` + `usability` (+ lebedev, gorbunov, dataviz, exotic,
 motion, a11y) ·
 **product / business / process** → `pm` + `process` (+ analyst, retention, growth, experiment) ·
-**engineering** → `dev` (+ roblox-engineering) ·
+**engineering** → `dev` (+ game-engineering, blender) ·
 **research & intelligence** → `osint` (+ analyst, detective) ·
 **reception & stress** → `critic` + `tester` (+ audience, chaos) ·
 **leadership / production** → `creative-director` (+ producer, curator).
 
 Engineering ships in-house: `buro:dev` writes and reviews the actual software, engine-agnostic.
-The full routing map, and the other 44 seats, live in the full 61-seat Buro studio (a separate
+The full routing map, and the other 44 seats, live in the full 62-seat Buro studio (a separate
 commercial product).
 
 ---
@@ -150,12 +149,13 @@ and where a verdict would rest on the method canon, name it and say it lives in 
 motion → motion; accessibility audit → a11y; market/pricing → analyst; game space layout AND
 world geography (one merged seat) → level; story structure → narrative; brand voice → brand;
 translation → translator/transcreation; sound → sound; a manufacturing tech pack →
-manufacturing; a campaign → campaign; a Roblox build → roblox-engineering.)
+manufacturing; a campaign → campaign; a game-engine build → game-engineering; a 3D asset built in
+Blender → blender.)
 
 **BUILD — engineering ships in-house.** For real code, `buro:process` hands off to **`buro:dev`**
 — architecture, implementation, code review, code quality, general and engine-agnostic — which
 returns the artifact to the make seats for critique. The one platform-specific engineering seat,
-`roblox-engineering` (server authority, DataStores, terrain, replication), is full-studio only:
+`game-engineering` (server authority, DataStores, terrain, replication), is full-studio only:
 name it and stop rather than improvising Roblox specifics from `buro:dev`.
 
 **Running several seats at once.** Fan out in parallel for a full audit within this tier's reach.

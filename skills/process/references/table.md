@@ -34,7 +34,7 @@ with RIFF** contaminates every seat after the first: one opinion in three voices
 | **Distorter** | takes it to the edge on purpose — absurd, hostile, degenerate | `buro:chaos` · `buro:tester` · `buro:audience` · `buro:exotic` |
 | **Judge** | verdict against the best of the form, defended from the material | `buro:critic` · `buro:curator` · `buro:lebedev` · `buro:editor` |
 
-A fourth chair, the **Grounder** (`buro:producer`, `buro:roblox-engineering`, `buro:experiment`),
+A fourth chair, the **Grounder** (`buro:producer`, `buro:game-engineering`, `buro:experiment`),
 joins only when the table keeps producing things that cannot be built, shipped, or measured.
 
 **Never two seats from one department** at one table — that's one lens in two voices. **Never more

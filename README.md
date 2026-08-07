@@ -5,7 +5,7 @@
 <sub>Free tier · 17 seats · updated 2026-08-07</sub>
 
 A studio's craft method, written down and packaged as Claude Code skills. **17 full-depth seats,
-at least one in every department** — 17 of the full studio's 61 — plus the `buro` dispatcher and
+at least one in every department** — 17 of the full studio's 62 — plus the `buro` dispatcher and
 a completion hook. No thinning: every seat here directs and produces exactly as it does in the
 full studio. What is missing is the rest of each department's bench, not the depth of what ships.
 
@@ -67,12 +67,12 @@ right-hand column is the bench that does not ship here.
 | **Words** | `docs` · `editor` | prose, screenwriter, copy, brand, verse, translator, transcreation |
 | **Screen** (film / animation) | `director` | storyboard, edit, sound, animation, performance |
 | **Visual art** | `art-director` | concept |
-| **Games & worlds** | `gamedesign` | combat-designer, level, narrative, game-ui-designer, roblox-engineering, asset-sourcing, live-ops |
+| **Games & worlds** | `gamedesign` | combat-designer, level, narrative, game-ui-designer, assets, live-ops |
 | **Physical / industrial design** | `industrial-designer` | cmf, packaging, spatial, manufacturing |
 | **Marketing & comms** | `ad-creative` | campaign, content, launch-pr, sales |
 | **Interfaces & UX** | `web-designer` · `copy` · `usability` | lebedev, gorbunov, dataviz, exotic, motion, a11y |
 | **Product & business** | `pm` · `process` | analyst, brainstorm, experiment, growth, retention |
-| **Engineering** | `dev` | roblox-engineering |
+| **Engineering** | `dev` | game-engineering, blender |
 | **Research & intelligence** | `osint` | analyst, detective |
 | **Reception & stress** | `critic` · `tester` | audience, chaos, emo |
 | **Leadership & production** | `creative-director` | producer, curator |

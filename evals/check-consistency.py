@@ -152,18 +152,18 @@ PLACEHOLDERS = {"seat"}  # `buro:seat` documents the colon syntax itself
 # as a literal list because this repo cannot read the commercial one; refresh it
 # from `ls skills/` there when the full studio gains or renames a seat.
 FULL_STUDIO = {
-    "a11y", "ad-creative", "analyst", "animation", "art-director", "asset-sourcing",
-    "audience", "brainstorm", "brand", "buro", "campaign", "chaos", "cmf",
+    "a11y", "ad-creative", "analyst", "animation", "art-director", "assets",
+    "audience", "blender", "brainstorm", "brand", "buro", "campaign", "chaos", "cmf",
     "combat-designer", "concept", "content", "copy", "creative-director", "critic",
     "curator", "dataviz", "detective", "dev", "director", "docs", "edit", "editor",
-    "emo", "exotic", "experiment", "game-ui-designer", "gamedesign", "gorbunov",
-    "growth", "industrial-designer", "launch-pr", "lebedev", "level", "live-ops",
-    "manufacturing", "motion", "narrative", "osint", "packaging", "performance",
-    "pm", "process", "producer", "prose", "retention", "roblox-engineering",
+    "emo", "exotic", "experiment", "game-engineering", "game-ui-designer", "gamedesign",
+    "gorbunov", "growth", "industrial-designer", "launch-pr", "lebedev", "level",
+    "live-ops", "manufacturing", "motion", "narrative", "osint", "packaging",
+    "performance", "pm", "process", "producer", "prose", "retention",
     "sales", "screenwriter", "selftest", "sound", "spatial", "storyboard", "tester",
     "transcreation", "translator", "usability", "verse", "web-designer",
-    # short forms the prose uses for full-studio seats
-    "combat-design", "game-ui",
+    # short forms and former names the prose still uses for full-studio seats
+    "combat-design", "game-ui", "asset-sourcing", "roblox-engineering",
 }
 for dirpath, dirnames, filenames in os.walk(ROOT):
     dirnames[:] = [d for d in dirnames if d not in (".git", "research")]
@@ -201,14 +201,19 @@ for label, text in rosters.items():
 # Two counts are legitimate in this repo and only two: THIS tier's roster, and the
 # full studio's, because the architecture documents are kept whole for reference
 # and say so. Any third number is drift.
-FULL_STUDIO_SEATS = 61
+FULL_STUDIO_SEATS = 62
+# The manifests are in this list because they were NOT, and the full studio shipped
+# `v0.52.0` claiming "60 specialists" — the one sentence a user reads before
+# installing anything, and the only count nothing checked.
 orchestration = read(os.path.join(ROOT, "docs", "ORCHESTRATION.md"))
+MANIFESTS = (".claude-plugin/plugin.json", ".claude-plugin/marketplace.json")
 for label, text in (
     ("README.md", readme),
     ("docs/STUDIO-PLAN.md", plan),
     ("docs/ORCHESTRATION.md", orchestration),
+    *((m, read(os.path.join(ROOT, *m.split("/")))) for m in MANIFESTS),
 ):
-    for claimed in {int(n) for n in re.findall(r"(\d+)[ -]seats?\b", text)}:
+    for claimed in {int(n) for n in re.findall(r"(\d+)[ -](?:seats?|specialists?)\b", text)}:
         if claimed not in (len(seats), FULL_STUDIO_SEATS):
             fail("counts", f"{label} claims {claimed} seats; this tier has {len(seats)} "
                            f"and the full studio {FULL_STUDIO_SEATS}")

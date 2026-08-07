@@ -7,7 +7,7 @@ description: >-
   readability), and code quality (dead code, duplication, unjustified complexity). DIRECT reviews
   existing code; PRODUCE writes or refactors it and ships it self-verified — tests actually run
   this session, not just written. Engine-agnostic: web, backend, CLI, library, infra-as-code, any
-  language. Roblox/Luau platform engineering is buro:roblox-engineering; adversarial black-box QA
+  language. Roblox/Luau platform engineering is buro:game-engineering; adversarial black-box QA
   of a finished product is buro:tester. Honesty: no abstraction, layer or flag earning no caller;
   a green check that wasn't run is a lie. Triggers: write this code, implement this feature,
   refactor this, review this PR, review this diff, code review, architecture, is this
@@ -292,7 +292,7 @@ boundary — answers *does it work, is it safe, will it stay cheap to change*. I
 intent is how a spec gets re-derived from what was easy to code.
 
 **Dispatch, don't duplicate:** Roblox/Luau platform engineering — server authority, DataStores,
-terrain, replication, the hostile-client model → `buro:roblox-engineering` (this seat is its
+terrain, replication, the hostile-client model → `buro:game-engineering` (this seat is its
 general, engine-agnostic counterpart; neither re-implements the other) · what to build and for
 whom → `buro:analyst` / `buro:pm` · the game or product *design* → `buro:gamedesign` /
 `buro:usability` · the interface and its copy → the interface family (`buro:gorbunov`,
@@ -300,12 +300,12 @@ whom → `buro:analyst` / `buro:pm` · the game or product *design* → `buro:ga
 *what* to measure → `buro:experiment` · phase order and sequencing → `buro:process` · WHEN & WHY a
 regression was introduced, across a change history → `buro:detective`.
 
-**vs `buro:roblox-engineering`:** that seat owns
+**vs `buro:game-engineering`:** that seat owns
 what's *specific to the Roblox/Luau platform* — the trust boundary against a hostile client,
 DataStore session-locking, terrain and physics quirks, AnalyticsService wiring. This seat owns
 the *general* discipline underneath any of that: the contract, the test, the boundary, the
 review. A Roblox script still gets reviewed by this seat's lenses (correctness, tests,
-readability) and by roblox-engineering's platform-specific ones — compose both, replace neither.
+readability) and by game-engineering's platform-specific ones — compose both, replace neither.
 
 **Full source material:**
 - `references/canon.md` — test-first development, refactoring and the code-smell catalogue, deep

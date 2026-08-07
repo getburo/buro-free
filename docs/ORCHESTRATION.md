@@ -1,8 +1,8 @@
 # Buro Studio — Orchestration (the seams)
 
-> Quality is made on the parts. **Cohesion is made on the seams.** The 61 seats are the
+> Quality is made on the parts. **Cohesion is made on the seams.** The 62 seats are the
 > parts — each already excellent. This document is the seams: how they combine into *one*
-> production, so a 61-seat studio stays one studio and not 61 tools.
+> production, so a 62-seat studio stays one studio and not 62 tools.
 >
 > **This free tier ships 17 of those seats.** The document below describes the full studio
 > and is kept whole for reference: where a pipeline names a seat this tier does not have,
@@ -54,7 +54,7 @@ a manipulation. Ban the mechanism and they lose a capability — the game's unce
 season, the reminder. That is the amputation this studio exists to refuse. When a verdict says
 "remove X", check which of the two it just removed.
 
-Because all 61 seats share this arbiter, their outputs *rhyme* by themselves. Cohesion is
+Because all 62 seats share this arbiter, their outputs *rhyme* by themselves. Cohesion is
 the consequence of the shared arbiter, not a separate task.
 
 ---
@@ -110,7 +110,7 @@ integration" section names its own boundaries). The three integration owners:
 
 Rule of thumb: **process** says *what phase / which seat*; **creative-director** says
 *does it cohere*; **producer** says *does it ship*. Engineering (`buro:dev`,
-`buro:roblox-engineering`) builds the code, in-house; the make-seats critique what
+`buro:game-engineering`) builds the code, in-house; the make-seats critique what
 comes back.
 
 ---
@@ -129,10 +129,10 @@ process(gate the whole) + creative-director(vision) + producer(ship)  ← integr
  2 level  — the world's geography and the spaces inside it · narrative — story/quests
  3 art-director   — one visual language → concept — the specific assets (design)
    animation — motion · sound — audio/music · game-ui-designer — HUD/menus under pressure
- 3b asset-sourcing — turn the concept/sound briefs into ACTUAL assets, by PRIORITY: build-own
+ 3b assets — turn the concept/sound briefs into ACTUAL assets, by PRIORITY: build-own
     (code/CSG/EditableMesh) → Roblox AI (Cube/Material/Texture) → web-free + post-process (CC0/CC-BY,
     converted/optimized) → commission/external-AI → Toolbox LAST (scanned + license-checked). Vet all.
- 4 roblox-engineering — server authority, DataStores, remotes, AnalyticsService, and the
+ 4 game-engineering — server authority, DataStores, remotes, AnalyticsService, and the
     mandatory script-SCAN + import of any sourced free model (the build)
  5 RECEIVE        — tester + audience + critic + chaos, then revise (detective if a quality regresses)
  6 PUBLISH        — one click from Roblox Studio (store page: art-director icon/thumbnail + copy + brand)
@@ -205,9 +205,9 @@ from one department at one table (that's one lens in two voices); never more tha
 
 ---
 
-## 5. Discoverability — how a user picks among 61 seats
+## 5. Discoverability — how a user picks among 62 seats
 
-A user does **not** memorise 61 seats. They state the task; **`buro:buro` (the dispatcher)
+A user does **not** memorise 62 seats. They state the task; **`buro:buro` (the dispatcher)
 routes.** The two entry patterns:
 
 - **Direct door:** you know the seat → invoke `buro:<seat>` (e.g. `buro:level`).
@@ -232,7 +232,7 @@ Run this whenever the studio grows or a big production assembles:
   doesn't belong.
 - **Gut-check** — take three random seats: *one studio, or three?* They should share the
   voice, the DIRECT+PRODUCE nature, the adversarial panel, and the honesty law.
-- **No bloat** — the parts have converged (61 seats). Further growth is at the *seams*
+- **No bloat** — the parts have converged (62 seats). Further growth is at the *seams*
   (docs like this one) or a real new medium — not more specialists. Adding a seat that
   overlaps an existing one is cohesion debt, not coverage.
 
@@ -240,7 +240,7 @@ Run this whenever the studio grows or a big production assembles:
 
 ## 7. Where the studio is
 
-Parts: converged (61 seats, one grammar). Seam management: this document. The honest
+Parts: converged (62 seats, one grammar). Seam management: this document. The honest
 next frontier is **not** more seats — it's the multi-engine engineering track (Unity /
 Unreal / Godot / web), which is a deliberate expansion past Roblox with its own
 spec → plan → build cycle (see `STUDIO-PLAN.md` → Roadmap), not an incremental seat.

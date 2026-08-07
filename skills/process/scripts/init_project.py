@@ -198,8 +198,8 @@ def main() -> int:
 
     for dept in KINDS[a.kind]:
         seat = {"regions": "level", "story": "narrative", "world": "level",
-                "features": "gamedesign", "systems": "roblox-engineering", "ui": "game-ui-designer",
-                "assets": "asset-sourcing", "flows": "usability", "growth": "growth",
+                "features": "gamedesign", "systems": "game-engineering", "ui": "game-ui-designer",
+                "assets": "assets", "flows": "usability", "growth": "growth",
                 "design": "buro", "build": "coder", "content": "copy",
                 "product": "pm"}.get(dept, "buro")
         body = REGISTER_HEADER.format(dept=dept) + EXAMPLE_ROW.format(

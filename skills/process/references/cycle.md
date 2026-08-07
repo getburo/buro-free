@@ -65,7 +65,7 @@ one department has run three states ahead of another.**
 ```
 | id | item | seat | state | acceptance — the number/observation that ENDS it | budget | spent | moved |
 |----|------|------|-------|--------------------------------------------------|--------|-------|-------|
-| S3 | BMX handling | roblox-engineering | built | clears a 3-stud ledge ≥9/10 at 30fps on mid phone | 3 | 5 | t11 |
+| S3 | BMX handling | game-engineering | built | clears a 3-stud ledge ≥9/10 at 30fps on mid phone | 3 | 5 | t11 |
 ```
 
 - `budget` — ticks this item may consume, declared when it reaches `specced`.
@@ -292,7 +292,7 @@ fail, so work on it never ends; that is not a discipline problem, it is a specif
 - Not a line: "feels responsive", "looks right", "is fun", "is optimised".
 - **Physics and feel are the canonical grinders** because they invite unfalsifiable iteration. If the
   only instrument is the author's hand on the keyboard, the item is not measurable — either build the
-  measurement (a scripted test, a counted trial, a recorded number: `buro:roblox-engineering`
+  measurement (a scripted test, a counted trial, a recorded number: `buro:game-engineering`
   §verification, arithmetic before screenshot) or `park` it. Iterating on an unmeasured feel is the
   most expensive way to spend a loop.
 
@@ -426,7 +426,7 @@ department log that restates entries is two histories that will disagree by roun
 ```markdown
 # 0042 · Level — the drained canal, seam pass · 2026-07-27 · tick t42
 Slice: crossing from Residential to the canal.
-Seats: level (fan: level, art-director, roblox-engineering).
+Seats: level (fan: level, art-director, game-engineering).
 Did: gradient band + ridge threshold on the 3↔4 boundary; region 4 stays `blocked` on purpose.
 Measured: landmark visible at 91% of 40 sampled points (target ≥90) · crossing 22 s at run speed.
 Cost: 2 ticks of 2 budgeted.
@@ -447,7 +447,7 @@ Next: region 7 encounters — it is the floor of the register.
 1 STALL   check the item in hand: spent vs budget, tick − moved. Stalled → take an exit, log it, done.
 2 DIRECT  3–5 seats, sequential if the slice touches ≤3 departments, fan if ≥4.
 3 PRODUCE artifacts through each seat's own self-critique gate.
-4 BUILD   buro:dev + buro:roblox-engineering where it's Roblox. TDD where it is code.
+4 BUILD   buro:dev + buro:game-engineering where it's Roblox. TDD where it is code.
 5 VERIFY  the acceptance number, measured. A tick that produced no number produced no progress.
 6 RECEIVE tester → audience → critic → chaos, on the slice. Findings become register rows.
 7 WRITE   registers (states, spent, moved) · one log entry · decisions if one was made · active.md

@@ -12,7 +12,7 @@ department, no thinning. The architecture below is the **full studio's** and is 
 reference; the roadmap, the remaining bench, and every seat not in this tier's roster live in
 the full commercial studio.
 
-**61 seats across 12 departments** (+ the `buro` dispatcher), packaged as the plugin
+**62 seats across 12 departments** (+ the `buro` dispatcher), packaged as the plugin
 `buro@buro-studio-dev`. Seat descriptions are kept lean (always-on ~9.8k tokens); each seat's
 full method loads on demand. A blind routing check (`evals/`) covers 75 tasks, 61 of them
 look-alike seam pairs; the last recorded blind run scored **53/61** on the cases that existed at
@@ -29,7 +29,7 @@ the time; the 14 cases added since await their first blind run.
   named ownership of tagging quality (DAM practice). Named by role, like `curator` and
   `producer`, because organising a corpus is stewardship rather than a craft.
   **Blocked on two seams before it can be authored:** against `buro:usability`, which already
-  owns product information architecture, and against `buro:asset-sourcing`, which procures assets
+  owns product information architecture, and against `buro:assets`, which procures assets
   but does not shelve them. Sources: `docs/research/2026-07-24-documentation-craft-sources.md`.
 
 - **A ceiling on specification depth — what the target can actually SHOW.** Opened 2026-08-06,
@@ -63,7 +63,7 @@ the time; the 14 cases added since await their first blind run.
 
 - **Multi-engine game engineering.** General, engine-agnostic software (web, backend, CLI,
   library, infra) is covered today by `buro:dev`; Roblox/Luau is covered by
-  `buro:roblox-engineering`. Still planned: **game-engine-specific** engineering seats for
+  `buro:game-engineering`. Still planned: **game-engine-specific** engineering seats for
   **Unity (C#), Unreal (C++/Blueprint), and Godot (GDScript)** — plus the non-Roblox
   release/devops that comes with them (Steam, console, mobile stores). This is the studio's
   biggest capability ceiling once it moves beyond Roblox; a buro:pm/gamedesign audit ranked it
@@ -118,15 +118,14 @@ the time; the 14 cases added since await their first blind run.
   and §10 fails if one drops under its cap without being removed from the list, so the debt cannot
   quietly go stale. Bringing them under is a separate pass that nothing depends on.
 
-- **Rename `buro:roblox-engineering` → `game-engineering`.** Decided 2026-08-02, not built.
-  Ties into the multi-engine item above — the intent is a rename/broadening, not a second seat: as
-  the studio picks up Unity/Unreal/Godot, name the seat for the discipline (game-engine platform
-  engineering) rather than the one platform it started on. Needs the same rename discipline as any
-  other seat rename (`CLAUDE.md` § Adding or renaming a seat): every `buro:roblox-engineering`
-  reference across rosters, seam rules, docs, and `evals/` updated in the same pass, plus a call on
-  whether the Roblox-specific method content stays as-is under the new name or splits into a
-  shared cross-engine layer once Unity/Unreal/Godot seats actually exist. Sequencing: likely rides
-  along with (or right after) the multi-engine build-out above, not before it.
+- **Split `buro:game-engineering`'s Roblox layer from a cross-engine one.** The rename
+  `roblox-engineering` → `game-engineering` shipped in `v0.52.0`; the *content* under the new name
+  is still entirely Roblox/Luau, and the seat's description says so out loud rather than pretending
+  otherwise. The open call, which only becomes real once Unity/Unreal/Godot seats exist (the
+  multi-engine item above): does the Roblox method stay whole under this seat, or does the part
+  that is true of every engine — server authority, replication, the hostile client, existence ≠
+  function — lift into a shared layer with per-engine seats beneath it? Do not pre-build the
+  abstraction: one engine is not a pattern.
 
 ---
 
@@ -141,7 +140,7 @@ the time; the 14 cases added since await their first blind run.
              ▼                 ▼                  ▼
      TASTE / METHOD SPINE   PROCESS SPINE      ENGINEERING SPINE
      buro seats             buro:process       buro:dev (general software) +
-     (what is good, why,    (which phase,      buro:roblox-engineering (Roblox/Luau)
+     (what is good, why,    (which phase,      buro:game-engineering (Roblox/Luau)
       + produce artifact)    order, gates)      (architecture / TDD / review, in-house)
 ```
 
@@ -149,12 +148,12 @@ the time; the 14 cases added since await their first blind run.
   "we need a site / a game / a book".
 - **Buro owns HOW to build safely, in-house** — `buro:dev` carries the general
   discipline (architecture → tests-first → implement → review → verify → ship);
-  `buro:roblox-engineering` carries the Roblox/Luau platform-specific layer on top of it.
+  `buro:game-engineering` carries the Roblox/Luau platform-specific layer on top of it.
 - **`buro:process` is the switchman** — on the *build* phase it hands the baton to
   the engineering department, then returns the finished artifact to the relevant Buro
   seats for a critique pass.
 
-The chain is **buro (frame) → dev/roblox-engineering (build) → buro (critique)** — the
+The chain is **buro (frame) → dev/game-engineering (build) → buro (critique)** — the
 studio conducts its own engineering discipline rather than routing it outside the plugin.
 
 ---
@@ -236,10 +235,11 @@ buro  — top studio dispatcher (plugin entry: buro:buro)
 │
 ├─ DEPARTMENT: GAMES & WORLDS
 │    gamedesign · combat-designer · narrative · level ·
-│    asset-sourcing · live-ops
+│    assets · live-ops
 │
 ├─ DEPARTMENT: ENGINEERING                                                [NEW]
-│    dev (general software) · roblox-engineering (Roblox/Luau platform)
+│    dev (general software) · game-engineering (game engine; Roblox/Luau today) ·
+│    blender (the DCC — assets built by bpy script, audited by count)
 │
 ├─ DEPARTMENT: WORDS
 │    copy · docs · screenwriter · prose · editor · verse · brand · translator · transcreation
@@ -263,7 +263,7 @@ buro  — top studio dispatcher (plugin entry: buro:buro)
 │    (emo reads the FELT result: what it makes a person feel, and whether that was the intent)
 │
 └─ EXECUTION, in-house (sites, game code)
-     buro:process ⟶ buro:dev / buro:roblox-engineering (architecture → TDD → review) ⟶ back for critique
+     buro:process ⟶ buro:dev / buro:game-engineering (architecture → TDD → review) ⟶ back for critique
 ```
 `*` = new seat to author. `screenwriter` is authored (exemplar/template).
 
@@ -339,7 +339,7 @@ Every seat is a folder with a `SKILL.md`:
    fiction/non-fiction, `screenwriter`=screen script).
 2. **mandate** — what the seat OWNS.
 3. **dispatches** — what it hands to neighbours (`storyboard`→`director`; world
-   physics/economics→`level`; actual build→`process`→`dev`/`roblox-engineering`).
+   physics/economics→`level`; actual build→`process`→`dev`/`game-engineering`).
 4. **DIRECT section** — method + canon + critique output format.
 5. **PRODUCE section** — how it emits the artifact + a self-critique gate before delivery.
 6. **honesty law** — what this seat forbids.
@@ -357,12 +357,12 @@ smallest correct boundary → tests first → implement → review (the twelve l
 (run this session) → ship. Covers web, backend, CLI, library, and infra-as-code, in any
 language.
 
-**`buro:roblox-engineering`** — the Roblox/Luau platform spine: server authority,
+**`buro:game-engineering`** — the Roblox/Luau platform spine: server authority,
 DataStore/remote/shard safety, terrain and physics quirks, AnalyticsService wiring — on top
 of the same general discipline, which it dispatches to `buro:dev`.
 
 Routing rule of thumb:
-- **Roblox/Luau** → `buro:roblox-engineering` (which still leans on `buro:dev` for the
+- **Roblox/Luau** → `buro:game-engineering` (which still leans on `buro:dev` for the
   general TDD/review layer).
 - **Everything else** → `buro:dev` directly.
 - `buro:detective` sends *code* regressions to `buro:dev`.
@@ -381,7 +381,7 @@ and the taste critique. Neither re-implements the other.
 | Medium | Seats engaged |
 |---|---|
 | Websites | buro (design) + dev (build) + analyst/pm/process |
-| Games | gamedesign/narrative/level + buro (HUD) + coder/roblox-engineering (code) + sound/art |
+| Games | gamedesign/narrative/level + buro (HUD) + coder/game-engineering (code) + sound/art |
 | Short / interface / marketing text | copy |
 | Books | prose + editor + art-director (cover / illustration brief) |
 | Cartoons (animation) | screenwriter + director + storyboard + sound + art-director + narrative |

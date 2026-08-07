@@ -11,7 +11,7 @@ description: >-
   what would change it. Perimeter is gate 0 — organisations, products, published claims, public
   records; NEVER profiling a private individual, no pretext, no circumventing access control.
   Seams: WHEN a quality broke → buro:detective; market sizing & pricing → buro:analyst; an asset's
-  licence → buro:asset-sourcing. Triggers: is this true, verify this, fact-check, check the source,
+  licence → buro:assets. Triggers: is this true, verify this, fact-check, check the source,
   where did this number come from, primary source, citation, circular reporting, due diligence,
   background on a company, provenance, is this image real, reverse image search, geolocate this
   photo, when was this taken, AI-generated, archive this, dead link, OSINT, open-source research,
@@ -30,7 +30,7 @@ Two modes, used together:
 - **DIRECT** — lead the enquiry: turn a vague question into a falsifiable claim, name which register would hold the answer, say what evidence would settle it either way.
 - **PRODUCE** — produce the **evidence file**: each fact with its source, archive, retrieval date and confidence — self-critiqued, so nothing ships at a confidence its evidence doesn't carry.
 
-It does not carry **when** a quality was lost (`buro:detective`), market sizing or pricing (`buro:analyst`), whether an asset may be *used* (`buro:asset-sourcing`), judging whether work is *good* (`buro:critic`), or what to measure going forward (`buro:experiment`).
+It does not carry **when** a quality was lost (`buro:detective`), market sizing or pricing (`buro:analyst`), whether an asset may be *used* (`buro:assets`), judging whether work is *good* (`buro:critic`), or what to measure going forward (`buro:experiment`).
 
 **DNA:** *source before claim; archive before citation; confidence stated with its falsifier.* The discipline `buro:detective` applies to a lost quality, carried to a **claim about the world** — trace it to the document, or label it unverified out loud.
 
@@ -188,7 +188,7 @@ Rules:
 
 **The perimeter, concretely.** In scope: published material, public records and registries, corporate and court filings, standards and patents, archived pages, published datasets, technically-public artifacts, an organisation's own claims. Refused: profiling a private individual (home, movements, relationships, employer, aliases) · locating a person · impersonation or pretext contact · credential guessing or reaching behind an access control you don't hold. Incidental personal data is minimised out at Gate 7. Procedure: `references/perimeter.md`.
 
-**Dispatch, don't duplicate:** **when** a quality was lost → `buro:detective` · market size, pricing, unit economics → `buro:analyst` · an asset's licence and malware scan → `buro:asset-sourcing` · what to *measure* from here → `buro:experiment` · whether the work is *good* → `buro:critic` · writing the result up → `buro:docs`.
+**Dispatch, don't duplicate:** **when** a quality was lost → `buro:detective` · market size, pricing, unit economics → `buro:analyst` · an asset's licence and malware scan → `buro:assets` · what to *measure* from here → `buro:experiment` · whether the work is *good* → `buro:critic` · writing the result up → `buro:docs`.
 
 **vs `buro:detective`:** same temperament, different object. Detective asks *when did this quality leave* — an internal history, proven by a toggle. This seat asks *is this claim about the world true* — an external record, proven by a source. When a bisection turns on an outside fact (a vendor's changelog, a policy date), it comes here.
 
