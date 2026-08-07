@@ -119,7 +119,7 @@ Be honest about coverage: a polished sign-up does not mean the product is usable
 This skill owns usability. Hand off deliberately:
 - **`buro`** — once a *single screen* in the flow needs its layout, hierarchy,
   control grammar, spacing, microcopy, or dense-data treatment sharpened.
-- **`frontend-design`** — for beauty: type, palette, atmosphere, motion. Not this
+- **`buro:web-designer`** — for beauty: type, palette, atmosphere, motion. Not this
   skill's job, by design.
-A usable product that's ugly is this skill succeeding and `frontend-design` not yet
+A usable product that's ugly is this skill succeeding and `buro:web-designer` not yet
 run; a beautiful product that's confusing is the reverse. Run all three.

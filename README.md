@@ -2,10 +2,10 @@
 
 **[getburo.dev](https://getburo.dev) · [how it works](https://getburo.dev/how-it-works) · [the full studio](https://getburo.dev/#pricing)**
 
-<sub>Free tier · 17 seats · updated 2026-08-07</sub>
+<sub>Free tier · 18 seats · updated 2026-08-07</sub>
 
-A studio's craft method, written down and packaged as Claude Code skills. **17 full-depth seats,
-at least one in every department** — 17 of the full studio's 61 — plus the `buro` dispatcher and
+A studio's craft method, written down and packaged as Claude Code skills. **18 full-depth seats,
+at least one in every department** — 18 of the full studio's 61 — plus the `buro` dispatcher and
 a completion hook. No thinning: every seat here directs and produces exactly as it does in the
 full studio. What is missing is the rest of each department's bench, not the depth of what ships.
 
@@ -58,7 +58,7 @@ seats are equal members; their outputs rhyme because they share the arbiter, not
 
 ## The seats
 
-Eleven departments, peers rather than a hierarchy. Every seat in the middle column is
+Twelve departments, peers rather than a hierarchy. Every seat in the middle column is
 complete: same method, same adversarial panel, same PRODUCE gate as the full studio. The
 right-hand column is the bench that does not ship here.
 
@@ -68,10 +68,11 @@ right-hand column is the bench that does not ship here.
 | **Screen** (film / animation) | `director` | storyboard, edit, sound, animation, performance |
 | **Visual art** | `art-director` | concept |
 | **Games & worlds** | `gamedesign` | combat-designer, level, narrative, game-ui-designer, roblox-engineering, asset-sourcing, live-ops |
-| **Physical / industrial design** | `industrial-design` | cmf, packaging, spatial, manufacturing |
+| **Physical / industrial design** | `industrial-designer` | cmf, packaging, spatial, manufacturing |
 | **Marketing & comms** | `ad-creative` | campaign, content, launch-pr, sales |
 | **Interfaces & UX** | `lebedev` · `gorbunov` · `copy` · `usability` | dataviz, exotic, motion, a11y, web-designer |
-| **Product & business** | `pm` · `process` | analyst, brainstorm, dev, experiment, growth, retention |
+| **Product & business** | `pm` · `process` | analyst, brainstorm, experiment, growth, retention |
+| **Engineering** | `dev` | roblox-engineering |
 | **Research & intelligence** | `osint` | analyst, detective |
 | **Reception & stress** | `critic` · `tester` | audience, chaos, emo |
 | **Leadership & production** | `creative-director` | producer, curator |
@@ -92,9 +93,10 @@ actually route between.
 | Documentation — README, reference, runbook | `docs` (+ `editor` to tighten an existing draft) |
 | A game system — loop, mechanics, balance | `gamedesign` |
 | A scene, staged | `director` |
-| A physical object's form (specs, not manufacturing) | `industrial-design` |
+| A physical object's form (specs, not manufacturing) | `industrial-designer` |
 | One ad set | `ad-creative` |
 | Prioritisation, or a PRD | `pm` |
+| Software — written, refactored, or reviewed | `dev` (+ `tester` for black-box QA) |
 | A small project, idea → shipped | `process` conducts · `creative-director` holds the vision · the relevant make seat · `tester` / `critic` receive it |
 
 A whole game, book, film, campaign, product line or Roblox build needs seats outside this tier.

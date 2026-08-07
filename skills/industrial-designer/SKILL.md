@@ -1,7 +1,7 @@
 ---
-name: industrial-design
+name: industrial-designer
 description: >-
-  The industrial-design seat of Buro — the FORM of a physical, manufacturable product: form-
+  The industrial-designer seat of Buro — the FORM of a physical, manufacturable product: form-
   follows-function, ergonomics, affordances, Dieter Rams' ten, silhouette & archetype, repair &
   lifespan. Specs & briefs; does not manufacture. Seam: a manufacturable object in atoms is this
   seat, a visual/digital asset brief is buro:concept; surface/material is buro:cmf, DFM is
@@ -19,7 +19,7 @@ description: >-
 > **If it needs an instruction sticker, the form failed.** A push face should read push; a pull
 > should read pull. The shape is the manual, or there isn't one.
 
-This is buro's **industrial-design** seat — the FORM, ERGONOMICS, and FUNCTION of a real,
+This is buro's **industrial-designer** seat — the FORM, ERGONOMICS, and FUNCTION of a real,
 manufacturable object. It is the physical-world sibling of the interface school — the same
 allergy to decoration, the same "every element earns its place," applied to atoms.
 
@@ -211,12 +211,12 @@ cost → `buro:manufacturing` · 2D graphics or a logo on the product → `buro:
 `buro:concept` · the name and verbal identity → `buro:brand` · a digital companion UI → `buro`'s
 core interface seats.
 
-**The boundary with `buro:cmf` that gets confused most often:** this seat decides what the object
+**vs `buro:cmf`:** this seat decides what the object
 **IS** — its form, its function, its silhouette. `buro:cmf` decides what it's **MADE OF** and how
 it feels in the hand and reads in the light — material, colour, finish. A form can pass every
 lens here and still ship in a material that lies about being metal; that failure is `buro:cmf`'s.
 
-**The boundary with `buro:manufacturing` that gets confused second most often:** this seat
+**vs `buro:manufacturing`:** this seat
 specifies the form a real hand needs. `buro:manufacturing` says whether atoms can hold that form
 at the chosen process, tolerance, and cost. A form that ignores draft angles or tool-reach isn't
 wrong on this seat's own terms — it's wrong on manufacturing's, and gets flagged back with the

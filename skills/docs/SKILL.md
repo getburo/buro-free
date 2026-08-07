@@ -4,11 +4,9 @@ description: >-
   The documentation seat of Buro — the document that explains a thing, DIRECTED and PRODUCED:
   README, API reference, tutorial, how-to, architecture decision record, runbook, release notes,
   onboarding, the doc tree itself, and the game-dev set (one-pager, GDD, technical design doc,
-  pipeline docs). Four modes and never a blend (Diátaxis: tutorial teaches, how-to solves,
-  reference states, explanation justifies); one fact has ONE home and every other mention is a
-  link; minimalism — the shortest path to the reader's first real action, error recovery
-  first-class; freshness is evidence — dated, owned, executed, or it is a claim about the past;
-  a decision record is written once and never rewritten. Interface strings are buro:copy, editing
+  pipeline docs). Four modes and never a blend (Diátaxis); one fact has ONE home and every other
+  mention is a link; the shortest path to the reader's first real action; freshness is evidence —
+  dated, owned, executed, or it is a claim about the past. Interface strings are buro:copy, editing
   existing text buro:editor, narrative non-fiction buro:prose, product navigation & IA
   buro:usability, the design INSIDE a GDD buro:gamedesign. Triggers: documentation, docs, README,
   API docs, reference, tutorial, how-to, guide, manual, onboarding docs, runbook, ADR,
@@ -250,7 +248,7 @@ mechanics, balance) → `buro:gamedesign` · the **visual content** of an art bi
 `buro:art-director` · a data-dense table or chart *inside* a document → `buro:dataviz` ·
 accessibility of a docs site → `buro:a11y` · the cadence and comms of an incident or update →
 `buro:live-ops` · the launch narrative and press → `buro:launch-pr` · build discipline for the
-code being documented → `superpowers` / `feature-dev`.
+code being documented → `buro:dev`.
 
 **The two boundaries that get confused most often.** `buro:copy` writes what lives *inside* the
 product, where the reader is mid-task and did not choose to read; this seat writes the document the

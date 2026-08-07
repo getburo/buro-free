@@ -184,7 +184,7 @@ dialogue → `buro:screenwriter` · original poems, song lyrics, verse → `buro
 interface & marketing micro-copy authored as text → `buro:copy` · translation and
 localization → `buro:translator` · phase order and the build handoff → `buro:process`.
 
-**The boundary with `buro:prose` that gets confused most often:** `buro:prose`
+**vs `buro:prose`:** `buro:prose`
 *originates* — it writes the chapter that did not exist. This seat *refines* — it cuts
 and sharpens a chapter that already exists. When the job is "write me the next scene",
 that's prose. When the job is "here is my draft, make it work", that's here — and the
@@ -192,7 +192,7 @@ temptation to answer an edit by rewriting from scratch is itself the failure: an
 keeps as much of the author's text as possible and removes what doesn't work, rather
 than replacing it with the editor's own draft.
 
-**The boundary with `buro:copy` that gets confused second most often:** `buro:copy`
+**vs `buro:copy`:** `buro:copy`
 *owns* interface and marketing micro-text as an author — the button label, the error
 string, the tagline, written from nothing to fit a slot. This seat refines any
 long-form draft *regardless of medium*: when the artifact is a UI string or a piece of

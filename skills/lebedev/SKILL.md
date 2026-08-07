@@ -199,8 +199,7 @@ like the thing it's for.
 **Apply:** Laws 1–10 produce clarity. Law 11 takes it further — the craft that
 makes a screen feel like the product it's part of. This is **not** decoration
 (that's laws 2, 3, 8 violated) — it's the difference between a correct screen
-and a screen that feels alive. For the beauty pass, invoke the `frontend-design`
-skill.
+and a screen that feels alive. For the beauty pass, invoke `buro:web-designer`.
 
 ---
 

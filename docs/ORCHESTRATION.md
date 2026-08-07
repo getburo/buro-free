@@ -1,9 +1,12 @@
 # Buro Studio — Orchestration (the seams)
 
-> Quality is made on the parts. **Cohesion is made on the seams.** The full studio's many
-> seats are the parts — each already excellent. This document is the seams: how they combine
-> into *one* production, so a large studio stays one studio and not many tools. **This free
-> tier ships 17 of them**; this document describes the full studio and is kept for reference.
+> Quality is made on the parts. **Cohesion is made on the seams.** The 61 seats are the
+> parts — each already excellent. This document is the seams: how they combine into *one*
+> production, so a 61-seat studio stays one studio and not 61 tools.
+>
+> **This free tier ships 18 of those seats.** The document below describes the full studio
+> and is kept whole for reference: where a pipeline names a seat this tier does not have,
+> say so and stop rather than improvising its method.
 
 This is the playbook `buro:process` (the conductor) points to. It answers: what is the
 studio *about*, how do the seats hand off, what's the core motion, and — for the common
@@ -51,7 +54,7 @@ a manipulation. Ban the mechanism and they lose a capability — the game's unce
 season, the reminder. That is the amputation this studio exists to refuse. When a verdict says
 "remove X", check which of the two it just removed.
 
-Because all seats share this arbiter, their outputs *rhyme* by themselves. Cohesion is
+Because all 61 seats share this arbiter, their outputs *rhyme* by themselves. Cohesion is
 the consequence of the shared arbiter, not a separate task.
 
 ---
@@ -106,8 +109,8 @@ integration" section names its own boundaries). The three integration owners:
   value-ranked cut-list, and the ship date.
 
 Rule of thumb: **process** says *what phase / which seat*; **creative-director** says
-*does it cohere*; **producer** says *does it ship*. Engineering (`superpowers`,
-`feature-dev`, `buro:roblox-engineering`) builds the code; the make-seats critique what
+*does it cohere*; **producer** says *does it ship*. Engineering (`buro:dev`,
+`buro:roblox-engineering`) builds the code, in-house; the make-seats critique what
 comes back.
 
 ---
@@ -120,11 +123,12 @@ Concrete "who, in what order, who integrates." These are defaults, not cages —
 ### Roblox game (idea → publish → operate) — the current primary path
 ```
 process(gate the whole) + creative-director(vision) + producer(ship)  ← integration owners
+-1 brainstorm     — if the idea isn't fixed yet: reframe, diverge, name the assumption
  0 analyst        — is it worth building, for whom, how it pays
  1 gamedesign     — the core loop, the verb of the next 30s, economy (+ references/roblox.md)
- 2 level          — the world's geography + the playable spaces · narrative — story/quests
+ 2 level  — the world's geography and the spaces inside it · narrative — story/quests
  3 art-director   — one visual language → concept — the specific assets (design)
-   animation — motion · sound — audio/music · game-ui — HUD/menus under pressure
+   animation — motion · sound — audio/music · game-ui-designer — HUD/menus under pressure
  3b asset-sourcing — turn the concept/sound briefs into ACTUAL assets, by PRIORITY: build-own
     (code/CSG/EditableMesh) → Roblox AI (Cube/Material/Texture) → web-free + post-process (CC0/CC-BY,
     converted/optimized) → commission/external-AI → Toolbox LAST (scanned + license-checked). Vet all.
@@ -152,10 +156,23 @@ curator(is it worth doing / on-voice) → creative-director(vision) →
 
 ### Website / app (idea → ship)
 ```
-process → analyst → pm → usability → buro (+ interface family: gorbunov/lebedev/dataviz/
- exotic/motion/a11y/copy) → superpowers / feature-dev (build) → docs (README, reference, the
- how-tos, the decision records) → RECEIVE(tester/audience) → retention + growth + experiment
+brainstorm (if the idea isn't fixed yet) → process → analyst → pm → usability →
+ buro (+ interface family: gorbunov/lebedev/dataviz/exotic/motion/a11y/copy) → dev (build) →
+ docs (README, reference, the how-tos, the decision records) →
+ RECEIVE(tester/audience) → retention + growth + experiment
 ```
+
+### Quest (idea → shipped) — not a seat, a standing three-seat team
+```
+narrative (the quest anatomy: hook → investigation → twist → choice) →
+ level (the space it plays out in: layout, pacing, guidance) →
+ gamedesign (what it teaches, first-time or as a refresher) →
+ RECEIVE(tester/audience) → revise
+```
+No dedicated "quest designer" seat — the three competences above are already owned elsewhere and
+a quest is their standing intersection, not a fourth craft. `buro:process` conducts the handoff;
+narrative leads because the anatomy is usually decided first, but the order loops back when a
+space constraint changes the story or a teaching need changes the space.
 
 ---
 
@@ -172,7 +189,7 @@ in a row raise nothing (cap 3–4; still hot after that → it's a spiral round,
 | **Screen** | `gorbunov` → `a11y` / `chaos` → `lebedev` | a new interface pattern, not a fix |
 | **Word** | `copy` / `prose` → `audience` → `editor` | text that has to work read aloud, cold |
 | **Frame** | `director` → `storyboard` → `critic` | a scene that isn't landing |
-| **Thing** | `industrial-design` → `tester` → `cmf` | an object in atoms |
+| **Thing** | `industrial-designer` → `tester` → `cmf` | an object in atoms |
 | **Market** | `analyst` → `chaos` → `curator` | *should this exist at all* |
 
 **Every table opens with the SCOUT step** — how is this already solved, by whom — before the
@@ -188,9 +205,9 @@ from one department at one table (that's one lens in two voices); never more tha
 
 ---
 
-## 5. Discoverability — how a user picks among many seats
+## 5. Discoverability — how a user picks among 61 seats
 
-A user does **not** memorise the roster. They state the task; **`buro:buro` (the dispatcher)
+A user does **not** memorise 61 seats. They state the task; **`buro:buro` (the dispatcher)
 routes.** The two entry patterns:
 
 - **Direct door:** you know the seat → invoke `buro:<seat>` (e.g. `buro:level`).
@@ -215,7 +232,7 @@ Run this whenever the studio grows or a big production assembles:
   doesn't belong.
 - **Gut-check** — take three random seats: *one studio, or three?* They should share the
   voice, the DIRECT+PRODUCE nature, the adversarial panel, and the honesty law.
-- **No bloat** — the parts have converged. Further growth is at the *seams*
+- **No bloat** — the parts have converged (61 seats). Further growth is at the *seams*
   (docs like this one) or a real new medium — not more specialists. Adding a seat that
   overlaps an existing one is cohesion debt, not coverage.
 
@@ -223,7 +240,7 @@ Run this whenever the studio grows or a big production assembles:
 
 ## 7. Where the studio is
 
-Parts: converged, one grammar. Seam management: this document. The honest
+Parts: converged (61 seats, one grammar). Seam management: this document. The honest
 next frontier is **not** more seats — it's the multi-engine engineering track (Unity /
 Unreal / Godot / web), which is a deliberate expansion past Roblox with its own
 spec → plan → build cycle (see `STUDIO-PLAN.md` → Roadmap), not an incremental seat.

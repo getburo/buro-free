@@ -94,7 +94,7 @@ Defaults, not a closed list.
 | **Screen** | `gorbunov` → `a11y` / `chaos` → `lebedev` | a new interface pattern, not a fix |
 | **Word** | `copy` / `prose` → `audience` → `editor` | text that has to work read aloud, cold |
 | **Frame** | `director` → `storyboard` → `critic` | a scene that isn't landing |
-| **Thing** | `industrial-design` → `tester` → `cmf` | an object in atoms |
+| **Thing** | `industrial-designer` → `tester` → `cmf` | an object in atoms |
 | **Market** | `analyst` → `chaos` → `curator` | *should this exist at all* |
 
 **Composing one that isn't listed:** the seat that **owns the artifact** (generator); a seat with a

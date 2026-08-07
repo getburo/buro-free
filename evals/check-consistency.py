@@ -162,8 +162,8 @@ FULL_STUDIO = {
     "pm", "process", "producer", "prose", "retention", "roblox-engineering",
     "sales", "screenwriter", "selftest", "sound", "spatial", "storyboard", "tester",
     "transcreation", "translator", "usability", "verse", "web-designer",
-    # named in this repo's prose with the free tier's own folder spelling
-    "industrial-design", "combat-design", "game-ui",
+    # short forms the prose uses for full-studio seats
+    "combat-design", "game-ui",
 }
 for dirpath, dirnames, filenames in os.walk(ROOT):
     dirnames[:] = [d for d in dirnames if d not in (".git", "research")]
@@ -183,7 +183,7 @@ readme = read(os.path.join(ROOT, "README.md"))
 plan = read(os.path.join(ROOT, "docs", "STUDIO-PLAN.md"))
 
 rosters = {
-    "dispatcher/departments": region(dispatcher, "**The eleven departments", "It bridges to"),
+    "dispatcher/departments": region(dispatcher, "**The twelve departments", "Engineering ships in-house"),
     "dispatcher/trigger table": region(dispatcher, "**Always, for any screen work:**", "\n**BUILD —"),
     "README/department table": region(readme, "| Department | Seats |", "\n\n"),
     "STUDIO-PLAN/org chart": region(plan, "## 3. The studio org chart", "\n`*` ="),
@@ -198,6 +198,10 @@ for label, text in rosters.items():
         fail("rosters", f"{label} omits: {', '.join(missing)}")
 
 # ── 6. declared seat counts match reality ──────────────────────────────────
+# Two counts are legitimate in this repo and only two: THIS tier's roster, and the
+# full studio's, because the architecture documents are kept whole for reference
+# and say so. Any third number is drift.
+FULL_STUDIO_SEATS = 61
 orchestration = read(os.path.join(ROOT, "docs", "ORCHESTRATION.md"))
 for label, text in (
     ("README.md", readme),
@@ -205,8 +209,9 @@ for label, text in (
     ("docs/ORCHESTRATION.md", orchestration),
 ):
     for claimed in {int(n) for n in re.findall(r"(\d+)[ -]seats?\b", text)}:
-        if claimed != len(seats):
-            fail("counts", f"{label} claims {claimed} seats; there are {len(seats)}")
+        if claimed not in (len(seats), FULL_STUDIO_SEATS):
+            fail("counts", f"{label} claims {claimed} seats; this tier has {len(seats)} "
+                           f"and the full studio {FULL_STUDIO_SEATS}")
 
 # ── 7. no reference file is copied into two seats ──────────────────────────
 # The dispatcher used to keep its own copies of four seat references. All four

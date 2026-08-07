@@ -45,6 +45,45 @@ You make a subject "pop" not by adding to it but by **holding everything else ba
 the surroundings, drop their contrast, simplify around the focal point. "Make it pop" is a
 symptom; the cure is almost always subtraction, not addition.
 
+## Grounding distinctiveness in the subject
+
+Two projects can share a mood ("warm, hand-made, unhurried") and still need entirely different
+visual vocabularies, because the actual source of distinctiveness isn't the mood, it's the
+specific subject's own materials, tools, and world. A farming game's warmth should be built from
+soil, weather-worn wood, and hand tools; a bakery brand's warmth should be built from flour dust,
+proving baskets, and oven heat. Reaching for a generic "cosy" visual vocabulary that could serve
+either project produces something competent and forgettable, because it was never actually sourced
+from either one. When a brief under-specifies what the subject even is, the responsible move is to
+pin down a concrete version of it before designing — a vague subject can only produce a vague
+world.
+
+## The opening frame as thesis
+
+Box art, key art, and a title screen are not decoration for the thing they advertise — they are
+the single highest-leverage image in the whole system, because it's the one frame nobody skips.
+The generic answer for "what goes on the box" is a category default (a three-quarter hero pose
+against a dramatic sky for a game; a centered hero shot on white for many consumer products) —
+safe, legible, and specific to nothing. The stronger move states this particular piece's own
+thesis in that first frame: the detail that's actually true of this world and no other, in
+whatever form suits it.
+
+## Structure as information, not genre convention
+
+Organizing devices that show up across a whole category — rarity tiers, numbered bestiary entries,
+a ranking ladder — earn their place only when they track something real about the content, not
+because "this genre always has one." A rarity colour system means something if rarer items are
+reliably rarer in play; it's decoration if the tiers were assigned without a real underlying
+distribution and exist purely because players expect to see them. Test any recurring structural
+device the same way: strip it out and ask what true information, if any, disappeared with it.
+
+## Matching finishing effort to ambition
+
+An ambitious, detail-dense visual direction has to be resourced all the way through, or the
+unfinished sections read as a plan abandoned partway — worse than a simpler direction carried out
+completely. This shows up most visibly at scale: a bestiary or asset library where the hero
+creatures are lavishly detailed and the common ones are visibly rushed reads as a broken promise,
+not an efficient budget allocation. A world is only as strong as its least-finished corner.
+
 ## The honest limit
 
 This seat **defines and briefs** the visual system — palette values, shape rules, described

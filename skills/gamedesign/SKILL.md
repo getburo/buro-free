@@ -9,9 +9,8 @@ description: >-
   buro:experiment, story to buro:narrative, geography to buro:level, the playable level to
   buro:level. It carries NO prohibitions of its own — the lenses ask only what makes play good;
   the honesty law lives in ONE place inside the seat, COMPLIANCE (gate 8), which bans patterns
-  never mechanisms and never without a source: findings are tiered BLOCKED (a named law, platform
-  or rating policy in the project's declared compliance regime) · CONDITIONAL (allowed if you
-  disclose/age-gate/label) · TASTE (stated once, the author decides). Triggers: game design, core loop, game balance, game economy, meaningful
+  never mechanisms and never without a source, tiered BLOCKED · CONDITIONAL · TASTE.
+  Triggers: game design, core loop, game balance, game economy, meaningful
   choice, difficulty curve, progression, game feel, onboarding, playtesting, why is this boring,
   why does this burn out, dominant strategy, juice, loot box, gacha, F2P, roguelike, permadeath,
   procedural generation, horror pacing, jump scare, tension and release, how is this already solved, prior art, genre standard, am I reinventing this, what does this number buy.
@@ -102,31 +101,26 @@ A lens is a **question, not a rule**. It doesn't say what to do; it shows what's
 
 **17. The Lens of Reactivity (open worlds).** When the player acts *on* the world, does the world **register it** — a wanted level, an NPC who remembers, a consequence that ripples? Rockstar's worlds (*Red Dead Redemption 2*) answer nearly every player action with an acknowledgment; a world that ignores what you do quietly teaches the player that nothing they do matters. Test: name three things the player can do *to* the world, and what the world does back within five seconds. Fewer than three answers → the world is scenery wearing a skin of interactivity, not a system. (The *geography* the reactivity sits inside is `buro:level`; that it *responds* is here.)
 
-**18. The Lens of Ambient Life (emergence, not triggers).** Does the world run its **own systems** when the player isn't pulling a lever — NPC schedules and weather (*RDR2*), hordes that migrate and swarm (*Days Gone*), machine herds that graze, hunt, and flee (*Horizon Zero Dawn*) — so encounters *emerge* rather than fire from a script? Test: have the player stand still and do nothing for two minutes — does the world produce a story on its own, or does it wait for input like a haunted-house animatronic? Emergent life is the difference between a place that exists whether or not you're watching and a stage set that only moves on cue. (Who lives where and why is `buro:level`; how that population *behaves and generates play* is here.) A cheaper version of the same illusion, for when a full simulated economy isn't affordable: a long, uninterrupted "work loop" animation (an NPC painting a wall, hauling crates back and forth) reads as ongoing labour without the world actually changing state underneath it — legible activity purchased at animation cost, not systems cost.
+**18. The Lens of Ambient Life (emergence, not triggers).** Does the world run its **own systems** when the player isn't pulling a lever — NPC schedules and weather (*RDR2*), hordes that migrate and swarm (*Days Gone*), machine herds that graze, hunt and flee (*Horizon Zero Dawn*) — so encounters *emerge* rather than fire from a script? Test: stand still for two minutes — does the world produce a story on its own, or wait for input like an animatronic? (Who lives where and why is `buro:level`; how that population *behaves and generates play* is here.) Cheaper version of the same illusion when a simulated economy isn't affordable: a long uninterrupted "work loop" animation (an NPC painting a wall, hauling crates) reads as ongoing labour at animation cost, not systems cost.
 
-**19. The Lens of Engagement vs Appeal.** Is the actual weakness *engagement* (moment-to-moment
-play doesn't reward continuing — the toy test, lens 2, is failing) or *appeal* (the concept never
-gets a look in the first place — no one downloads the demo)? These are different failure modes
-with different fixes, and conflating them wastes effort: a game can be genuinely engaging once
-played and still fail on appeal (a strong core loop with a premise nobody stops to notice), or have
-strong appeal and fail on engagement (a striking hook that plays hollow once the novelty wears
-off). Appeal is mostly outside this seat's own lenses — it lives in the premise/fantasy
-(`buro:narrative`), the visual point of view (`buro:art-director`), and the positioning
-(`buro:analyst`) — but naming *which* problem you actually have, before reaching for a fix, is
-this seat's diagnostic job. A design brief that reads as a genuine tension ("you want to do this,
-**but** doing it costs you that") is a sign both engagement and appeal are pulling in the same
-direction; a brief that never produces a "but" is worth checking for real conflict at all.
+**19. The Lens of Engagement vs Appeal.** Is the weakness *engagement* (moment-to-moment play
+doesn't reward continuing — the toy test, lens 2, is failing) or *appeal* (nobody looks in the
+first place)? Different failure modes, different fixes: a strong core loop with a premise nobody
+stops to notice fails on appeal; a striking hook that plays hollow fails on engagement. Appeal
+mostly lives elsewhere — premise/fantasy (`buro:narrative`), visual point of view
+(`buro:art-director`), positioning (`buro:analyst`) — but naming *which* problem you have before
+reaching for a fix is this seat's diagnostic job. A brief that reads as genuine tension ("you want
+this, **but** it costs you that") has both pulling together; a brief that never produces a "but"
+is worth checking for real conflict at all.
 
-**20. The Lens of Subtractive Scope.** For a small team, is a mechanic or content category earning
-its place, or could the same fantasy be delivered with less — fewer or no characters (narrative
-absence, a non-human protagonist, a UI-mediated role instead of direct control), a smaller or
-reused space (replay/mastery mechanics extracting more value from one place instead of building
-many), or a single mechanic blown up into the whole game instead of one slice of a larger genre
-(a full dungeon crawler descoped to just its inventory management, a real-time-strategy game
-descoped to just its base-defense moment)? The test for a good cut here isn't "what did we
-remove" but "what did removing it let us add" — desolation removes characters and adds mood;
-a single reused mechanic removes production scope and adds focus. A cut that only subtracts,
-adding nothing back, is a compromise; a cut that subtracts and adds is a design decision.
+**20. The Lens of Subtractive Scope.** For a small team, could the same fantasy be delivered with
+less — fewer or no characters (narrative absence, a non-human protagonist, a UI-mediated role), a
+smaller or reused space (replay/mastery extracting more from one place instead of building many),
+or one mechanic blown up into the whole game instead of one slice of a larger genre (a dungeon
+crawler descoped to just its inventory management; an RTS descoped to just base defense)? The test
+isn't "what did we remove" but **"what did removing it let us add"** — desolation removes
+characters and adds mood. A cut that only subtracts is a compromise; a cut that subtracts and adds
+is a design decision.
 
 ---
 
@@ -291,7 +285,7 @@ Rules:
 
 Engine, assets, level production — **out of zone.**
 
-**The boundary with the analyst that gets confused most often:** in-game economy (faucets, sinks, inflation, resource balance) — **here**. Monetization (Robux, prices, ARPU, LTV) — **the analyst's**. A resource the player earns is game design; a resource bought with real money is business.
+**vs the analyst:** in-game economy (faucets, sinks, inflation, resource balance) — **here**. Monetization (Robux, prices, ARPU, LTV) — **the analyst's**. A resource the player earns is game design; a resource bought with real money is business.
 
 **Simulate before you go live.** If the design has a numeric model (bots, odds, drops, resources) — its structural properties **can be proven on paper in an evening**, not "calibrated on live players over months." Live players are needed for exactly two things: how a real human errs, and how often they lose their composure. Everything else is algebra. A design that defers checking its model until release is hiding, behind "we need data," something that could have been calculated.
 

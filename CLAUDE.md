@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this repo is
 
 Buro — a **Claude Code plugin**, not an application. There is no build step, no
-package manager, no runtime. The deliverable is prose: 17 seats (+ the `buro` dispatcher and
+package manager, no runtime. The deliverable is prose: 18 seats (+ the `buro` dispatcher and
 the `selftest` tool) under `skills/`, each a folder with a `SKILL.md` and a `references/`
 canon. Editing this repo means editing skill prose, and the only "tests" are the consistency
 check and the routing eval.
@@ -33,9 +33,11 @@ and must name the seat, with no access to the expected answer. Results are recor
 ## Architecture
 
 **Two spines, one dispatcher.** `buro:buro` reads a task and routes it. Buro owns *what* and
-*why* (intent, taste, honesty, the artifact); `superpowers` / `feature-dev` own *how to build
-safely*; `buro:process` is the switchman between them, and the make-seats critique what comes
-back. See `docs/STUDIO-PLAN.md` (architecture, seat template, roadmap) and
+*why* (intent, taste, honesty, the artifact) **and** *how to build safely*, in-house: `buro:dev`
+(general, engine-agnostic software) is this tier's engineering department, and
+`buro:roblox-engineering` is its full-studio bench. `buro:process` is the switchman between the
+taste/method spine and the engineering spine, and the make-seats critique what comes back.
+See `docs/STUDIO-PLAN.md` (architecture, seat template, roadmap) and
 `docs/ORCHESTRATION.md` (the seams: handoffs, standard production pipelines).
 
 **Every seat is dual-nature** — DIRECT (method, canon, critique) **and** PRODUCE (emits the
@@ -43,13 +45,13 @@ artifact, through its own self-critique gate). A third mode, RECEIVE, lives in t
 department (`tester` · `audience` · `critic` · `chaos` · `detective`). The studio's motion is
 DIRECT → PRODUCE → RECEIVE → revise.
 
-**The one law**, carried by every seat, is what makes the eleven departments one studio rather
-than 17 tools: *subtract decoration never a capability; quality earned by mastery and delivered
+**The one law**, carried by every seat, is what makes the twelve departments one studio rather
+than 18 tools: *subtract decoration never a capability; quality earned by mastery and delivered
 value, never extracted by dark patterns, FOMO, or hype; producing is never an excuse to phone
 it in.* Cohesion is a consequence of the shared arbiter, not a separate task — so a new seat
 that doesn't carry the law doesn't belong.
 
-**No craft above another.** The eleven departments are peers. Where two seats look alike, the
+**No craft above another.** The twelve departments are peers. Where two seats look alike, the
 dispatcher's **Seam rules** table (`skills/buro/SKILL.md`) is the tie-breaker (playable space or
 invented geography → `level`, real built environment → `spatial`, and so on);
 the eval's `seam` field mirrors those pairs.
@@ -68,7 +70,7 @@ Adding a seat touches more places than it looks. All of these must be updated to
    universal template (frontmatter → epigraphs → core chain → lenses → adversarial panel →
    method gates → **PRODUCE** with a self-critique gate → verdict format → discipline &
    boundaries → "slop it kills on sight"), plus `references/canon.md`.
-2. Four rosters, each of which must name every seat: the dispatcher's **eleven departments** block
+2. Four rosters, each of which must name every seat: the dispatcher's **twelve departments** block
    and its **trigger table** (`| The task is… | Seat |` — one row saying *when to open it*, never
    what it carries; that lives in the seat's own always-on description), the README department
    table, and the `docs/STUDIO-PLAN.md` org chart.

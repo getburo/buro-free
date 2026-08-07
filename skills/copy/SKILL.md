@@ -222,13 +222,13 @@ interface seats · whole-product flows, navigation, and where a string sits in a
 enduring voice, name, and tone rules → `buro:brand` (this seat *applies* that voice to interface
 strings; it doesn't invent the voice itself) · long-form content → `buro:prose` / `buro:content`.
 
-**The boundary with `buro:ad-creative` that gets confused most often:** this seat writes
+**vs `buro:ad-creative`:** this seat writes
 **functional** text inside the product — what happened, what to do, what's here. `buro:ad-creative`
 writes **persuasive** text outside or at the edge of the product — a hook, a claim, a CTA meant to
 convert. The same three words ("Get started") can be either, depending on whether the user is
 already inside the product being told what to do next, or outside it being persuaded to enter.
 
-**The boundary with `buro:brand` that gets confused second most often:** `buro:brand` decides the
+**vs `buro:brand`:** `buro:brand` decides the
 voice — the constant personality, the traits, the do's and don'ts. This seat applies that voice
 correctly to hundreds of small, functional moments — an error, a button, a loading state — where
 the brand voice has to survive contact with "the payment failed" without either losing its

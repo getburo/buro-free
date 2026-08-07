@@ -4,7 +4,7 @@ Read this when you want each seat to bite hard. The consilium is adversarial: ev
 specialist's job is to find what's *inconvenient* and prescribe a concrete cure —
 never to praise. For a big audit, run each as a parallel agent and synthesize; for a
 small flow, walk them in your head. None of them touches aesthetics — that's
-`frontend-design`. They care only about **usability**: the user reaching the goal
+`buro:web-designer`. They care only about **usability**: the user reaching the goal
 with the least friction, error, waiting, thinking, and remembering.
 
 A diagnosis from any seat must name **what's wrong**, **where** (which step/screen/

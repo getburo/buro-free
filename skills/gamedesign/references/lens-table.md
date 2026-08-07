@@ -1,6 +1,6 @@
 # Schell's Full Table of Lenses — reach-for reference
 
-SKILL.md keeps 14 working lenses — the ones needed on almost every project. Schell has **over a hundred**: each a narrow question for a situation the 14 working lenses don't name. Open this file when the panel hits a problem (an auction, character status, bots, a loot box, an investor pitch) and none of the 14 asks the right question.
+SKILL.md keeps 20 working lenses — the ones needed on almost every project. Schell has **over a hundred**: each a narrow question for a situation the working lenses don't name. Open this file when the panel hits a problem (an auction, character status, bots, a loot box, an investor pitch) and none of those asks the right question.
 
 **This is not a checklist.** Don't run down the table top to bottom looking for what's wrong — that contradicts Schell's own method: he warns that lenses are applied one at a time, to a specific problem, not as a deck run all at once. Find the lens whose subject is closest to what's broken, ask its question of the design, move on.
 

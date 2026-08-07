@@ -59,9 +59,9 @@ bug without a reliable repro gets closed "cannot reproduce" — the repro *is* t
 
 This seat is **black-box and experiential**: it plays the artifact adversarially and files
 reproducible bugs. It *designs* what to test. The **executable** automated tests (unit,
-integration) and the test-first TDD loop are `superpowers:test-driven-development`; a code
-regression's root cause is `superpowers:systematic-debugging`. This seat names the failure and
-its repro; those seats build the automated guard and find the line of code.
+integration), the test-first TDD loop, and a code regression's root cause are `buro:dev`. This
+seat names the failure and its repro; `buro:dev` builds the automated guard and finds the line
+of code.
 
 ## Shipping Known-Broken to Hit a Date (Cautionary — Synthesis, Not Citation)
 

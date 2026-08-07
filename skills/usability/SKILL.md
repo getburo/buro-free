@@ -6,8 +6,8 @@ description: >-
   architecture, onboarding, cutting friction/steps/clicks/errors, cognitive load, auditing a whole
   app across devices (mobile, tablet, web, desktop, TV, voice, car, kiosk) as an ecosystem. A
   consilium (researcher/JTBD, IA & flows, cognitive-load, inclusive/devices) that works any
-  interface up to insanely usable WITHOUT amputating capability. Beauty is frontend-design;
-  single-screen clarity & the Russian method are buro. Triggers: usability, UX, user flow,
+  interface up to insanely usable WITHOUT amputating capability. Beauty is buro:web-designer;
+  single-screen clarity & the screen method are buro. Triggers: usability, UX, user flow,
   journey, navigation, information architecture, onboarding, friction, cognitive load, too many
   features, how not to overwhelm, whole-product UX, audit an app.
 ---
@@ -15,7 +15,7 @@ description: >-
 # Buro · Usability — the consilium of specialists
 
 This is **buro's usability sub-skill**. Where `buro` sharpens *one screen* into
-clarity (and `frontend-design` makes it beautiful), this skill takes the **whole
+clarity (and `buro:web-designer` makes it beautiful), this skill takes the **whole
 product** — one app or many, one device or a fleet — and works it up to **insanely
 usable**. Nothing here is about beauty. Everything is about **usability**: the user
 reaching their goal with the least friction, error, waiting, thinking and

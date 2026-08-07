@@ -4,31 +4,20 @@ description: >-
   The conductor of Buro — the whole-product development process: take any product from idea to
   shipped at real quality AND cohesion (цельность), through phases & gates, iterating to
   convergence. NOT the production plan, critical path, or cut-list under a real deadline — that's
-  buro:producer. It tells you WHICH PHASE you're in and WHICH seat to call now (buro:analyst
-  upstream, buro:pm for backlog, buro / buro:usability for design, buro:retention / buro:growth /
-  buro:experiment to grow & measure), enforces the gate between phases, runs the iteration-to-
-  convergence loop, keeps an idea-archive of rejected ideas that can be revived, runs a
-  composition pass for emergence across many elements (2 → N), and converges against the goals.
-  It also seats a TABLE — 3–4 seats playing the SAME material in one move, either as a RIFF
-  relay (generator → distorter → judge → back, rounds until nothing rises: gamedesign invents,
-  chaos takes it to absurd, critic judges, another round) to BIRTH what one lens won't, or as a
-  FAN (all lenses at once, verdicts collided) to JUDGE what exists.
+  buro:producer. It tells you WHICH PHASE you're in and WHICH seat to call now, enforces the gate
+  between phases, runs the convergence loop, keeps an idea-archive, and runs a composition pass
+  for emergence (2 → N), and seats a TABLE — 3–4 seats playing the SAME material in one move.
   Before gate 0 it runs the QUESTION AUDIT — no question is trusted on arrival, the studio's own
-  included: solution-shaped, symptom-shaped, borrowed jargon, or wrong scope; reframe out loud,
-  never silently; a question that can't change what you do next is a ritual. Three MECHANICAL
-  checks run on the answer: READ-BACK (substitute it into their exact sentence — does it survive
-  its number, subject, scope?), CONVENIENT AGREEMENT (a reframe that dissolves a problem YOU
-  raised raises suspicion, not lowers it), AMBIGUITY NAMED (two readings → name both and which
-  you took, never resolve by picking; a one-line answer hides the fork).
-  Owns the lifecycle & cohesion-under-growth; dispatches the per-phase craft.
-  Triggers: how to develop the product, where to start, process, iterations, phases, quality,
-  cohesion, what order do we work in, how not to break the product as it grows, development
-  process, iteration loop, research vs design vs testing, emergence, how elements interact
-  together, idea archive, converge to the goal, several seats at once, seat a table, riff,
-  jam, bounce ideas between seats, one seat isn't enough, take it to absurd then judge it,
-  is this the right question, am I solving the wrong problem, they asked for the wrong thing,
-  reframe the task, X-Y problem, you misunderstood me, that's not what I said,
-  you answered a different question, read it back, I meant something else.
+  included; reframe out loud, never silently. Owns the lifecycle & cohesion-under-growth.
+  Triggers: how to
+  develop the product, where to start, process, iterations, phases, quality, cohesion, what order
+  do we work in, how not to break the product as it grows, development process, iteration loop,
+  research vs design vs testing, emergence, how elements interact together, idea archive, converge
+  to the goal, several seats at once, seat a table, riff, jam, bounce ideas between seats, one
+  seat isn't enough, take it to absurd then judge it, is this the right question, am I solving the
+  wrong problem, they asked for the wrong thing, reframe the task, X-Y problem, you misunderstood
+  me, that's not what I said, you answered a different question, read it back, I meant something
+  else.
 ---
 
 # Buro · Process — quality made on parts, cohesion held by one idea
@@ -110,28 +99,23 @@ scope** — the reframe is wrong, and the sentence is the evidence.
 > belongs to the building"* → every item in a building shares one level. Substitute it back and
 > the plural becomes meaningless. **One reading and it dies** — but nobody read it back.
 
-**Scope creep hides in a convenient mechanism, not just a wrong noun.** *"A player should be able
-to start solo or in a chosen party"* asked about **grouping**. The answer that shipped — "N
-parallel lanes, each a complete independent copy of the whole shared hub" — solved grouping and
-also, unasked, decided the hub's cardinality: one shared social space became eight duplicated
-ones. Read back against the original sentence, "duplicate the hub" isn't in it anywhere; it rode
-along because it was the cheapest way to satisfy the part that *was* asked. Caught six ticks and a
-real build later, only once someone saw eight copies of a space meant to be one. **Every answer
-that touches something the question never named is a second, unaudited decision** — read it back
-before it ships, not after it's built.
+**Scope creep hides in a convenient mechanism, not just a wrong noun.** *"Start solo or in a chosen
+party"* asked about **grouping**; the answer that shipped — N parallel lanes, each a full copy of
+the shared hub — also decided the hub's cardinality, unasked, turning one social space into eight.
+"Duplicate the hub" is nowhere in the sentence; it rode along as the cheapest way to satisfy the
+part that *was* asked. **Every answer that touches something the question never named is a second,
+unaudited decision** — read it back before it ships, not after it's built.
 
 **2. Convenient agreement — when a reading dissolves a problem YOU raised, suspicion goes UP.**
-This is the dangerous class, because it arrives disguised as luck. You have a motive to accept it,
-so you are the worst-placed auditor of it. Say it out loud — *"this also removes the objection I
-raised; checking it twice"* — and then check it against the read-back, not against how well it fits.
+It arrives disguised as luck, and you have a motive to accept it, so you are the worst-placed
+auditor of it. Say it out loud — *"this also removes the objection I raised; checking it twice"* —
+then check it against the read-back, not against how well it fits.
 
-**This covers reading a RULE, not only reading a request.** An interpretation of a studio rule
-that happens to excuse you from work is the same class and gets the same suspicion — most of all
-when the rule being invoked is one about *economy* (cut the ritual, don't duplicate, dispatch
-don't re-carry). Those are the rules with a standing motive attached. **Invoking a rule is not
-evidence; it is a claim that still needs its check.** Deciding by what the text permits instead of
-by what you verified is settling by authority — the failure `buro:roblox-engineering` names for
-platform behaviour, and it is general.
+**This covers reading a RULE, not only a request.** An interpretation of a studio rule that happens
+to excuse you from work is the same class, most of all when the rule is one about *economy* (cut
+the ritual, don't duplicate, dispatch don't re-carry) — those have a standing motive attached.
+**Invoking a rule is not evidence; it is a claim that still needs its check.** Deciding by what the
+text permits instead of by what you verified is settling by authority.
 
 **3. Ambiguity is named, never resolved by picking.** *"The level belongs to the building"* has two
 readings — **whose** the level is (ownership) and **where** it is assigned (mechanism). They are
@@ -254,7 +238,7 @@ PHASE           GOAL                            GATE (don't pass until…)      
  1 Concept      one idea + a border             one checkable sentence + a "not"    buro:analyst (positioning→concept)
  2 Structure    IA, flows, the spine of pillars where's the hero? where's the door? buro:usability
  3 Frame        every screen, every STATE       all states designed, not just happy buro (+ dataviz/exotic)
- 4 Craft        type, colour, copy, motion      one grammar; honest; beautiful      buro (+ copy/motion/a11y) → frontend-design
+ 4 Craft        type, colour, copy, motion      one grammar; honest; beautiful      buro (+ copy/motion/a11y) → buro:web-designer
  5 Critique     adversarial pass                survived the Skeptic                buro (panel) · buro:usability (consilium)
  6 Iterate      real-use convergence            two clean rounds in a row           this skill (loop below)
 ```
@@ -549,6 +533,6 @@ pass with no re-test.
 | The game itself — loop, mechanics, balance | `buro:gamedesign` |
 | Story structure / branching / lore vs plot | `buro:narrative` |
 | World geography — real or fictional | `buro:level` |
-| The beauty pass | `frontend-design` |
+| The beauty pass | `buro:web-designer` |
 
 The conductor sequences and gates; the seats play (`buro:lebedev` law 7: dispatch, don't duplicate).

@@ -209,13 +209,13 @@ film craft of a spot (staging, cut) → `buro:director` / `buro:edit` · the vis
 `buro:art-director` · sustained organic content → `buro:content` · a live one-to-one conversation
 with a named buyer → `buro:sales`.
 
-**The boundary with `buro:campaign` that gets confused most often:** `buro:campaign` owns the
+**vs `buro:campaign`:** `buro:campaign` owns the
 **idea** everything is executing — the proposition, the territories, the through-line. This seat
 owns the **execution** — the actual script, the actual page, sized and shaped to its format. A
 campaign can hand over a genuinely single-minded idea and this seat can still execute it badly;
 that failure is here, not there.
 
-**The boundary with `buro:sales` that gets confused second most often:** an offer page is
+**vs `buro:sales`:** an offer page is
 one-to-many persuasion — a unit nobody can reply to, the same craft as an ad, sized to a scroll.
 The moment there's a real, live conversation with a named person who answers back — a call, a
 demo, an objection raised in real time — that's `buro:sales`, not this seat.

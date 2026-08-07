@@ -3,7 +3,7 @@
   "cases": [
     {
       "id": 1,
-      "expected": "industrial-design",
+      "expected": "industrial-designer",
       "seam": "vs concept",
       "prompt": "ok i'm designing a physical wall-mounted bottle opener that'll be injection molded — need to nail the grip shape and where the thumb sits"
     },
