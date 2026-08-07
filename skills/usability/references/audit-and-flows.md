@@ -28,6 +28,28 @@ auditing them — same structure, forward instead of backward.
 
 ---
 
+## Before the tax: does the journey COMPLETE?
+
+> **Walk each top journey to its end, on the real product, before counting anything.**
+
+A step the user cannot get past is **not expensive — it is broken**, and the ledger below cannot
+see the difference. Friction is counted in decisions, taps, fields and waits; a dead end, a
+control that does nothing, a route that lands somewhere else, a state you cannot leave has none
+of those, scores **no tax at all**, and drops out of the ranking entirely. The consilium then
+optimises a checkout that cannot be finished.
+
+**Two outcomes, and they are not compared with each other:**
+
+| The journey | Then |
+|---|---|
+| **cannot be completed** | that break is the work, ahead of every tax on the board. Not a finding to list — the finding |
+| completes | count the tax below and rank by it |
+
+A journey nobody walked is **unverified**, never "fine" — the same rule as a pass that was not
+run. Say which journeys you walked, on what device, and where each ended.
+
+---
+
 ## Counting the tax (make friction measurable)
 
 For each step in a journey, tally:
@@ -42,7 +64,8 @@ For each step in a journey, tally:
 
 Sum per step, then per journey. **Friction concentrates** — usually a couple of steps
 hold most of the tax. Those are where the consilium operates first (peak-end: fix the
-worst moment before the average).
+worst moment before the average) — **among journeys that complete**. A break outranks
+every peak on the board.
 
 ---
 

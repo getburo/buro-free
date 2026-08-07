@@ -51,7 +51,29 @@ whether it helps, but for whether shipping it quietly costs the user something n
 
 ---
 
-## The priority filter
+## Tier 0 — what is not scored at all
+
+> **A product that does not work is not competing with features. It is the only item.**
+
+**Before the rubric runs, ask: does the thing work today?** Does it start · complete its main job
+once, end to end · still do what it did last release? Anything failing that is **tier 0**: it goes
+first, it is not scored, and it is not compared with a gap.
+
+**Why it needs its own tier and cannot just score high.** The rubric is *additive*, so a broken
+thing that is expensive to fix scores 10 on Pain and 10 on Timing and then loses it back on
+**Execution** ("architectural debt, not in a single cycle") — landing at WAIT, while a cheap
+cosmetic scores Execution 10 and Timing 7 and reaches DO. **Execution rewards cheapness, and
+cheapness is exactly what a broken thing is not.** Measured elsewhere in the studio, the same
+arithmetic put twenty cycles into fog and luminance on a game nobody could start
+(`buro:process` → `cycle.md` §2a, the tier ladder this mirrors).
+
+**Execution never demotes a tier-0 item.** A hard fix is still first; a low Execution score changes
+how it is *planned* — split it, spike it, escalate it to `buro:producer` — never whether it is done.
+
+⚠ **Tier 0 is a measurement, not an assumption.** "It worked last release" and "the code looks
+fine" are tier 0 *unverified*. Start it, run the main job once, and say what happened.
+
+## The priority filter — for everything above tier 0
 
 Every gap/feature is scored across 5 dimensions, 1–10 each. Total /50. A deliberately simple,
 universal rubric — it works for any product because it scores against *that product's own*
@@ -138,11 +160,13 @@ End with a synthesis: what is the white space no one owns?
 Prerequisites: `.pm/product/inventory.md` + at least one competitor file
 
 Process:
+0. **Tier 0 first** — run the product: does it start, do its main job once, and still do what it
+   did last release? Anything failing goes on top, unscored, ahead of every gap below.
 1. Compare product inventory against competitor analysis
 2. For each gap found: name it in one line (user language, not engineering jargon)
 3. Score with the priority filter (5 dimensions × 1-10)
 4. Apply the buro Skeptic's veto: "delete it — what does the user lose?" (Seats, below)
-5. Sort by score descending
+5. Sort by score descending, **under** the tier-0 items — never mixed into the same ranking
 6. Output three lists: DO / WAIT / SKIP
 
 **Self-critique gate, before saving:** every DO item re-checked — *is this a real gap named in
@@ -156,11 +180,17 @@ Save to `.pm/gaps/[date]-gaps.md`
 
 Output format:
 ```
+## TIER 0 — broken, not scored
+- [what does not work] — measured: [what happened when you ran it, when]
+
 ## Gap: [name in user language]
 Pain: N | North-star fit: N | Timing: N | Worth it: N | Execution: N
 Total: NN/50 → DO / WAIT / SKIP
 Why: [one sentence — the decisive argument]
 ```
+**The tier-0 block is written even when empty** — as `TIER 0 — none; ran it on <date>, main job
+completed`. An absent block means nobody looked, and that is the state this whole tier exists to
+catch.
 
 No more than 10 gaps per cycle. If more found — score all, show top 10.
 
