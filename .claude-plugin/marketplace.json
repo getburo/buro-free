@@ -9,7 +9,7 @@
     {
       "name": "buro-free",
       "description": "Buro, free tier — one seat per department (17 of 62), full method and full production, no thinning.",
-      "version": "0.7.0",
+      "version": "0.7.1",
       "license": "UNLICENSED",
       "source": "./",
       "author": {
